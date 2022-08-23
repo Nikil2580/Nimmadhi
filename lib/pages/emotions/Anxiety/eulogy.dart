@@ -1,13 +1,12 @@
-import 'package:agni/pages/emotions/Anxiety/awareness_steps.dart';
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
 
-class SelfAwareness extends StatefulWidget {
+class Eulogy extends StatefulWidget {
   @override
-  _SelfAwarenessState createState() => _SelfAwarenessState();
+  _EulogyState createState() => _EulogyState();
 }
 
-class _SelfAwarenessState extends State<SelfAwareness>
+class _EulogyState extends State<Eulogy>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -57,7 +56,10 @@ class _SelfAwarenessState extends State<SelfAwareness>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/self_awareness.jpg'),
+                  child: FittedBox(
+                    child: Image.asset('assets/images/eulogy.png'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -96,7 +98,7 @@ class _SelfAwarenessState extends State<SelfAwareness>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Self-awareness',
+                              'Eulogy',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -113,8 +115,8 @@ class _SelfAwarenessState extends State<SelfAwareness>
                               padding: const EdgeInsets.all(8),
                               child: Row(
                                 children: <Widget>[
-                                  //getTimeBoxUI('5min', 'Practice'),
-                                  //getTimeBoxUI('1 time', 'Day'),
+//                                  getTimeBoxUI('5min', 'Practice'),
+//                                 getTimeBoxUI('1 time', 'Day'),
                                   //getTimeBoxUI('', 'Seat'),
                                 ],
                               ),
@@ -129,8 +131,8 @@ class _SelfAwarenessState extends State<SelfAwareness>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Self-awareness is the ability to monitor our inner and external world. Our thoughts and feelings arise as signals.\nSelf-awareness brings about three features: \n• Thought Journal\n• Regret letter\n• Eulogy',
-                                    textAlign: TextAlign.left,
+                                    'Write your imaginary novel(song of praise) to illuminate how you’d like to be remembered after you’re gone. This exercise allows you to know how you want to show up in the world and the necessary shifts that need to occur. This self-awareness exercise allows you to know the necessary set of actions to reach your goal.',
+                                    textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
                                       fontSize: 14,
@@ -154,67 +156,56 @@ class _SelfAwarenessState extends State<SelfAwareness>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  // Container(
-                                  //   width: 48,
-                                  //   height: 48,
-                                  //   child: Container(
-                                  //     decoration: BoxDecoration(
-                                  //       color: DesignCourseAppTheme.nearlyWhite,
-                                  //       borderRadius: const BorderRadius.all(
-                                  //         Radius.circular(16.0),
-                                  //       ),
-                                  //       border: Border.all(
-                                  //           color: DesignCourseAppTheme.grey
-                                  //               .withOpacity(0.2)),
-                                  //     ),
-                                  //     // child: Icon(
-                                  //     //   Icons.add,
-                                  //     //   color: DesignCourseAppTheme.nearlyBlue,
-                                  //     //   size: 28,
-                                  //     // ),
-                                  //   ),
-                                  // ),
-                                  // const SizedBox(
-                                  //   width: 16,
-                                  // ),
-                                  Expanded(
-                                    child: new InkWell(
-                                      onTap: () {
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                AwarenessSteps(),
-                                          ),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        decoration: BoxDecoration(
-                                          color:
-                                              DesignCourseAppTheme.nearlyBlue,
-                                          borderRadius: const BorderRadius.all(
-                                            Radius.circular(16.0),
-                                          ),
-                                          boxShadow: <BoxShadow>[
-                                            BoxShadow(
-                                                color: DesignCourseAppTheme
-                                                    .nearlyBlue
-                                                    .withOpacity(0.5),
-                                                offset: const Offset(1.1, 1.1),
-                                                blurRadius: 10.0),
-                                          ],
+                                  Container(
+                                    width: 48,
+                                    height: 48,
+                                    child: Container(
+                                        // decoration: BoxDecoration(
+                                        //   color: DesignCourseAppTheme.nearlyWhite,
+                                        //   borderRadius: const BorderRadius.all(
+                                        //     Radius.circular(16.0),
+                                        //   ),
+                                        //   border: Border.all(
+                                        //       color: DesignCourseAppTheme.grey
+                                        //           .withOpacity(0.2)),
+                                        // ),
+                                        // child: Icon(
+                                        //   Icons.add,
+                                        //   color: DesignCourseAppTheme.nearlyBlue,
+                                        //   size: 28,
+                                        // ),
                                         ),
-                                        child: Center(
-                                          child: Text(
-                                            'Take Session',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18,
-                                              letterSpacing: 0.0,
+                                  ),
+                                  const SizedBox(
+                                    width: 16,
+                                  ),
+                                  Expanded(
+                                    child: Container(
+                                      height: 48,
+                                      decoration: BoxDecoration(
+                                        color: DesignCourseAppTheme.nearlyBlue,
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                        boxShadow: <BoxShadow>[
+                                          BoxShadow(
                                               color: DesignCourseAppTheme
-                                                  .nearlyWhite,
-                                            ),
+                                                  .nearlyBlue
+                                                  .withOpacity(0.5),
+                                              offset: const Offset(1.1, 1.1),
+                                              blurRadius: 10.0),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Take Session',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            letterSpacing: 0.0,
+                                            color: DesignCourseAppTheme
+                                                .nearlyWhite,
                                           ),
                                         ),
                                       ),
@@ -287,60 +278,51 @@ class _SelfAwarenessState extends State<SelfAwareness>
     );
   }
 
-  // Widget getTimeBoxUI(String text1, String txt2) {
-  //   return Padding(
-  //     padding: const EdgeInsets.all(8.0),
-  //     child: new InkWell(
-  //       onTap: () {
-  //         Navigator.of(context).push(
-  //           MaterialPageRoute(
-  //             builder: (context) => AwarenessSteps(),
-  //           ),
-  //         );
-  //       },
-  //       child: Container(
-  //         decoration: BoxDecoration(
-  //           color: DesignCourseAppTheme.nearlyWhite,
-  //           borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-  //           boxShadow: <BoxShadow>[
-  //             BoxShadow(
-  //                 color: DesignCourseAppTheme.grey.withOpacity(0.2),
-  //                 offset: const Offset(1.1, 1.1),
-  //                 blurRadius: 8.0),
-  //           ],
-  //         ),
-  //         child: Padding(
-  //           padding: const EdgeInsets.only(
-  //               left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
-  //           child: Column(
-  //             mainAxisAlignment: MainAxisAlignment.center,
-  //             crossAxisAlignment: CrossAxisAlignment.center,
-  //             children: <Widget>[
-  //               Text(
-  //                 text1,
-  //                 textAlign: TextAlign.center,
-  //                 style: TextStyle(
-  //                   fontWeight: FontWeight.w600,
-  //                   fontSize: 14,
-  //                   letterSpacing: 0.27,
-  //                   color: DesignCourseAppTheme.nearlyBlue,
-  //                 ),
-  //               ),
-  //               Text(
-  //                 txt2,
-  //                 textAlign: TextAlign.center,
-  //                 style: TextStyle(
-  //                   fontWeight: FontWeight.w200,
-  //                   fontSize: 14,
-  //                   letterSpacing: 0.27,
-  //                   color: DesignCourseAppTheme.grey,
-  //                 ),
-  //               ),
-  //             ],
-  //           ),
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
+  Widget getTimeBoxUI(String text1, String txt2) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: DesignCourseAppTheme.nearlyWhite,
+          borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: DesignCourseAppTheme.grey.withOpacity(0.2),
+                offset: const Offset(1.1, 1.1),
+                blurRadius: 8.0),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(
+              left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                text1,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  letterSpacing: 0.27,
+                  color: DesignCourseAppTheme.nearlyBlue,
+                ),
+              ),
+              Text(
+                txt2,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.w200,
+                  fontSize: 14,
+                  letterSpacing: 0.27,
+                  color: DesignCourseAppTheme.grey,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
