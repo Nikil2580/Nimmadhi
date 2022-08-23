@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
 
-class BetterCommunication extends StatefulWidget {
+class ThoughtJournal extends StatefulWidget {
   @override
-  _BetterCommunicationState createState() => _BetterCommunicationState();
+  _ThoughtJournalState createState() => _ThoughtJournalState();
 }
 
-class _BetterCommunicationState extends State<BetterCommunication>
+class _ThoughtJournalState extends State<ThoughtJournal>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -57,7 +57,7 @@ class _BetterCommunicationState extends State<BetterCommunication>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/communication.jpg'),
+                    child: Image.asset('assets/images/thought_journal.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
