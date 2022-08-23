@@ -1,13 +1,12 @@
-import 'package:agni/pages/emotions/Anger/reappraisal_session.dart';
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
 
-class CognitiveReappraisal extends StatefulWidget {
+class ReappraisalSession extends StatefulWidget {
   @override
-  _CognitiveReappraisalState createState() => _CognitiveReappraisalState();
+  _ReappraisalSessionState createState() => _ReappraisalSessionState();
 }
 
-class _CognitiveReappraisalState extends State<CognitiveReappraisal>
+class _ReappraisalSessionState extends State<ReappraisalSession>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -58,7 +57,7 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/reappraisal.jpg'),
+                    child: Image.asset('assets/images/reappraisal_session.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -132,7 +131,7 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Cognitive reappraisal is an ability to successfully reappraise enables us to reduce negative emotions and open us up to experiencing happiness, even during difficult times.\n\nReappraisal involves cognitively reframing an event to reduce the negative emotions you feel.',
+                                    'Lets start an effecient reappraisal, start by writing out a list of things you learned from a past failure. For example, if you missed an important deadline, maybe you learned that you need to prioritize better, delegate more, or tone down your perfectionism.\n\nAsk yourself these questions to help you reappraise:\n• Were there, or will there be, any positive outcomes that result from this situation?\n• Are you grateful for any part of this situation?\n• In what ways are you better off than when you started?\n• What did you learn?\n• How did you grow and develop as a result of this situation?\n\nThe more you invest the situation this Perspective,the better Reappraised your perspective will be.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -161,62 +160,52 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
                                     width: 48,
                                     height: 48,
                                     child: Container(
+                                        // decoration: BoxDecoration(
+                                        //   color: DesignCourseAppTheme.nearlyWhite,
+                                        //   borderRadius: const BorderRadius.all(
+                                        //     Radius.circular(16.0),
+                                        //   ),
+                                        //   border: Border.all(
+                                        //       color: DesignCourseAppTheme.grey
+                                        //           .withOpacity(0.2)),
+                                        // ),
+                                        // child: Icon(
+                                        //   Icons.add,
+                                        //   color: DesignCourseAppTheme.nearlyBlue,
+                                        //   size: 28,
+                                        // ),
+                                        ),
+                                  ),
+                                  const SizedBox(
+                                    width: 18,
+                                  ),
+                                  Expanded(
+                                    child: Container(
+                                      height: 48,
                                       decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyWhite,
+                                        color: DesignCourseAppTheme.nearlyBlue,
                                         borderRadius: const BorderRadius.all(
                                           Radius.circular(16.0),
                                         ),
-                                        border: Border.all(
-                                            color: DesignCourseAppTheme.grey
-                                                .withOpacity(0.2)),
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        size: 28,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
-                                  Expanded(
-                                    child: InkWell(
-                                      onTap: () {
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                ReappraisalSession(),
-                                          ),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        decoration: BoxDecoration(
-                                          color: DesignCourseAppTheme.nearlyBlue,
-                                          borderRadius: const BorderRadius.all(
-                                            Radius.circular(16.0),
-                                          ),
-                                          boxShadow: <BoxShadow>[
-                                            BoxShadow(
-                                                color: DesignCourseAppTheme
-                                                    .nearlyBlue
-                                                    .withOpacity(0.5),
-                                                offset: const Offset(1.1, 1.1),
-                                                blurRadius: 10.0),
-                                          ],
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            'Take Session',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18,
-                                              letterSpacing: 0.0,
+                                        boxShadow: <BoxShadow>[
+                                          BoxShadow(
                                               color: DesignCourseAppTheme
-                                                  .nearlyWhite,
-                                            ),
+                                                  .nearlyBlue
+                                                  .withOpacity(0.5),
+                                              offset: const Offset(1.1, 1.1),
+                                              blurRadius: 10.0),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Type here',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            letterSpacing: 0.0,
+                                            color: DesignCourseAppTheme
+                                                .nearlyWhite,
                                           ),
                                         ),
                                       ),
