@@ -1,13 +1,13 @@
-import 'package:agni/pages/emotions/Anger/restructuring_steps/restructuring_step.dart';
+import 'package:agni/pages/emotions/Anger/restructuring_steps/step2_session.dart';
 import 'package:flutter/material.dart';
-import '../../design_course_app_theme.dart';
+import '../../../design_course_app_theme.dart';
 
-class CognitiveRestructuring extends StatefulWidget {
+class Step2 extends StatefulWidget {
   @override
-  _CognitiveRestructuringState createState() => _CognitiveRestructuringState();
+  _Step2State createState() => _Step2State();
 }
 
-class _CognitiveRestructuringState extends State<CognitiveRestructuring>
+class _Step2State extends State<Step2>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -58,7 +58,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/restructuring.jpg'),
+                    child: Image.asset('assets/images/restructuring/step2.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -99,7 +99,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Cognitive restructuring',
+                              'Step 2:',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -132,7 +132,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Cognitive restructuring is a technique that has been successfully used to help people change the way they think.It refers to therapeutic techniques that help people notice and change their negative thinking patterns',
+                                    'Cognitive reappraisal is an ability to successfully reappraise enables us to reduce negative emotions and open us up to experiencing happiness, even during difficult times.\nReappraisal involves cognitively reframing an event to reduce the negative emotions you feel.\nTo practice reappraisal, start by writing out a list of things you learned from a past failure.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -161,24 +161,24 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                     width: 48,
                                     height: 48,
                                     child: Container(
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyWhite,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
+                                        // decoration: BoxDecoration(
+                                        //   color: DesignCourseAppTheme.nearlyWhite,
+                                        //   borderRadius: const BorderRadius.all(
+                                        //     Radius.circular(16.0),
+                                        //   ),
+                                        //   border: Border.all(
+                                        //       color: DesignCourseAppTheme.grey
+                                        //           .withOpacity(0.2)),
+                                        // ),
+                                        // child: Icon(
+                                        //   Icons.add,
+                                        //   color: DesignCourseAppTheme.nearlyBlue,
+                                        //   size: 28,
+                                        // ),
                                         ),
-                                        border: Border.all(
-                                            color: DesignCourseAppTheme.grey
-                                                .withOpacity(0.2)),
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        size: 28,
-                                      ),
-                                    ),
                                   ),
                                   const SizedBox(
-                                    width: 16,
+                                    width: 18,
                                   ),
                                   Expanded(
                                     child: InkWell(
@@ -186,7 +186,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                         Navigator.of(context).push(
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                RestructuringSteps(),
+                                                Step2Session(),
                                           ),
                                         );
                                       },
@@ -208,7 +208,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                         ),
                                         child: Center(
                                           child: Text(
-                                            'Take Session',
+                                            'Take session',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
                                               fontWeight: FontWeight.w600,

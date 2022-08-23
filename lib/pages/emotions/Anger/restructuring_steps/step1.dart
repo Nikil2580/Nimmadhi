@@ -1,13 +1,12 @@
-import 'package:agni/pages/emotions/Anger/restructuring_steps/restructuring_step.dart';
 import 'package:flutter/material.dart';
-import '../../design_course_app_theme.dart';
+import '../../../design_course_app_theme.dart';
 
-class CognitiveRestructuring extends StatefulWidget {
+class Step1 extends StatefulWidget {
   @override
-  _CognitiveRestructuringState createState() => _CognitiveRestructuringState();
+  _Step1State createState() => _Step1State();
 }
 
-class _CognitiveRestructuringState extends State<CognitiveRestructuring>
+class _Step1State extends State<Step1>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -58,7 +57,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/restructuring.jpg'),
+                    child: Image.asset('assets/images/restructuring/step1.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -99,7 +98,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Cognitive restructuring',
+                              'Step 1: The Situation',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -116,8 +115,8 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                               padding: const EdgeInsets.all(8),
                               child: Row(
                                 children: <Widget>[
-//                                  getTimeBoxUI('5min', 'Practice'),
-//                                 getTimeBoxUI('1 time', 'Day'),
+                                  //getTimeBoxUI('5min', 'Practice'),
+                                  //getTimeBoxUI('1 time', 'Day'),
                                   //getTimeBoxUI('', 'Seat'),
                                 ],
                               ),
@@ -132,7 +131,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Cognitive restructuring is a technique that has been successfully used to help people change the way they think.It refers to therapeutic techniques that help people notice and change their negative thinking patterns',
+                                    'You want to identify the most upsetting feeling you had in the situation.Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling. It is easiest to focus on four broad feelings:\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\n Pick one of these four feelings and work through all 5 steps with this feeling. For example, fear might be the strongest feeling associated with going to the grocery store, while guilt might be the strongest feeling associated with the thought of not evacuating from the flood soon enough.\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -161,62 +160,52 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                     width: 48,
                                     height: 48,
                                     child: Container(
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyWhite,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
+                                        // decoration: BoxDecoration(
+                                        //   color: DesignCourseAppTheme.nearlyWhite,
+                                        //   borderRadius: const BorderRadius.all(
+                                        //     Radius.circular(16.0),
+                                        //   ),
+                                        //   border: Border.all(
+                                        //       color: DesignCourseAppTheme.grey
+                                        //           .withOpacity(0.2)),
+                                        // ),
+                                        // // child: Icon(
+                                        // //   Icons.add,
+                                        // //   color: DesignCourseAppTheme.nearlyBlue,
+                                        // //   size: 28,
+                                        // // ),
                                         ),
-                                        border: Border.all(
-                                            color: DesignCourseAppTheme.grey
-                                                .withOpacity(0.2)),
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        size: 28,
-                                      ),
-                                    ),
                                   ),
                                   const SizedBox(
                                     width: 16,
                                   ),
                                   Expanded(
-                                    child: InkWell(
-                                      onTap: () {
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                RestructuringSteps(),
-                                          ),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        decoration: BoxDecoration(
-                                          color: DesignCourseAppTheme.nearlyBlue,
-                                          borderRadius: const BorderRadius.all(
-                                            Radius.circular(16.0),
-                                          ),
-                                          boxShadow: <BoxShadow>[
-                                            BoxShadow(
-                                                color: DesignCourseAppTheme
-                                                    .nearlyBlue
-                                                    .withOpacity(0.5),
-                                                offset: const Offset(1.1, 1.1),
-                                                blurRadius: 10.0),
-                                          ],
+                                    child: Container(
+                                      height: 48,
+                                      decoration: BoxDecoration(
+                                        color: DesignCourseAppTheme.nearlyBlue,
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(16.0),
                                         ),
-                                        child: Center(
-                                          child: Text(
-                                            'Take Session',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18,
-                                              letterSpacing: 0.0,
+                                        boxShadow: <BoxShadow>[
+                                          BoxShadow(
                                               color: DesignCourseAppTheme
-                                                  .nearlyWhite,
-                                            ),
+                                                  .nearlyBlue
+                                                  .withOpacity(0.5),
+                                              offset: const Offset(1.1, 1.1),
+                                              blurRadius: 10.0),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Type here',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            letterSpacing: 0.0,
+                                            color: DesignCourseAppTheme
+                                                .nearlyWhite,
                                           ),
                                         ),
                                       ),

@@ -1,13 +1,12 @@
-import 'package:agni/pages/emotions/Anger/restructuring_steps/restructuring_step.dart';
 import 'package:flutter/material.dart';
-import '../../design_course_app_theme.dart';
+import '../../../design_course_app_theme.dart';
 
-class CognitiveRestructuring extends StatefulWidget {
+class Step3 extends StatefulWidget {
   @override
-  _CognitiveRestructuringState createState() => _CognitiveRestructuringState();
+  _Step3State createState() => _Step3State();
 }
 
-class _CognitiveRestructuringState extends State<CognitiveRestructuring>
+class _Step3State extends State<Step3>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -58,7 +57,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/restructuring.jpg'),
+                    child: Image.asset('assets/images/restructuring/step3.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -99,7 +98,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Cognitive restructuring',
+                              'Step 3: Evaluate the thought',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -132,7 +131,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Cognitive restructuring is a technique that has been successfully used to help people change the way they think.It refers to therapeutic techniques that help people notice and change their negative thinking patterns',
+                                    'You want to evaluate the accuracy of your upsetting thought as carefully and objectively as possible. To do this, first think of all of the evidence you can that supports your thought or makes you think it is accurate. For example, for the thought You said “hello” to an old friend, and that friend ignored you.” the person could ask. Write all the evidence down on the worksheet.\nThen, think of all the evidence you can that does not support your thought, or suggests it may not be accurate. Consider as many reasons as you can for why your thought might not be correct. Then, write all the evidence against the thought down on the worksheet\n',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -161,62 +160,52 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                     width: 48,
                                     height: 48,
                                     child: Container(
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyWhite,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
+                                        // decoration: BoxDecoration(
+                                        //   color: DesignCourseAppTheme.nearlyWhite,
+                                        //   borderRadius: const BorderRadius.all(
+                                        //     Radius.circular(16.0),
+                                        //   ),
+                                        //   border: Border.all(
+                                        //       color: DesignCourseAppTheme.grey
+                                        //           .withOpacity(0.2)),
+                                        // ),
+                                        // child: Icon(
+                                        //   Icons.add,
+                                        //   color: DesignCourseAppTheme.nearlyBlue,
+                                        //   size: 28,
+                                        // ),
                                         ),
-                                        border: Border.all(
-                                            color: DesignCourseAppTheme.grey
-                                                .withOpacity(0.2)),
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        size: 28,
-                                      ),
-                                    ),
                                   ),
                                   const SizedBox(
                                     width: 16,
                                   ),
                                   Expanded(
-                                    child: InkWell(
-                                      onTap: () {
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                RestructuringSteps(),
-                                          ),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        decoration: BoxDecoration(
-                                          color: DesignCourseAppTheme.nearlyBlue,
-                                          borderRadius: const BorderRadius.all(
-                                            Radius.circular(16.0),
-                                          ),
-                                          boxShadow: <BoxShadow>[
-                                            BoxShadow(
-                                                color: DesignCourseAppTheme
-                                                    .nearlyBlue
-                                                    .withOpacity(0.5),
-                                                offset: const Offset(1.1, 1.1),
-                                                blurRadius: 10.0),
-                                          ],
+                                    child: Container(
+                                      height: 48,
+                                      decoration: BoxDecoration(
+                                        color: DesignCourseAppTheme.nearlyBlue,
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(16.0),
                                         ),
-                                        child: Center(
-                                          child: Text(
-                                            'Take Session',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18,
-                                              letterSpacing: 0.0,
+                                        boxShadow: <BoxShadow>[
+                                          BoxShadow(
                                               color: DesignCourseAppTheme
-                                                  .nearlyWhite,
-                                            ),
+                                                  .nearlyBlue
+                                                  .withOpacity(0.5),
+                                              offset: const Offset(1.1, 1.1),
+                                              blurRadius: 10.0),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Take Session',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            letterSpacing: 0.0,
+                                            color: DesignCourseAppTheme
+                                                .nearlyWhite,
                                           ),
                                         ),
                                       ),
