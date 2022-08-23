@@ -4,7 +4,7 @@
 import 'package:agni/pages/home_page.dart';
 import 'package:agni/pages/notifications_page.dart';
 import 'package:agni/pages/profile_page.dart';
-import 'package:agni/pages/search_page.dart';
+import 'package:agni/pages/emotions_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -24,7 +24,7 @@ class _AppRouteState extends State<AppRoute> {
   // ignore: prefer_final_fields
   List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    SearchPage(),
+    EmotionsPage(),
     //Text("Add"),
     NotificationsPage(),
     ProfilePage(),
