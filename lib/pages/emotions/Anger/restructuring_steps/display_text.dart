@@ -1,3 +1,4 @@
+import 'package:agni/pages/design_course_app_theme.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DisplayText extends StatefulWidget {
   DisplayText({super.key, required this.steps});
@@ -43,10 +45,21 @@ class _DisplayTextState extends State<DisplayText> {
               child: ListView.builder(
                 itemCount: data[widget.steps].length,
                 itemBuilder: (context, index) {
-                  return Card(
-                      clipBehavior: Clip.antiAlias,
-                      elevation: 10,
-                      child: Text(data[widget.steps][index]));
+                  return Padding(
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: Card(
+                        clipBehavior: Clip.antiAlias,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                        elevation: 10,
+                        child: Expanded(
+                            child: Text(
+                          data[widget.steps][index],
+                          style: GoogleFonts.sourceCodePro(
+                              color: DesignCourseAppTheme.grey),
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                  );
                 },
               ),
             ),
