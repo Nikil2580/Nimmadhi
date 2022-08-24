@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
+import 'display_text.dart';
 import 'edit_text.dart';
 
 class Step4 extends StatefulWidget {
@@ -57,7 +58,8 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                      child: Image.asset('assets/images/restructuring/step4.png'),
+                      child:
+                          Image.asset('assets/images/restructuring/step4.png'),
                       fit: BoxFit.fill),
                 ),
               ],
@@ -145,6 +147,7 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
+                          Expanded(child: DisplayText(steps: '4')),
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity3,
@@ -187,11 +190,12 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                                               builder: (context) =>
                                                   EditText(steps: '4')),
                                         );
-                                      },,
+                                      },
                                       child: Container(
                                         height: 48,
                                         decoration: BoxDecoration(
-                                          color: DesignCourseAppTheme.nearlyBlue,
+                                          color:
+                                              DesignCourseAppTheme.nearlyBlue,
                                           borderRadius: const BorderRadius.all(
                                             Radius.circular(16.0),
                                           ),

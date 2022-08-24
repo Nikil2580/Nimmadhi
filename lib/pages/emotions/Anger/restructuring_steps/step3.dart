@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
+import 'display_text.dart';
 import 'edit_text.dart';
 
 class Step3 extends StatefulWidget {
@@ -146,6 +147,7 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
+                          Expanded(child: DisplayText(steps: '3')),
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity3,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
+import 'display_text.dart';
 import 'edit_text.dart';
 
 class Step2Session extends StatefulWidget {
@@ -148,6 +149,7 @@ class _Step2SessionState extends State<Step2Session>
                               ),
                             ),
                           ),
+                          Expanded(child: DisplayText(steps: '2')),
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity3,
