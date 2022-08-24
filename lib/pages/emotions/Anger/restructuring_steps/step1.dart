@@ -1,3 +1,4 @@
+import 'package:agni/pages/emotions/Anger/restructuring_steps/edit_text.dart';
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
 
@@ -6,8 +7,7 @@ class Step1 extends StatefulWidget {
   _Step1State createState() => _Step1State();
 }
 
-class _Step1State extends State<Step1>
-    with TickerProviderStateMixin {
+class _Step1State extends State<Step1> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -197,15 +197,25 @@ class _Step1State extends State<Step1>
                                         ],
                                       ),
                                       child: Center(
-                                        child: Text(
-                                          'Type here',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
+                                        child: InkWell(
+                                          onTap: () => {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      EditText(steps: '1')),
+                                            )
+                                          },
+                                          child: Text(
+                                            'Type here',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 18,
+                                              letterSpacing: 0.0,
+                                              color: DesignCourseAppTheme
+                                                  .nearlyWhite,
+                                            ),
                                           ),
                                         ),
                                       ),

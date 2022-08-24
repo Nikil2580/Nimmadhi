@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
+import 'edit_text.dart';
 
 class Step2Session extends StatefulWidget {
   @override
@@ -57,7 +58,8 @@ class _Step2SessionState extends State<Step2Session>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/restructuring/step2_session.png'),
+                    child: Image.asset(
+                        'assets/images/restructuring/step2_session.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -180,32 +182,43 @@ class _Step2SessionState extends State<Step2Session>
                                     width: 16,
                                   ),
                                   Expanded(
-                                    child: Container(
-                                      height: 48,
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  EditText(steps: '1')),
+                                        );
+                                      },
+                                      child: Container(
+                                        height: 48,
+                                        decoration: BoxDecoration(
+                                          color:
+                                              DesignCourseAppTheme.nearlyBlue,
+                                          borderRadius: const BorderRadius.all(
+                                            Radius.circular(16.0),
+                                          ),
+                                          boxShadow: <BoxShadow>[
+                                            BoxShadow(
+                                                color: DesignCourseAppTheme
+                                                    .nearlyBlue
+                                                    .withOpacity(0.5),
+                                                offset: const Offset(1.1, 1.1),
+                                                blurRadius: 10.0),
+                                          ],
                                         ),
-                                        boxShadow: <BoxShadow>[
-                                          BoxShadow(
+                                        child: Center(
+                                          child: Text(
+                                            'Type here',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 18,
+                                              letterSpacing: 0.0,
                                               color: DesignCourseAppTheme
-                                                  .nearlyBlue
-                                                  .withOpacity(0.5),
-                                              offset: const Offset(1.1, 1.1),
-                                              blurRadius: 10.0),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Type here',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
+                                                  .nearlyWhite,
+                                            ),
                                           ),
                                         ),
                                       ),
