@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:agni/quiz/screens/quiz/welcome_screen.dart';
 
+import '../quiz/screens/quiz/welcome_screen2.dart';
+
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
 
@@ -94,7 +96,12 @@ class _HomePageState extends State<HomePage> {
                   ElevatedButton(
                       style:
                           ElevatedButton.styleFrom(primary: Colors.deepPurple),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          settings: RouteSettings(name: "/WelcomeScreen2"),
+                          builder: (context) => WelcomeScreen2(),
+                        ));
+                      },
                       child: Text('Stress Test')),
                 ],
               ),
