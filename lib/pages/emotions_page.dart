@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_const, unnecessary_new
+import 'package:agni/utils/constants.dart';
 import 'package:agni/pages/emotions/Anger/better_communication.dart';
 import 'package:agni/pages/emotions/Anger/cognitive_reappraisal.dart';
 import 'package:agni/pages/emotions/Anger/cognitive_restructuring.dart';
@@ -31,10 +33,11 @@ class _EmotionsPageState extends State<EmotionsPage> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 108, 99, 254),
-          title: Text('Events'),
+          backgroundColor: Colors.deepPurple,
+          title: Text('Emotions'),
           automaticallyImplyLeading: false,
           centerTitle: true,
+          // ignore: prefer_const_literals_to_create_immutables
           bottom: TabBar(tabs: [
             Tab(text: 'Anger'),
             Tab(text: 'Anxiety'),
@@ -49,23 +52,6 @@ class _EmotionsPageState extends State<EmotionsPage> {
                 child: Scrollbar(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    // child: TabBar(
-                    // minWidth: 120.0,
-                    // fontSize: 14,
-                    // cornerRadius: 7.0,
-                    // customWidths: _customWidhts,
-                    // activeBgColors: _activebgcolors,
-                    // activeFgColor: Colors.white,
-                    // inactiveBgColor: Color.fromARGB(251, 251, 251, 251),
-                    // inactiveFgColor: Colors.black,
-                    // //initialLabelIndex: 0,
-                    // //totalSwitches: 5,
-                    // labels: _categories,
-                    // radiusStyle: true,
-                    // customTextStyles: [
-                    //   TextStyle(fontSize: 11, fontWeight: FontWeight.w200)
-                    // ],
-                    // ),
                   ),
                 ),
               ),
@@ -82,11 +68,12 @@ class _EmotionsPageState extends State<EmotionsPage> {
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(14)),
+                        // ignore: unnecessary_new
                         child: new InkWell(
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => _pages1[index],
+                                builder: (context) => pages1[index],
                               ),
                             );
                           },
@@ -122,19 +109,21 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                                     right: 10.0),
                                                 child: IconButton(
                                                   icon: Icon(
-                                                    _selections1[index]
+                                                    angerselections[index]
                                                         ? Icons
                                                             .favorite_border_sharp
                                                         : Icons.favorite_sharp,
-                                                    color: _selections1[index]
-                                                        ? Colors.white
-                                                        : Colors.red,
+                                                    color:
+                                                        angerselections[index]
+                                                            ? Colors.white
+                                                            : Colors.red,
                                                     size: 20,
                                                   ),
                                                   onPressed: () {
                                                     setState(() {
-                                                      _selections1[index] =
-                                                          !_selections1[index];
+                                                      angerselections[index] =
+                                                          !angerselections[
+                                                              index];
                                                     });
                                                   },
                                                 ),
@@ -172,23 +161,6 @@ class _EmotionsPageState extends State<EmotionsPage> {
                 child: Scrollbar(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    // child: TabBar(
-                    // minWidth: 120.0,
-                    // fontSize: 14,
-                    // cornerRadius: 7.0,
-                    // customWidths: _customWidhts,
-                    // activeBgColors: _activebgcolors,
-                    // activeFgColor: Colors.white,
-                    // inactiveBgColor: Color.fromARGB(251, 251, 251, 251),
-                    // inactiveFgColor: Colors.black,
-                    // //initialLabelIndex: 0,
-                    // //totalSwitches: 5,
-                    // labels: _categories,
-                    // radiusStyle: true,
-                    // customTextStyles: [
-                    //   TextStyle(fontSize: 11, fontWeight: FontWeight.w200)
-                    // ],
-                    // ),
                   ),
                 ),
               ),
@@ -209,7 +181,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => _pages2[index],
+                                builder: (context) => pages2[index],
                               ),
                             );
                           },
@@ -245,19 +217,21 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                                     right: 10.0),
                                                 child: IconButton(
                                                   icon: Icon(
-                                                    _selections2[index]
+                                                    anxietyselections[index]
                                                         ? Icons
                                                             .favorite_border_sharp
                                                         : Icons.favorite_sharp,
-                                                    color: _selections2[index]
-                                                        ? Colors.white
-                                                        : Colors.red,
+                                                    color:
+                                                        anxietyselections[index]
+                                                            ? Colors.white
+                                                            : Colors.red,
                                                     size: 20,
                                                   ),
                                                   onPressed: () {
                                                     setState(() {
-                                                      _selections2[index] =
-                                                          !_selections2[index];
+                                                      anxietyselections[index] =
+                                                          !anxietyselections[
+                                                              index];
                                                     });
                                                   },
                                                 ),
@@ -295,23 +269,6 @@ class _EmotionsPageState extends State<EmotionsPage> {
                 child: Scrollbar(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    // child: TabBar(
-                    // minWidth: 120.0,
-                    // fontSize: 14,
-                    // cornerRadius: 7.0,
-                    // customWidths: _customWidhts,
-                    // activeBgColors: _activebgcolors,
-                    // activeFgColor: Colors.white,
-                    // inactiveBgColor: Color.fromARGB(251, 251, 251, 251),
-                    // inactiveFgColor: Colors.black,
-                    // //initialLabelIndex: 0,
-                    // //totalSwitches: 5,
-                    // labels: _categories,
-                    // radiusStyle: true,
-                    // customTextStyles: [
-                    //   TextStyle(fontSize: 11, fontWeight: FontWeight.w200)
-                    // ],
-                    // ),
                   ),
                 ),
               ),
@@ -332,7 +289,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => _pages3[index],
+                                builder: (context) => pages3[index],
                               ),
                             );
                           },
@@ -368,19 +325,19 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                                     right: 10.0),
                                                 child: IconButton(
                                                   icon: Icon(
-                                                    _selections3[index]
+                                                    sadselections[index]
                                                         ? Icons
                                                             .favorite_border_sharp
                                                         : Icons.favorite_sharp,
-                                                    color: _selections3[index]
+                                                    color: sadselections[index]
                                                         ? Colors.white
                                                         : Colors.red,
                                                     size: 20,
                                                   ),
                                                   onPressed: () {
                                                     setState(() {
-                                                      _selections3[index] =
-                                                          !_selections3[index];
+                                                      sadselections[index] =
+                                                          !sadselections[index];
                                                     });
                                                   },
                                                 ),
@@ -416,57 +373,3 @@ class _EmotionsPageState extends State<EmotionsPage> {
     );
   }
 }
-
-final List<String> entries1 = <String>[
-  'relaxation.jpg',
-  'restructuring_card.jpg',
-  'think.jpg',
-  'communication.jpg',
-  'reappraisal.jpg',
-  'pause.jpg'
-];
-
-final List<String> entries2 = <String>['mindful.png', 'self_awareness.jpg'];
-
-final List<String> entries3 = <String>[
-  'self_compassion_card.jpg',
-  'emotional_support.jpg'
-];
-
-final List<String> anger = <String>[
-  'Relaxation Techniques',
-  'Cognitive Restructuring',
-  'Think Before You Speak',
-  'Better Communication',
-  'Cognitive Reappraisal',
-  'Pause and Reflect'
-];
-
-final List<String> anxiety = <String>['Being Mindful', 'Self Awareness'];
-
-final List<String> sad = <String>['Self Compassion', 'Emotional Support'];
-
-final List<bool> _selections1 = List.generate(anger.length, (_) => true);
-
-final List<bool> _selections2 = List.generate(anger.length, (_) => true);
-
-final List<bool> _selections3 = List.generate(anger.length, (_) => true);
-
-final List<Widget> _pages1 = [
-  Relaxation(),
-  CognitiveRestructuring(),
-  ThinkSpeak(),
-  BetterCommunication(),
-  CognitiveReappraisal(),
-  PauseReflect()
-];
-
-final List<Widget> _pages2 = [
-  BeingMindful(),
-  SelfAwareness(),
-];
-
-final List<Widget> _pages3 = [
-  SelfCompassion(),
-  EmotionalSupport(),
-];

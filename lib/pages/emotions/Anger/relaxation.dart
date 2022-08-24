@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
+import 'package:agni/utils/constants.dart';
 
 class Relaxation extends StatefulWidget {
   @override
@@ -253,14 +254,23 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0)),
                   elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite,
-                        color: DesignCourseAppTheme.nearlyWhite,
-                        size: 30,
+                  child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        angerselections[0] = !angerselections[0];
+                      });
+                    },
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      child: Center(
+                        child: Icon(
+                          angerselections[0]
+                              ? Icons.favorite_border_sharp
+                              : Icons.favorite_sharp,
+                          color: angerselections[0] ? Colors.white : Colors.red,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),

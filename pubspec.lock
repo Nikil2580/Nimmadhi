@@ -168,12 +168,20 @@ packages:
     source: hosted
     version: "0.0.3"
   flutter_svg:
+<<<<<<< HEAD
     dependency: transitive
+=======
+    dependency: "direct main"
+>>>>>>> cd5e97c312c61cf7888f7edb541b9d2b57f1f0c9
     description:
       name: flutter_svg
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.1.4"
+=======
+    version: "0.21.0+1"
+>>>>>>> cd5e97c312c61cf7888f7edb541b9d2b57f1f0c9
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -184,6 +192,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.6.5"
   google_fonts:
     dependency: "direct main"
     description:
@@ -461,7 +476,11 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "6.1.0"
+=======
+    version: "5.4.1"
+>>>>>>> cd5e97c312c61cf7888f7edb541b9d2b57f1f0c9
 sdks:
   dart: ">=2.17.6 <3.0.0"
   flutter: ">=3.0.0"
