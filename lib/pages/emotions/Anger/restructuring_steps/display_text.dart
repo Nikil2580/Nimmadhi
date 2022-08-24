@@ -57,7 +57,7 @@ class _DisplayTextState extends State<DisplayText> {
                           data[widget.steps][index],
                           style: GoogleFonts.sourceCodePro(
                               color: DesignCourseAppTheme.grey),
-                          overflow: TextOverflow.ellipsis,
+                          overflow: TextOverflow.visible,
                         ))),
                   );
                 },
