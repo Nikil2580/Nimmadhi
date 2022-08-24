@@ -86,7 +86,7 @@ class _EditTextState extends State<EditText> {
                     behavior: SnackBarBehavior.floating,
                     backgroundColor: Colors.transparent,
                     content: AwesomeSnackbarContent(
-                      title: 'On Snap!',
+                      title: 'Let\'s Go',
                       message: 'Note successfully added',
                       contentType: ContentType.success,
                     ),

@@ -7,8 +7,7 @@ class Step2 extends StatefulWidget {
   _Step2State createState() => _Step2State();
 }
 
-class _Step2State extends State<Step2>
-    with TickerProviderStateMixin {
+class _Step2State extends State<Step2> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -193,7 +192,8 @@ class _Step2State extends State<Step2>
                                       child: Container(
                                         height: 48,
                                         decoration: BoxDecoration(
-                                          color: DesignCourseAppTheme.nearlyBlue,
+                                          color:
+                                              DesignCourseAppTheme.nearlyBlue,
                                           borderRadius: const BorderRadius.all(
                                             Radius.circular(16.0),
                                           ),

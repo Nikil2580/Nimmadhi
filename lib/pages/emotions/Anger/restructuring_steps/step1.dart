@@ -1,3 +1,4 @@
+import 'package:agni/pages/emotions/Anger/restructuring_steps/display_text.dart';
 import 'package:agni/pages/emotions/Anger/restructuring_steps/edit_text.dart';
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
@@ -146,6 +147,7 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
+                          Expanded(child: DisplayText(steps: '1')),
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity3,
@@ -197,7 +199,7 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                                         ],
                                       ),
                                       child: Center(
-                                        child: InkWell(
+                                        child: GestureDetector(
                                           onTap: () => {
                                             Navigator.push(
                                               context,
