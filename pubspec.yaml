@@ -42,6 +42,7 @@ dependencies:
   google_nav_bar: ^5.0.6
   google_fonts: ^3.0.1
   flutter_remix: ^0.0.3
+  google_sign_in: ^5.0.0
 
 dev_dependencies:
   flutter_test:

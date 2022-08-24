@@ -2,6 +2,8 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_remix/flutter_remix.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class Login extends StatefulWidget {
   final VoidCallback showRegisterPage;
@@ -12,15 +14,28 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  //text controllers
+  //text controllers\
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  GoogleSignInAccount? _user;
+  GoogleSignInAccount get user => _user!;
 
   Future signIn() async {
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: _emailController.text.trim(),
       password: _passwordController.text.trim(),
     );
+  }
+
+  Future signInWithGoogle() async {
+    final googleUser = await GoogleSignIn().signIn();
+    if (googleUser == null) return;
+    _user = googleUser;
+
+    final googleAuth = await googleUser.authentication;
+    final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
+    await FirebaseAuth.instance.signInWithCredential(credential);
   }
 
   @override
@@ -127,6 +142,33 @@ class _LoginState extends State<Login> {
                       style: TextStyle(color: Colors.indigo, fontSize: 14),
                     ))
               ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                  child: ElevatedButton(
+                    onPressed: signInWithGoogle,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: EdgeInsets.all(20),
+                      primary: Colors.deepPurple,
+                      elevation: 10,
+                    ),
+                    child: Row(children: [
+                      Icon(FlutterRemix.google_fill),
+                      Text('Sign In With Google')
+                    ]),
+                  ),
+                ),
+              ),
             )
           ],
         ),
