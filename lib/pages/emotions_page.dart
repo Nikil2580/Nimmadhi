@@ -1,6 +1,7 @@
 import 'package:agni/pages/emotions/Anger/better_communication.dart';
 import 'package:agni/pages/emotions/Anger/cognitive_reappraisal.dart';
 import 'package:agni/pages/emotions/Anger/cognitive_restructuring.dart';
+import 'package:agni/pages/emotions/Anger/pause_reflect.dart';
 import 'package:agni/pages/emotions/Anger/relaxation.dart';
 import 'package:agni/pages/emotions/Anger/think_before_you_speak.dart';
 import 'package:agni/pages/emotions/Anxiety/being_mindful.dart';
@@ -418,16 +419,17 @@ class _EmotionsPageState extends State<EmotionsPage> {
 
 final List<String> entries1 = <String>[
   'relaxation.jpg',
-  'restructuring.jpg',
+  'restructuring_card.jpg',
   'think.jpg',
   'communication.jpg',
-  'reappraisal.jpg'
+  'reappraisal.jpg',
+  'pause.jpg'
 ];
 
 final List<String> entries2 = <String>['mindful.png', 'self_awareness.jpg'];
 
 final List<String> entries3 = <String>[
-  'self_compassion.jpg',
+  'self_compassion_card.jpg',
   'emotional_support.jpg'
 ];
 
@@ -437,6 +439,7 @@ final List<String> anger = <String>[
   'Think Before You Speak',
   'Better Communication',
   'Cognitive Reappraisal',
+  'Pause and Reflect'
 ];
 
 final List<String> anxiety = <String>['Being Mindful', 'Self Awareness'];
@@ -454,7 +457,8 @@ final List<Widget> _pages1 = [
   CognitiveRestructuring(),
   ThinkSpeak(),
   BetterCommunication(),
-  CognitiveReappraisal()
+  CognitiveReappraisal(),
+  PauseReflect()
 ];
 
 final List<Widget> _pages2 = [
