@@ -188,7 +188,7 @@ class _Step2SessionState extends State<Step2Session>
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  EditText(steps: '1')),
+                                                  EditText(steps: '2')),
                                         );
                                       },
                                       child: Container(
