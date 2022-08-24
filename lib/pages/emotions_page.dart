@@ -3,6 +3,7 @@ import 'package:agni/utils/constants.dart';
 import 'package:agni/pages/emotions/Anger/better_communication.dart';
 import 'package:agni/pages/emotions/Anger/cognitive_reappraisal.dart';
 import 'package:agni/pages/emotions/Anger/cognitive_restructuring.dart';
+import 'package:agni/pages/emotions/Anger/pause_reflect.dart';
 import 'package:agni/pages/emotions/Anger/relaxation.dart';
 import 'package:agni/pages/emotions/Anger/think_before_you_speak.dart';
 import 'package:agni/pages/emotions/Anxiety/being_mindful.dart';
