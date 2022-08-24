@@ -1,3 +1,4 @@
+import 'package:agni/pages/emotions/Anger/reappraisal_session.dart';
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
 
@@ -180,32 +181,42 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
                                     width: 16,
                                   ),
                                   Expanded(
-                                    child: Container(
-                                      height: 48,
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ReappraisalSession(),
+                                          ),
+                                        );
+                                      },
+                                      child: Container(
+                                        height: 48,
+                                        decoration: BoxDecoration(
+                                          color: DesignCourseAppTheme.nearlyBlue,
+                                          borderRadius: const BorderRadius.all(
+                                            Radius.circular(16.0),
+                                          ),
+                                          boxShadow: <BoxShadow>[
+                                            BoxShadow(
+                                                color: DesignCourseAppTheme
+                                                    .nearlyBlue
+                                                    .withOpacity(0.5),
+                                                offset: const Offset(1.1, 1.1),
+                                                blurRadius: 10.0),
+                                          ],
                                         ),
-                                        boxShadow: <BoxShadow>[
-                                          BoxShadow(
+                                        child: Center(
+                                          child: Text(
+                                            'Take Session',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 18,
+                                              letterSpacing: 0.0,
                                               color: DesignCourseAppTheme
-                                                  .nearlyBlue
-                                                  .withOpacity(0.5),
-                                              offset: const Offset(1.1, 1.1),
-                                              blurRadius: 10.0),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Take Session',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
+                                                  .nearlyWhite,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -278,51 +289,51 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
     );
   }
 
-  Widget getTimeBoxUI(String text1, String txt2) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        decoration: BoxDecoration(
-          color: DesignCourseAppTheme.nearlyWhite,
-          borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: DesignCourseAppTheme.grey.withOpacity(0.2),
-                offset: const Offset(1.1, 1.1),
-                blurRadius: 8.0),
-          ],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(
-              left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                text1,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14,
-                  letterSpacing: 0.27,
-                  color: DesignCourseAppTheme.nearlyBlue,
-                ),
-              ),
-              Text(
-                txt2,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.w200,
-                  fontSize: 14,
-                  letterSpacing: 0.27,
-                  color: DesignCourseAppTheme.grey,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+  // Widget getTimeBoxUI(String text1, String txt2) {
+  //   return Padding(
+  //     padding: const EdgeInsets.all(8.0),
+  //     child: Container(
+  //       decoration: BoxDecoration(
+  //         color: DesignCourseAppTheme.nearlyWhite,
+  //         borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+  //         boxShadow: <BoxShadow>[
+  //           BoxShadow(
+  //               color: DesignCourseAppTheme.grey.withOpacity(0.2),
+  //               offset: const Offset(1.1, 1.1),
+  //               blurRadius: 8.0),
+  //         ],
+  //       ),
+  //       child: Padding(
+  //         padding: const EdgeInsets.only(
+  //             left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
+  //         child: Column(
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           crossAxisAlignment: CrossAxisAlignment.center,
+  //           children: <Widget>[
+  //             Text(
+  //               text1,
+  //               textAlign: TextAlign.center,
+  //               style: TextStyle(
+  //                 fontWeight: FontWeight.w600,
+  //                 fontSize: 14,
+  //                 letterSpacing: 0.27,
+  //                 color: DesignCourseAppTheme.nearlyBlue,
+  //               ),
+  //             ),
+  //             Text(
+  //               txt2,
+  //               textAlign: TextAlign.center,
+  //               style: TextStyle(
+  //                 fontWeight: FontWeight.w200,
+  //                 fontSize: 14,
+  //                 letterSpacing: 0.27,
+  //                 color: DesignCourseAppTheme.grey,
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 }
