@@ -128,11 +128,11 @@ class _EmotionalSupportState extends State<EmotionalSupport>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Self-compassion entails being warm ,understanding and nurturing toward ourselves when we want to ignore our pain or bombard ourselves with self-criticism.',
+                                    'Self-compassion entails  being warm,understanding and nurturing toward ourselves when we want to ignore our pain or bombard ourselves with self-criticism.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

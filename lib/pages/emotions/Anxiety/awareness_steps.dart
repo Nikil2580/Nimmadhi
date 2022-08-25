@@ -17,7 +17,10 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Self Awareness"),
+            title: Text(
+              "Self Awareness",
+              style: TextStyle(fontSize: 26),
+            ),
             backgroundColor: Colors.deepPurple,
           ),
           body: Column(
@@ -130,7 +133,9 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
                                             alignment: Alignment.center,
                                             child: Text(
                                               steps[index],
-                                              // style: titleStyle,
+                                              style: TextStyle(
+                                                fontSize: 22,
+                                              ),
                                             )),
                                       ),
                                     ),

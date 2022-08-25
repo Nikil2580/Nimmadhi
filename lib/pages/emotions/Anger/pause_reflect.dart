@@ -6,7 +6,8 @@ class PauseReflect extends StatefulWidget {
   _PauseReflectState createState() => _PauseReflectState();
 }
 
-class _PauseReflectState extends State<PauseReflect> with TickerProviderStateMixin {
+class _PauseReflectState extends State<PauseReflect>
+    with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -132,8 +133,8 @@ class _PauseReflectState extends State<PauseReflect> with TickerProviderStateMix
                                     'This involves making a decision about whether your thought is accurate or not, based on all the evidence you have listed in Step 3, and then taking action based on your decision.When considering the evidence for and against the accuracy of your thought, you should place the greatest weight on strong evidence that is objective and based on facts, and give less attention to weak evidence that is based only on feelings or beliefs.Being objective when evaluating your thought is important, since you want your understanding of the situation to be as accurate as possible so that any actions you take are informed and effective.After deciding whether the thought is accurate or not, you then take action, depending on your decision.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

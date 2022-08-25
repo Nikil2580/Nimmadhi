@@ -151,8 +151,8 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                                     'This method encourages you comfort and relaxation. It activates the sympathetic nervous system region, which is in charge of rest and healing.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
