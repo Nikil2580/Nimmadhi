@@ -39,32 +39,54 @@ class _DisplayTextState extends State<DisplayText> {
         }
         Map<String, dynamic> data =
             snapshot.data!.data() as Map<String, dynamic>;
-        return Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                itemCount: data[widget.steps].length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 10.0),
-                    child: Card(
-                        clipBehavior: Clip.antiAlias,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        elevation: 10,
-                        child: Expanded(
-                            child: Text(
-                          data[widget.steps][index],
-                          style: GoogleFonts.sourceCodePro(
-                              color: DesignCourseAppTheme.grey),
-                          overflow: TextOverflow.visible,
-                        ))),
-                  );
-                },
+        if (data[widget.steps] == null) {
+          return Row(
+            children: [
+              Expanded(
+                  child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Expanded(
+                    child: Text(
+                      "No notes added",
+                      style: GoogleFonts.rubik(
+                          color: DesignCourseAppTheme.dark_grey),
+                    ),
+                  ),
+                ),
+              ))
+            ],
+          );
+        } else {
+          return Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: data[widget.steps].length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 10.0),
+                      child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          elevation: 10,
+                          child: Expanded(
+                              child: Text(
+                            data[widget.steps][index],
+                            style: GoogleFonts.rubik(
+                                color: DesignCourseAppTheme.grey),
+                            overflow: TextOverflow.visible,
+                          ))),
+                    );
+                  },
+                ),
               ),
-            ),
-          ],
-        );
+            ],
+          );
+        }
       },
     );
   }
