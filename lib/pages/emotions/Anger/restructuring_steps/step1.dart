@@ -2,6 +2,7 @@ import 'package:agni/pages/emotions/Anger/restructuring_steps/display_text.dart'
 import 'package:agni/pages/emotions/Anger/restructuring_steps/edit_text.dart';
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
+import 'package:share_plus/share_plus.dart';
 
 class Step1 extends StatefulWidget {
   @override
@@ -132,7 +133,7 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'You want to identify the most upsetting feeling you had in the situation.Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling. It is easiest to focus on four broad feelings:\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\n Pick one of these four feelings and work through all 5 steps with this feeling. For example, fear might be the strongest feeling associated with going to the grocery store, while guilt might be the strongest feeling associated with the thought of not evacuating from the flood soon enough.\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling',
+                                    'You want to identify the most upsetting feeling you had in the situation. Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling. It is easiest to focus on four broad feelings:\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\n Pick one of these four feelings and work through all 5 steps with this feeling. For example, fear might be the strongest feeling associated with going to the grocery store, while guilt might be the strongest feeling associated with the thought of not evacuating from the flood soon enough.\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -244,19 +245,26 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: Card(
-                  color: DesignCourseAppTheme.nearlyBlue,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite,
-                        color: DesignCourseAppTheme.nearlyWhite,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Share.share(
+                      'The Situation \nYou want to identify the most upsetting feeling you had in the situation. Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling. It is easiest to focus on four broad feelings:\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\n Pick one of these four feelings and work through all 5 steps with this feeling. For example, fear might be the strongest feeling associated with going to the grocery store, while guilt might be the strongest feeling associated with the thought of not evacuating from the flood soon enough.\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling',
+                    );
+                  },
+                  child: Card(
+                    color: DesignCourseAppTheme.nearlyBlue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    elevation: 10.0,
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      child: Center(
+                        child: Icon(
+                          Icons.share,
+                          color: DesignCourseAppTheme.nearlyWhite,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),

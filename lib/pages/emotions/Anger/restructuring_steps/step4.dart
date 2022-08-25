@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../../design_course_app_theme.dart';
 import 'display_text.dart';
 import 'edit_text.dart';
@@ -245,19 +246,25 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: Card(
-                  color: DesignCourseAppTheme.nearlyBlue,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite,
-                        color: DesignCourseAppTheme.nearlyWhite,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Share.share(
+                        'Make a Decision \nThis involves making a decision about whether your thought is accurate or not, based on all the evidence you have listed in Step 3, and then taking action based on your decision.When considering the evidence for and against the accuracy of your thought, you should place the greatest weight on strong evidence that is objective and based on facts, and give less attention to weak evidence that is based only on feelings or beliefs.Being objective when evaluating your thought is important, since you want your understanding of the situation to be as accurate as possible so that any actions you take are informed and effective.After deciding whether the thought is accurate or not, you then take action, depending on your decision.');
+                  },
+                  child: Card(
+                    color: DesignCourseAppTheme.nearlyBlue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    elevation: 10.0,
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      child: Center(
+                        child: Icon(
+                          Icons.share,
+                          color: DesignCourseAppTheme.nearlyWhite,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),

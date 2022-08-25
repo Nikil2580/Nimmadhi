@@ -25,7 +25,16 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(24.0),
         child: ListView(
           children: [
-            SizedBox(height: 50),
+            SizedBox(height: 40),
+            // SizedBox(height: 10),
+            // Align(
+            //   alignment: Alignment.centerRight,
+            //   child: Container(
+            //     height: 40,
+            //     width: 110,
+            //     color: Colors.white,
+            //   ),
+            // ),
             Text(
               'Welcome!',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 48),
@@ -34,7 +43,7 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             Text(
-              'User',
+              'User 👋',
               style: TextStyle(fontSize: 36),
             ),
             SizedBox(
@@ -73,7 +82,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 20),
-            Text("Evaluate yourself",
+            Text("Evaluate yourself ✅",
                 style: TextStyle(
                   fontSize: 28,
                 )),
@@ -107,7 +116,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 20),
-            Text('Favorites',
+            Text('Favorites ⭐',
                 style: TextStyle(
                   fontSize: 28,
                 )),

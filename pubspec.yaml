@@ -46,6 +46,7 @@ dependencies:
   flutter_svg: 
   get: ^4.1.4
   awesome_snackbar_content:
+  share_plus: ^4.0.10+1
 
 dev_dependencies:
   flutter_test:

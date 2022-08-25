@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../../design_course_app_theme.dart';
 import 'display_text.dart';
 import 'edit_text.dart';
@@ -247,19 +248,25 @@ class _Step2SessionState extends State<Step2Session>
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: Card(
-                  color: DesignCourseAppTheme.nearlyBlue,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite,
-                        color: DesignCourseAppTheme.nearlyWhite,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Share.share(
+                        'The thought \nYou identify your thoughts about the situation that are underlying your upsetting feelings. If you are unsure what those thoughts are, ask yourself the following questions, depending on what your upsetting feelings were:\n• For fear or anxiety, ask yourself, “What bad thing do I expect to happen?” “What kind of danger am I in?”\n• For sadness or depression, ask yourself, “What have I lost hope in?” “What is missing in my life or in me?”\n• For guilt or shame, ask yourself, “What bad thing have I done?” “What is wrong with me?”\n• For anger, ask yourself, “What is unfair about this situation?” “Who has wronged me?”');
+                  },
+                  child: Card(
+                    color: DesignCourseAppTheme.nearlyBlue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    elevation: 10.0,
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      child: Center(
+                        child: Icon(
+                          Icons.share,
+                          color: DesignCourseAppTheme.nearlyWhite,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),

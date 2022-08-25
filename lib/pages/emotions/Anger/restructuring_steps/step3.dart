@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../../design_course_app_theme.dart';
 import 'display_text.dart';
 import 'edit_text.dart';
@@ -245,19 +246,25 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: Card(
-                  color: DesignCourseAppTheme.nearlyBlue,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite,
-                        color: DesignCourseAppTheme.nearlyWhite,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Share.share(
+                        'Evaluate the thought\nYou want to evaluate the accuracy of your upsetting thought as carefully and objectively as possible. To do this, first think of all of the evidence you can that supports your thought or makes you think it is accurate. For example, for the thought You said “hello” to an old friend, and that friend ignored you.” the person could ask. Write all the evidence down on the worksheet.\nThen, think of all the evidence you can that does not support your thought, or suggests it may not be accurate. Consider as many reasons as you can for why your thought might not be correct. Then, write all the evidence against the thought down on the worksheet');
+                  },
+                  child: Card(
+                    color: DesignCourseAppTheme.nearlyBlue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    elevation: 10.0,
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      child: Center(
+                        child: Icon(
+                          Icons.share,
+                          color: DesignCourseAppTheme.nearlyWhite,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),
