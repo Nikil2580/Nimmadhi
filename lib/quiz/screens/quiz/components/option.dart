@@ -50,22 +50,25 @@ class Option extends StatelessWidget {
                 children: [
                   Text(
                     "${index + 1}. $text",
-                    style: TextStyle(color: getTheRightColor(), fontSize: 12),
+                    style: TextStyle(
+                        color: getTheRightColor(),
+                        fontSize: 12,
+                        overflow: TextOverflow.visible),
                   ),
-                  Container(
-                    height: 26,
-                    width: 26,
-                    decoration: BoxDecoration(
-                      color: getTheRightColor() == kGrayColor
-                          ? Colors.transparent
-                          : getTheRightColor(),
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all(color: getTheRightColor()),
-                    ),
-                    child: getTheRightColor() == kGrayColor
-                        ? null
-                        : Icon(getTheRightIcon(), size: 16),
-                  )
+                  // Container(
+                  //   height: 26,
+                  //   width: 26,
+                  //   decoration: BoxDecoration(
+                  //     color: getTheRightColor() == kGrayColor
+                  //         ? Colors.transparent
+                  //         : getTheRightColor(),
+                  //     borderRadius: BorderRadius.circular(50),
+                  //     border: Border.all(color: getTheRightColor()),
+                  //   ),
+                  //   child: getTheRightColor() == kGrayColor
+                  //       ? null
+                  //       : Icon(getTheRightIcon(), size: 16),
+                  // )
                 ],
               ),
             ),
