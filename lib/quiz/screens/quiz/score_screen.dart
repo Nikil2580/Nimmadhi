@@ -34,6 +34,7 @@ class ScoreScreen extends StatelessWidget {
                     .headline4
                     ?.copyWith(color: kSecondaryColor),
               ),
+              Spacer(),
               ElevatedButton(
                   onPressed: () {
                     try {
@@ -80,4 +81,6 @@ class ScoreScreen extends StatelessWidget {
       ),
     );
   }
+
+  
 }
