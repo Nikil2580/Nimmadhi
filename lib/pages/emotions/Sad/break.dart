@@ -132,7 +132,7 @@ class _SelfCompassionBreakState extends State<SelfCompassionBreak>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Enter Content...',
+                                    'This session can be used any time of day or night and will help you remember to evoke the three aspects of self-compassion in the moment you need it most.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,

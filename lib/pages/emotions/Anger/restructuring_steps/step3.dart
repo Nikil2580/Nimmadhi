@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
+import 'display_text.dart';
+import 'edit_text.dart';
 
 class Step3 extends StatefulWidget {
   @override
@@ -145,6 +147,7 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
+                          Expanded(child: DisplayText(steps: '3')),
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity3,
@@ -159,21 +162,21 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                                   //   width: 48,
                                   //   height: 48,
                                   //   child: Container(
-                                  // decoration: BoxDecoration(
-                                  //   color: DesignCourseAppTheme.nearlyWhite,
-                                  //   borderRadius: const BorderRadius.all(
-                                  //     Radius.circular(16.0),
-                                  //   ),
-                                  //   border: Border.all(
-                                  //       color: DesignCourseAppTheme.grey
-                                  //           .withOpacity(0.2)),
-                                  // ),
-                                  // // child: Icon(
-                                  // //   Icons.add,
-                                  // //   color: DesignCourseAppTheme.nearlyBlue,
-                                  // //   size: 28,
-                                  // // ),
+                                  //     decoration: BoxDecoration(
+                                  //       color: DesignCourseAppTheme.nearlyWhite,
+                                  //       borderRadius: const BorderRadius.all(
+                                  //         Radius.circular(16.0),
                                   //       ),
+                                  //       border: Border.all(
+                                  //           color: DesignCourseAppTheme.grey
+                                  //               .withOpacity(0.2)),
+                                  //     ),
+                                  //     child: Icon(
+                                  //       Icons.add,
+                                  //       color: DesignCourseAppTheme.nearlyBlue,
+                                  //       size: 28,
+                                  //     ),
+                                  //   ),
                                   // ),
                                   // const SizedBox(
                                   //   width: 16,
@@ -197,7 +200,7 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'Type here',
+                                          'Type Here',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,

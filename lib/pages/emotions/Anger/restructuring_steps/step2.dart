@@ -97,7 +97,7 @@ class _Step2State extends State<Step2> with TickerProviderStateMixin {
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Step 1: The Feeling',
+                              'Step 2: The Feeling',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -130,7 +130,7 @@ class _Step2State extends State<Step2> with TickerProviderStateMixin {
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'You want to identify the most upsetting feeling you had in the situation.Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling. It is easiest to focus on four broad feelings:\n\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling.\n\nCR-Cognitive Restructuring',
+                                    'You want to identify the most upsetting feeling you had in the situation.Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling.\n It is easiest to focus on four broad feelings, Try picking one of the following emotions:\n\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling.\n\nCR-Cognitive Restructuring',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,

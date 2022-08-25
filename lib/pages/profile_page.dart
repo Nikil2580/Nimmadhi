@@ -103,24 +103,24 @@ class _ProfilePageState extends State<ProfilePage> {
                           style: TextStyle(fontSize: 24),
                         ),
                         SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Followers',
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(width: 5),
-                            Text('69'),
-                            SizedBox(width: 15),
-                            Text(
-                              'Following',
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(width: 5),
-                            Text('42'),
-                          ],
-                        ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [
+                        //     Text(
+                        //       'Followers',
+                        //       style: TextStyle(fontWeight: FontWeight.w600),
+                        //     ),
+                        //     SizedBox(width: 5),
+                        //     Text('66'),
+                        //     SizedBox(width: 15),
+                        //     Text(
+                        //       'Following',
+                        //       style: TextStyle(fontWeight: FontWeight.w600),
+                        //     ),
+                        //     SizedBox(width: 5),
+                        //     Text('42'),
+                        //   ],
+                        // ),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -131,66 +131,6 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text('${user.email}')
                       ],
                     ),
-                    SizedBox(height: 20),
-                    Row(
-                      children: [
-                        Icon(FlutterRemix.github_line, size: 20),
-                        SizedBox(width: 5),
-                        Text('Github')
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      children: [
-                        Icon(FlutterRemix.linkedin_box_line, size: 20),
-                        SizedBox(width: 5),
-                        Text('LinkedIn')
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      children: [
-                        Text('Interests:',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                            )),
-                        SizedBox(width: 5),
-                        Text('Flutter, Web Design, Blockchain, Crypto')
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Ideas",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 24),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    Expanded(
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 6,
-                        itemBuilder: (context, index) {
-                          return Card(
-                            elevation: 5,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(14),
-                            ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Container(
-                                height: double.infinity,
-                                width: 200,
-                                color: Colors.white,
-                                child: Center(child: Text('Idea ${index}')),
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    )
                   ],
                 ),
               ),

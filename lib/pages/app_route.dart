@@ -2,7 +2,6 @@
 
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:agni/pages/home_page.dart';
-import 'package:agni/pages/notifications_page.dart';
 import 'package:agni/pages/profile_page.dart';
 import 'package:agni/pages/emotions_page.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +25,6 @@ class _AppRouteState extends State<AppRoute> {
     HomePage(),
     EmotionsPage(),
     //Text("Add"),
-    NotificationsPage(),
     ProfilePage(),
   ];
 
@@ -65,10 +63,6 @@ class _AppRouteState extends State<AppRoute> {
               // GButton(
               //   icon: FlutterRemix.add_line,
               // ),
-              GButton(
-                icon: FlutterRemix.heart_3_line,
-                text: '0',
-              ),
               GButton(
                 icon: FlutterRemix.user_3_line,
                 text: 'Profile',

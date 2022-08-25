@@ -132,7 +132,7 @@ class _SelfCompassionJournalState extends State<SelfCompassionJournal>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Enter Content.......',
+                                    'Keeping a daily journal in which you process the difficult events of your day through a lens of self-compassion can enhance both mental and physical well-being. This exercise will help make self-kindness, common humanity, and mindfulness part of your daily life',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,

@@ -128,7 +128,7 @@ class _EmotionalSupportState extends State<EmotionalSupport>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Emotional support is a way of helping people feel connected and less alone. Providing emotional support requires a person to listen without judgment and show that they understand by responding empathetically. Find a wellwisher in your circle who can provide you with this.',
+                                    'Self-compassion entails being warm ,understanding and nurturing toward ourselves when we want to ignore our pain or bombard ourselves with self-criticism.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,

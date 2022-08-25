@@ -1,3 +1,5 @@
+import 'package:agni/pages/emotions/Anger/restructuring_steps/display_text.dart';
+import 'package:agni/pages/emotions/Anger/restructuring_steps/edit_text.dart';
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
 
@@ -145,6 +147,7 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
+                          Expanded(child: DisplayText(steps: '1')),
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity3,
@@ -155,29 +158,29 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  // Container(
-                                  //   width: 48,
-                                  //   height: 48,
-                                  //   child: Container(
-                                  // decoration: BoxDecoration(
-                                  //   color: DesignCourseAppTheme.nearlyWhite,
-                                  //   borderRadius: const BorderRadius.all(
-                                  //     Radius.circular(16.0),
-                                  //   ),
-                                  //   border: Border.all(
-                                  //       color: DesignCourseAppTheme.grey
-                                  //           .withOpacity(0.2)),
-                                  // ),
-                                  // // child: Icon(
-                                  // //   Icons.add,
-                                  // //   color: DesignCourseAppTheme.nearlyBlue,
-                                  // //   size: 28,
-                                  // // ),
-                                  //       ),
-                                  // ),
-                                  // const SizedBox(
-                                  //   width: 16,
-                                  // ),
+                                  Container(
+                                    width: 48,
+                                    height: 48,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: DesignCourseAppTheme.nearlyWhite,
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                        border: Border.all(
+                                            color: DesignCourseAppTheme.grey
+                                                .withOpacity(0.2)),
+                                      ),
+                                      child: Icon(
+                                        Icons.arrow_back_ios_new,
+                                        color: DesignCourseAppTheme.nearlyBlue,
+                                        size: 28,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 16,
+                                  ),
                                   Expanded(
                                     child: Container(
                                       height: 48,
@@ -196,15 +199,25 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                                         ],
                                       ),
                                       child: Center(
-                                        child: Text(
-                                          'Type here',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
+                                        child: GestureDetector(
+                                          onTap: () => {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      EditText(steps: '1')),
+                                            )
+                                          },
+                                          child: Text(
+                                            'Type here',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 18,
+                                              letterSpacing: 0.0,
+                                              color: DesignCourseAppTheme
+                                                  .nearlyWhite,
+                                            ),
                                           ),
                                         ),
                                       ),
