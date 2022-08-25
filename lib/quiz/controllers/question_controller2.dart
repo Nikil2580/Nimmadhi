@@ -5,7 +5,7 @@ import 'package:get/state_manager.dart';
 //change the file name for the quiz change to Questions.dart
 //1.body.dart and 2.question_card.dart
 import 'package:agni/quiz/models/Question_stress.dart';
-import 'package:agni/quiz/screens/quiz/score_screen.dart';
+import 'package:agni/quiz/screens/quiz/score_screen2.dart';
 
 // We use get package for our state management
 
@@ -25,7 +25,7 @@ class QuestionController2 extends GetxController
       .map(
         (question) => QuestionStress(
             id: question['id'],
-            questionStress: question['question'],
+            questionStress: question['questionStress'],
             options: question['options'],
             answer: question['answer_index']),
       )
@@ -114,7 +114,7 @@ class QuestionController2 extends GetxController
       _animationController?.forward().whenComplete(nextQuestion);
     } else {
       // Get package provide us simple way to naviigate another page
-      Get.to(ScoreScreen());
+      Get.to(ScoreScreen2());
     }
   }
 

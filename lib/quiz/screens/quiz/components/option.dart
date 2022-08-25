@@ -48,24 +48,30 @@ class Option extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "${index + 1}. $text",
-                    style: TextStyle(color: getTheRightColor(), fontSize: 12),
-                  ),
                   Container(
-                    height: 26,
-                    width: 26,
-                    decoration: BoxDecoration(
-                      color: getTheRightColor() == kGrayColor
-                          ? Colors.transparent
-                          : getTheRightColor(),
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all(color: getTheRightColor()),
+                    width: 200,
+                    child: Text(
+                      "${index + 1}. $text",
+                      style: TextStyle(
+                        color: getTheRightColor(),
+                        fontSize: 12,
+                      ),
                     ),
-                    child: getTheRightColor() == kGrayColor
-                        ? null
-                        : Icon(getTheRightIcon(), size: 16),
-                  )
+                  ),
+                  // Container(
+                  //   height: 26,
+                  //   width: 26,
+                  //   decoration: BoxDecoration(
+                  //     color: getTheRightColor() == kGrayColor
+                  //         ? Colors.transparent
+                  //         : getTheRightColor(),
+                  //     borderRadius: BorderRadius.circular(50),
+                  //     border: Border.all(color: getTheRightColor()),
+                  //   ),
+                  //   child: getTheRightColor() == kGrayColor
+                  //       ? null
+                  //       : Icon(getTheRightIcon(), size: 16),
+                  // )
                 ],
               ),
             ),
