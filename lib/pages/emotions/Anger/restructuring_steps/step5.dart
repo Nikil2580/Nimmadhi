@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../design_course_app_theme.dart';
+import '../../../design_course_app_theme.dart';
 
-class EmotionalSupport extends StatefulWidget {
+class Step5 extends StatefulWidget {
   @override
-  _EmotionalSupportState createState() => _EmotionalSupportState();
+  _Step5State createState() => _Step5State();
 }
 
-class _EmotionalSupportState extends State<EmotionalSupport>
-    with TickerProviderStateMixin {
+class _Step5State extends State<Step5> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -56,7 +55,10 @@ class _EmotionalSupportState extends State<EmotionalSupport>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/emotional_support.jpg'),
+                  child: FittedBox(
+                      child:
+                          Image.asset('assets/images/restructuring/step5.png'),
+                      fit: BoxFit.fill),
                 ),
               ],
             ),
@@ -95,7 +97,7 @@ class _EmotionalSupportState extends State<EmotionalSupport>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Emotional Support',
+                              'Step 5:Make a decision',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -128,7 +130,7 @@ class _EmotionalSupportState extends State<EmotionalSupport>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Emotional support is a way of helping people feel connected and less alone. Providing emotional support requires a person to listen without judgment and show that they understand by responding empathetically. Find a wellwisher in your circle who can provide you with this.',
+                                    'This involves making a decision about whether your thought is accurate or not, based on all the evidence you have listed in Step 3, and then taking action based on your decision.When considering the evidence for and against the accuracy of your thought, you should place the greatest weight on strong evidence that is objective and based on facts, and give less attention to weak evidence that is based only on feelings or beliefs.Being objective when evaluating your thought is important, since you want your understanding of the situation to be as accurate as possible so that any actions you take are informed and effective.After deciding whether the thought is accurate or not, you then take action, depending on your decision.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -136,82 +138,82 @@ class _EmotionalSupportState extends State<EmotionalSupport>
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
-                                    maxLines: 30,
+                                    maxLines: 100,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                          AnimatedOpacity(
-                            duration: const Duration(milliseconds: 500),
-                            opacity: opacity3,
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16, bottom: 16, right: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  // Container(
-                                  //   width: 48,
-                                  //   height: 48,
-                                  //   child: Container(
-                                  //     decoration: BoxDecoration(
-                                  //       color: DesignCourseAppTheme.nearlyWhite,
-                                  //       borderRadius: const BorderRadius.all(
-                                  //         Radius.circular(16.0),
-                                  //       ),
-                                  //       border: Border.all(
-                                  //           color: DesignCourseAppTheme.grey
-                                  //               .withOpacity(0.2)),
-                                  //     ),
-                                  //     child: Icon(
-                                  //       Icons.add,
-                                  //       color: DesignCourseAppTheme.nearlyBlue,
-                                  //       size: 28,
-                                  //     ),
-                                  //   ),
-                                  // ),
-                                  // const SizedBox(
-                                  //   width: 16,
-                                  // ),
-                                  Expanded(
-                                    child: Container(
-                                      height: 48,
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
-                                        ),
-                                        boxShadow: <BoxShadow>[
-                                          BoxShadow(
-                                              color: DesignCourseAppTheme
-                                                  .nearlyBlue
-                                                  .withOpacity(0.5),
-                                              offset: const Offset(1.1, 1.1),
-                                              blurRadius: 10.0),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Take Session',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
+                          // AnimatedOpacity(
+                          //   duration: const Duration(milliseconds: 500),
+                          //   opacity: opacity3,
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.only(
+                          //         left: 16, bottom: 16, right: 16),
+                          //     child: Row(
+                          //       mainAxisAlignment: MainAxisAlignment.center,
+                          //       crossAxisAlignment: CrossAxisAlignment.center,
+                          //       children: <Widget>[
+                          //         // Container(
+                          //         //   width: 48,
+                          //         //   height: 48,
+                          //         //   child: Container(
+                          //         // decoration: BoxDecoration(
+                          //         //   color: DesignCourseAppTheme.nearlyWhite,
+                          //         //   borderRadius: const BorderRadius.all(
+                          //         //     Radius.circular(16.0),
+                          //         //   ),
+                          //         //   border: Border.all(
+                          //         //       color: DesignCourseAppTheme.grey
+                          //         //           .withOpacity(0.2)),
+                          //         // ),
+                          //         // child: Icon(
+                          //         //   Icons.add,
+                          //         //   color: DesignCourseAppTheme.nearlyBlue,
+                          //         //   size: 28,
+                          //         // ),
+                          //         //       ),
+                          //         // ),
+                          //         // const SizedBox(
+                          //         //   width: 16,
+                          //         // ),
+                          //         Expanded(
+                          //           child: Container(
+                          //             height: 48,
+                          //             decoration: BoxDecoration(
+                          //               color: DesignCourseAppTheme.nearlyBlue,
+                          //               borderRadius: const BorderRadius.all(
+                          //                 Radius.circular(16.0),
+                          //               ),
+                          //               boxShadow: <BoxShadow>[
+                          //                 BoxShadow(
+                          //                     color: DesignCourseAppTheme
+                          //                         .nearlyBlue
+                          //                         .withOpacity(0.5),
+                          //                     offset: const Offset(1.1, 1.1),
+                          //                     blurRadius: 10.0),
+                          //               ],
+                          //             ),
+                          //             child: Center(
+                          //               child: Text(
+                          //                 'Type here',
+                          //                 textAlign: TextAlign.left,
+                          //                 style: TextStyle(
+                          //                   fontWeight: FontWeight.w600,
+                          //                   fontSize: 18,
+                          //                   letterSpacing: 0.0,
+                          //                   color: DesignCourseAppTheme
+                          //                       .nearlyWhite,
+                          //                 ),
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         )
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
                           SizedBox(
                             height: MediaQuery.of(context).padding.bottom,
                           )
@@ -275,51 +277,51 @@ class _EmotionalSupportState extends State<EmotionalSupport>
     );
   }
 
-  Widget getTimeBoxUI(String text1, String txt2) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        decoration: BoxDecoration(
-          color: DesignCourseAppTheme.nearlyWhite,
-          borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: DesignCourseAppTheme.grey.withOpacity(0.2),
-                offset: const Offset(1.1, 1.1),
-                blurRadius: 8.0),
-          ],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(
-              left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                text1,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14,
-                  letterSpacing: 0.27,
-                  color: DesignCourseAppTheme.nearlyBlue,
-                ),
-              ),
-              Text(
-                txt2,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.w200,
-                  fontSize: 14,
-                  letterSpacing: 0.27,
-                  color: DesignCourseAppTheme.grey,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+  // Widget getTimeBoxUI(String text1, String txt2) {
+  //   return Padding(
+  //     padding: const EdgeInsets.all(8.0),
+  //     child: Container(
+  //       decoration: BoxDecoration(
+  //         color: DesignCourseAppTheme.nearlyWhite,
+  //         borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+  //         boxShadow: <BoxShadow>[
+  //           BoxShadow(
+  //               color: DesignCourseAppTheme.grey.withOpacity(0.2),
+  //               offset: const Offset(1.1, 1.1),
+  //               blurRadius: 8.0),
+  //         ],
+  //       ),
+  //       child: Padding(
+  //         padding: const EdgeInsets.only(
+  //             left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
+  //         child: Column(
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           crossAxisAlignment: CrossAxisAlignment.center,
+  //           children: <Widget>[
+  //             Text(
+  //               text1,
+  //               textAlign: TextAlign.center,
+  //               style: TextStyle(
+  //                 fontWeight: FontWeight.w600,
+  //                 fontSize: 14,
+  //                 letterSpacing: 0.27,
+  //                 color: DesignCourseAppTheme.nearlyBlue,
+  //               ),
+  //             ),
+  //             Text(
+  //               txt2,
+  //               textAlign: TextAlign.center,
+  //               style: TextStyle(
+  //                 fontWeight: FontWeight.w200,
+  //                 fontSize: 14,
+  //                 letterSpacing: 0.27,
+  //                 color: DesignCourseAppTheme.grey,
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 }

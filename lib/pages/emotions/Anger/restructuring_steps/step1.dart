@@ -6,8 +6,7 @@ class Step1 extends StatefulWidget {
   _Step1State createState() => _Step1State();
 }
 
-class _Step1State extends State<Step1>
-    with TickerProviderStateMixin {
+class _Step1State extends State<Step1> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -131,7 +130,7 @@ class _Step1State extends State<Step1>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'You want to identify the most upsetting feeling you had in the situation.Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling. It is easiest to focus on four broad feelings:\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\n Pick one of these four feelings and work through all 5 steps with this feeling. For example, fear might be the strongest feeling associated with going to the grocery store, while guilt might be the strongest feeling associated with the thought of not evacuating from the flood soon enough.\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling',
+                                    'Write down the upsetting situation. The situation might be an actual event,like having an argument with someone, or a memory of an event such as thinking about the disaster.\n\nIn either case, just write one sentence describing the situation',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -156,29 +155,29 @@ class _Step1State extends State<Step1>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                        // decoration: BoxDecoration(
-                                        //   color: DesignCourseAppTheme.nearlyWhite,
-                                        //   borderRadius: const BorderRadius.all(
-                                        //     Radius.circular(16.0),
-                                        //   ),
-                                        //   border: Border.all(
-                                        //       color: DesignCourseAppTheme.grey
-                                        //           .withOpacity(0.2)),
-                                        // ),
-                                        // // child: Icon(
-                                        // //   Icons.add,
-                                        // //   color: DesignCourseAppTheme.nearlyBlue,
-                                        // //   size: 28,
-                                        // // ),
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
+                                  // Container(
+                                  //   width: 48,
+                                  //   height: 48,
+                                  //   child: Container(
+                                  // decoration: BoxDecoration(
+                                  //   color: DesignCourseAppTheme.nearlyWhite,
+                                  //   borderRadius: const BorderRadius.all(
+                                  //     Radius.circular(16.0),
+                                  //   ),
+                                  //   border: Border.all(
+                                  //       color: DesignCourseAppTheme.grey
+                                  //           .withOpacity(0.2)),
+                                  // ),
+                                  // // child: Icon(
+                                  // //   Icons.add,
+                                  // //   color: DesignCourseAppTheme.nearlyBlue,
+                                  // //   size: 28,
+                                  // // ),
+                                  //       ),
+                                  // ),
+                                  // const SizedBox(
+                                  //   width: 16,
+                                  // ),
                                   Expanded(
                                     child: Container(
                                       height: 48,

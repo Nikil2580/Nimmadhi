@@ -1,4 +1,3 @@
-import 'package:agni/pages/emotions/Anger/restructuring_steps/step2_session.dart';
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
 
@@ -7,8 +6,7 @@ class Step2 extends StatefulWidget {
   _Step2State createState() => _Step2State();
 }
 
-class _Step2State extends State<Step2>
-    with TickerProviderStateMixin {
+class _Step2State extends State<Step2> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -99,7 +97,7 @@ class _Step2State extends State<Step2>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Step 2:',
+                              'Step 1: The Feeling',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -116,8 +114,8 @@ class _Step2State extends State<Step2>
                               padding: const EdgeInsets.all(8),
                               child: Row(
                                 children: <Widget>[
-//                                  getTimeBoxUI('5min', 'Practice'),
-//                                 getTimeBoxUI('1 time', 'Day'),
+                                  //getTimeBoxUI('5min', 'Practice'),
+                                  //getTimeBoxUI('1 time', 'Day'),
                                   //getTimeBoxUI('', 'Seat'),
                                 ],
                               ),
@@ -132,7 +130,7 @@ class _Step2State extends State<Step2>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Cognitive reappraisal is an ability to successfully reappraise enables us to reduce negative emotions and open us up to experiencing happiness, even during difficult times.\nReappraisal involves cognitively reframing an event to reduce the negative emotions you feel.\nTo practice reappraisal, start by writing out a list of things you learned from a past failure.',
+                                    'You want to identify the most upsetting feeling you had in the situation.Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling. It is easiest to focus on four broad feelings:\n\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling.\n\nCR-Cognitive Restructuring',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -157,66 +155,56 @@ class _Step2State extends State<Step2>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                        // decoration: BoxDecoration(
-                                        //   color: DesignCourseAppTheme.nearlyWhite,
-                                        //   borderRadius: const BorderRadius.all(
-                                        //     Radius.circular(16.0),
-                                        //   ),
-                                        //   border: Border.all(
-                                        //       color: DesignCourseAppTheme.grey
-                                        //           .withOpacity(0.2)),
-                                        // ),
-                                        // child: Icon(
-                                        //   Icons.add,
-                                        //   color: DesignCourseAppTheme.nearlyBlue,
-                                        //   size: 28,
-                                        // ),
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    width: 18,
-                                  ),
+                                  // Container(
+                                  //   width: 48,
+                                  //   height: 48,
+                                  //   child: Container(
+                                  // decoration: BoxDecoration(
+                                  //   color: DesignCourseAppTheme.nearlyWhite,
+                                  //   borderRadius: const BorderRadius.all(
+                                  //     Radius.circular(16.0),
+                                  //   ),
+                                  //   border: Border.all(
+                                  //       color: DesignCourseAppTheme.grey
+                                  //           .withOpacity(0.2)),
+                                  // ),
+                                  // // child: Icon(
+                                  // //   Icons.add,
+                                  // //   color: DesignCourseAppTheme.nearlyBlue,
+                                  // //   size: 28,
+                                  // // ),
+                                  //       ),
+                                  // ),
+                                  // const SizedBox(
+                                  //   width: 16,
+                                  // ),
                                   Expanded(
-                                    child: InkWell(
-                                      onTap: () {
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                Step2Session(),
-                                          ),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        decoration: BoxDecoration(
-                                          color: DesignCourseAppTheme.nearlyBlue,
-                                          borderRadius: const BorderRadius.all(
-                                            Radius.circular(16.0),
-                                          ),
-                                          boxShadow: <BoxShadow>[
-                                            BoxShadow(
-                                                color: DesignCourseAppTheme
-                                                    .nearlyBlue
-                                                    .withOpacity(0.5),
-                                                offset: const Offset(1.1, 1.1),
-                                                blurRadius: 10.0),
-                                          ],
+                                    child: Container(
+                                      height: 48,
+                                      decoration: BoxDecoration(
+                                        color: DesignCourseAppTheme.nearlyBlue,
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(16.0),
                                         ),
-                                        child: Center(
-                                          child: Text(
-                                            'Take session',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18,
-                                              letterSpacing: 0.0,
+                                        boxShadow: <BoxShadow>[
+                                          BoxShadow(
                                               color: DesignCourseAppTheme
-                                                  .nearlyWhite,
-                                            ),
+                                                  .nearlyBlue
+                                                  .withOpacity(0.5),
+                                              offset: const Offset(1.1, 1.1),
+                                              blurRadius: 10.0),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Type here',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            letterSpacing: 0.0,
+                                            color: DesignCourseAppTheme
+                                                .nearlyWhite,
                                           ),
                                         ),
                                       ),

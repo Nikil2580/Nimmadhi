@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
 
-class BeingMindful extends StatefulWidget {
-  const BeingMindful({super.key});
-
+class SelfCompassionBreak extends StatefulWidget {
   @override
-  _BeingMindfulState createState() => _BeingMindfulState();
+  _SelfCompassionBreakState createState() => _SelfCompassionBreakState();
 }
 
-class _BeingMindfulState extends State<BeingMindful>
+class _SelfCompassionBreakState extends State<SelfCompassionBreak>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -58,7 +56,11 @@ class _BeingMindfulState extends State<BeingMindful>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/mindful.png'),
+                  child: FittedBox(
+                    child:
+                        Image.asset('assets/images/self_compassion_break.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -97,7 +99,7 @@ class _BeingMindfulState extends State<BeingMindful>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Mindfulness',
+                              'Self Compassion Break',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -114,8 +116,8 @@ class _BeingMindfulState extends State<BeingMindful>
                           //     padding: const EdgeInsets.all(8),
                           //     child: Row(
                           //       children: <Widget>[
-                          //         getTimeBoxUI('5min', 'Practice'),
-                          //         getTimeBoxUI('1 time', 'Day'),
+                          //         getTimeBoxUI('1 time', 'Start Journaling'),
+                          //         getTimeBoxUI('15 mins', 'Take a break'),
                           //         //getTimeBoxUI('', 'Seat'),
                           //       ],
                           //     ),
@@ -130,7 +132,7 @@ class _BeingMindfulState extends State<BeingMindful>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Mindfulness meditation is the practice of actually being present in the moment, which in turn trains us to become more mindful throughout the day, particularly during difficult situations. As Ms. Brach puts it: “Mindfulness is your awareness of whats going on in the present moment without any judgment',
+                                    'Enter Content...',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -138,7 +140,7 @@ class _BeingMindfulState extends State<BeingMindful>
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
-                                    maxLines: 30,
+                                    maxLines: 50,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),

@@ -1,19 +1,18 @@
-import 'package:agni/pages/emotions/Anger/restructuring_steps/step1.dart';
-import 'package:agni/pages/emotions/Anger/restructuring_steps/step2.dart';
-import 'package:agni/pages/emotions/Anger/restructuring_steps/step3.dart';
-import 'package:agni/pages/emotions/Anger/restructuring_steps/step3.dart';
-import 'package:agni/pages/emotions/Anger/restructuring_steps/step4.dart';
-import 'package:agni/pages/emotions/Anger/restructuring_steps/step5.dart';
+import 'package:agni/pages/emotions/Anxiety/eulogy.dart';
+import 'package:agni/pages/emotions/Anxiety/regret_letter.dart';
+import 'package:agni/pages/emotions/Anxiety/thought_journal.dart';
+import 'package:agni/pages/emotions/Sad/break.dart';
+import 'package:agni/pages/emotions/Sad/journal.dart';
 import 'package:flutter/material.dart';
 
-class RestructuringSteps extends StatefulWidget {
-  RestructuringSteps({Key? key}) : super(key: key);
+class SelfCompassionSteps extends StatefulWidget {
+  SelfCompassionSteps({Key? key}) : super(key: key);
 
   @override
-  State<RestructuringSteps> createState() => _RestructuringStepsState();
+  State<SelfCompassionSteps> createState() => _SelfCompassionStepsState();
 }
 
-class _RestructuringStepsState extends State<RestructuringSteps> {
+class _SelfCompassionStepsState extends State<SelfCompassionSteps> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -79,7 +78,7 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
                                       foregroundDecoration: BoxDecoration(
                                           image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/images/restructuring/${entries[index]}'),
+                                            'assets/images/${entries[index]}'),
                                         fit: BoxFit.fitWidth,
                                       )),
                                     ),
@@ -129,7 +128,7 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
                                         alignment: Alignment.center,
                                         child: Text(
                                           steps[index],
-                                          //  style: titleStyle,
+                                          // style: titleStyle,
                                         )),
                                   ),
                                 ),
@@ -147,21 +146,15 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
 }
 
 final List<String> entries = <String>[
-  'step1.png',
-  'step2.png',
-  'step3.png',
-  'step4.png',
-  'step5.png'
+  'self_compassion_break.jpg',
+  'self_compassion_journal.jpg',
 ];
 
 final List<String> steps = <String>[
-  'Step 1: The Situation',
-  'Step 2: Feeling',
-  'Step 3: The thought',
-  'Step 4: Evaluate the thought',
-  'Step 5: Make A Desicion'
+  'Self Compassion Break',
+  'Self Compassion Journal'
 ];
 
 final List<bool> _selections = List.generate(steps.length, (_) => true);
 
-final List<Widget> _pages = [Step1(), Step2(), Step3(), Step4(), Step5()];
+final List<Widget> _pages = [SelfCompassionBreak(), SelfCompassionJournal()];

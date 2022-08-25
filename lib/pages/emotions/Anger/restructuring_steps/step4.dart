@@ -56,8 +56,9 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                      child: Image.asset('assets/images/restructuring/step4.png'),
-                      fit: BoxFit.fill),
+                    child: Image.asset('assets/images/restructuring/step4.png'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -96,7 +97,7 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Step 4: Make a decision',
+                              'Step 4: Evaluate the thought',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -113,8 +114,8 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                               padding: const EdgeInsets.all(8),
                               child: Row(
                                 children: <Widget>[
-                                  //getTimeBoxUI('5min', 'Practice'),
-                                  //getTimeBoxUI('1 time', 'Day'),
+//                                  getTimeBoxUI('5min', 'Practice'),
+//                                 getTimeBoxUI('1 time', 'Day'),
                                   //getTimeBoxUI('', 'Seat'),
                                 ],
                               ),
@@ -129,7 +130,7 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'This involves making a decision about whether your thought is accurate or not, based on all the evidence you have listed in Step 3, and then taking action based on your decision.When considering the evidence for and against the accuracy of your thought, you should place the greatest weight on strong evidence that is objective and based on facts, and give less attention to weak evidence that is based only on feelings or beliefs.Being objective when evaluating your thought is important, since you want your understanding of the situation to be as accurate as possible so that any actions you take are informed and effective.After deciding whether the thought is accurate or not, you then take action, depending on your decision.',
+                                    'You want to evaluate the accuracy of your upsetting thought as carefully and objectively as possible. To do this, first think of all of the evidence you can that supports your thought or makes you think it is accurate. For example, for the thought You said “hello” to an old friend whom you met in  grocery store, and that friend ignored you". The person could ask "Why do I think there will be an old friend in the grocery store?" "If there was a friend there, why do I think I would be ignored by her?". Write all the evidence down on the worksheet.\nThen, think of all the evidence you can that does not support your thought, or suggests it may not be accurate. Consider as many reasons as you can for why your thought might not be correct. Then, write all the evidence against the thought down on the worksheet\n',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -137,7 +138,7 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
-                                    maxLines: 100,
+                                    maxLines: 50,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
@@ -154,29 +155,29 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                        // decoration: BoxDecoration(
-                                        //   color: DesignCourseAppTheme.nearlyWhite,
-                                        //   borderRadius: const BorderRadius.all(
-                                        //     Radius.circular(16.0),
-                                        //   ),
-                                        //   border: Border.all(
-                                        //       color: DesignCourseAppTheme.grey
-                                        //           .withOpacity(0.2)),
-                                        // ),
-                                        // child: Icon(
-                                        //   Icons.add,
-                                        //   color: DesignCourseAppTheme.nearlyBlue,
-                                        //   size: 28,
-                                        // ),
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
+                                  // Container(
+                                  //   width: 48,
+                                  //   height: 48,
+                                  //   child: Container(
+                                  // decoration: BoxDecoration(
+                                  //   color: DesignCourseAppTheme.nearlyWhite,
+                                  //   borderRadius: const BorderRadius.all(
+                                  //     Radius.circular(16.0),
+                                  //   ),
+                                  //   border: Border.all(
+                                  //       color: DesignCourseAppTheme.grey
+                                  //           .withOpacity(0.2)),
+                                  // ),
+                                  // child: Icon(
+                                  //   Icons.add,
+                                  //   color: DesignCourseAppTheme.nearlyBlue,
+                                  //   size: 28,
+                                  // ),
+                                  //       ),
+                                  // ),
+                                  // const SizedBox(
+                                  //   width: 16,
+                                  // ),
                                   Expanded(
                                     child: Container(
                                       height: 48,
