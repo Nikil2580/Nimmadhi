@@ -115,6 +115,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
             SizedBox(height: 20),
             Text('Favorites ⭐',
                 style: TextStyle(

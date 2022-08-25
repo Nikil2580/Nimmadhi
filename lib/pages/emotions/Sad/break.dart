@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
-import 'package:agni/utils/constants.dart';
 
-class Relaxation extends StatefulWidget {
+class SelfCompassionBreak extends StatefulWidget {
   @override
-  _RelaxationState createState() => _RelaxationState();
+  _SelfCompassionBreakState createState() => _SelfCompassionBreakState();
 }
 
-class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
+class _SelfCompassionBreakState extends State<SelfCompassionBreak>
+    with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -57,8 +57,10 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                      child: Image.asset('assets/images/relaxation.jpg'),
-                      fit: BoxFit.fill),
+                    child:
+                        Image.asset('assets/images/self_compassion_break.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -97,7 +99,7 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Relaxation',
+                              'Self Compassion Break',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -107,48 +109,30 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
-                          AnimatedOpacity(
-                            duration: const Duration(milliseconds: 500),
-                            opacity: opacity1,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8),
-                              child: Row(
-                                children: <Widget>[
-                                  //getTimeBoxUI('5min', 'Practice'),
-                                  //getTimeBoxUI('1 time', 'Day'),
-                                  //getTimeBoxUI('', 'Seat'),
-                                ],
-                              ),
-                            ),
-                          ),
+                          // AnimatedOpacity(
+                          //   duration: const Duration(milliseconds: 500),
+                          //   opacity: opacity1,
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(8),
+                          //     child: Row(
+                          //       children: <Widget>[
+                          //         getTimeBoxUI('1 time', 'Start Journaling'),
+                          //         getTimeBoxUI('15 mins', 'Take a break'),
+                          //         //getTimeBoxUI('', 'Seat'),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
                           Expanded(
                             child: AnimatedOpacity(
                               duration: const Duration(milliseconds: 500),
                               opacity: opacity2,
-                              // child: Padding(
-                              //   padding: const EdgeInsets.only(
-                              //       left: 16, right: 16, top: 8, bottom: 8),
-                              //   child: SingleChildScrollView(
-                              //     child: Text(
-                              //       'This method encourages you comfort and relaxation. It activates the sympathetic nervous system region, which is in charge of rest and healing.',
-                              //       textAlign: TextAlign.justify,
-                              //       style: TextStyle(
-                              //         fontWeight: FontWeight.w200,
-                              //         fontSize: 14,
-                              //         letterSpacing: 0.27,
-                              //         color: DesignCourseAppTheme.grey,
-                              //       ),
-                              //       maxLines: 3,
-                              //       overflow: TextOverflow.ellipsis,
-                              //     ),
-                              //   ),
-                              // ),
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'This method encourages you comfort and relaxation. It activates the sympathetic nervous system region, which is in charge of rest and healing.',
+                                    'This session can be used any time of day or night and will help you remember to evoke the three aspects of self-compassion in the moment you need it most.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -254,23 +238,14 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0)),
                   elevation: 10.0,
-                  child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        angerselections[0] = !angerselections[0];
-                      });
-                    },
-                    child: Container(
-                      width: 60,
-                      height: 60,
-                      child: Center(
-                        child: Icon(
-                          angerselections[0]
-                              ? Icons.favorite_border_sharp
-                              : Icons.favorite_sharp,
-                          color: angerselections[0] ? Colors.white : Colors.red,
-                          size: 30,
-                        ),
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    child: Center(
+                      child: Icon(
+                        Icons.favorite,
+                        color: DesignCourseAppTheme.nearlyWhite,
+                        size: 30,
                       ),
                     ),
                   ),

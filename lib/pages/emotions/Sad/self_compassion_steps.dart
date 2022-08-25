@@ -1,23 +1,25 @@
 import 'package:agni/pages/emotions/Anxiety/eulogy.dart';
 import 'package:agni/pages/emotions/Anxiety/regret_letter.dart';
 import 'package:agni/pages/emotions/Anxiety/thought_journal.dart';
+import 'package:agni/pages/emotions/Sad/break.dart';
+import 'package:agni/pages/emotions/Sad/journal.dart';
 import 'package:flutter/material.dart';
 
-class AwarenessSteps extends StatefulWidget {
-  AwarenessSteps({Key? key}) : super(key: key);
+class SelfCompassionSteps extends StatefulWidget {
+  SelfCompassionSteps({Key? key}) : super(key: key);
 
   @override
-  State<AwarenessSteps> createState() => _AwarenessStepsState();
+  State<SelfCompassionSteps> createState() => _SelfCompassionStepsState();
 }
 
-class _AwarenessStepsState extends State<AwarenessSteps> {
+class _SelfCompassionStepsState extends State<SelfCompassionSteps> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Self Awareness"),
+            title: Text("Self Compassion"),
             backgroundColor: Colors.deepPurple,
           ),
           body: Column(
@@ -148,17 +150,15 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
 }
 
 final List<String> entries = <String>[
-  'thought_journal.png',
-  'regret_letter.png',
-  'eulogy.png'
+  'self_compassion_break.jpg',
+  'self_compassion_journal.jpg',
 ];
 
 final List<String> steps = <String>[
-  'Thought Journal',
-  'Regret Letter',
-  'Eulogy'
+  'Self Compassion Break',
+  'Self Compassion Journal'
 ];
 
 final List<bool> _selections = List.generate(steps.length, (_) => true);
 
-final List<Widget> _pages = [ThoughtJournal(), RegretLetter(), Eulogy()];
+final List<Widget> _pages = [SelfCompassionBreak(), SelfCompassionJournal()];

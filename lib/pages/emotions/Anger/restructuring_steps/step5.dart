@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
 import '../../../design_course_app_theme.dart';
-import 'display_text.dart';
-import 'edit_text.dart';
 
-class Step2Session extends StatefulWidget {
+class Step5 extends StatefulWidget {
   @override
-  _Step2SessionState createState() => _Step2SessionState();
+  _Step5State createState() => _Step5State();
 }
 
-class _Step2SessionState extends State<Step2Session>
-    with TickerProviderStateMixin {
+class _Step5State extends State<Step5> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -60,10 +56,9 @@ class _Step2SessionState extends State<Step2Session>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset(
-                        'assets/images/restructuring/step2_session.png'),
-                    fit: BoxFit.fill,
-                  ),
+                      child:
+                          Image.asset('assets/images/restructuring/step5.png'),
+                      fit: BoxFit.fill),
                 ),
               ],
             ),
@@ -102,7 +97,7 @@ class _Step2SessionState extends State<Step2Session>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'The thought',
+                              'Step 5:Make a decision',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -135,7 +130,7 @@ class _Step2SessionState extends State<Step2Session>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'You identify your thoughts about the situation that are underlying your upsetting feelings. If you are unsure what those thoughts are, ask yourself the following questions, depending on what your upsetting feelings were:\n• For fear or anxiety, ask yourself, “What bad thing do I expect to happen?” “What kind of danger am I in?”\n• For sadness or depression, ask yourself, “What have I lost hope in?” “What is missing in my life or in me?”\n• For guilt or shame, ask yourself, “What bad thing have I done?” “What is wrong with me?”\n• For anger, ask yourself, “What is unfair about this situation?” “Who has wronged me?”',
+                                    'This involves making a decision about whether your thought is accurate or not, based on all the evidence you have listed in Step 4, and then taking action based on your decision. When considering the evidence for and against the accuracy of your thought, you should place the greatest weight on strong evidence that is objective and based on facts, and give less attention to weak evidence that is based only on feelings or beliefs.Being objective when evaluating your thought is important, since you want your understanding of the situation to be as accurate as possible so that any actions you take are informed and effective. After deciding whether the thought is accurate or not, you then take action, depending on your decision.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -143,94 +138,82 @@ class _Step2SessionState extends State<Step2Session>
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
-                                    maxLines: 50,
+                                    maxLines: 100,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                          Expanded(child: DisplayText(steps: '2')),
-                          AnimatedOpacity(
-                            duration: const Duration(milliseconds: 500),
-                            opacity: opacity3,
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16, bottom: 16, right: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                        // decoration: BoxDecoration(
-                                        //   color: DesignCourseAppTheme.nearlyWhite,
-                                        //   borderRadius: const BorderRadius.all(
-                                        //     Radius.circular(16.0),
-                                        //   ),
-                                        //   border: Border.all(
-                                        //       color: DesignCourseAppTheme.grey
-                                        //           .withOpacity(0.2)),
-                                        // ),
-                                        // // child: Icon(
-                                        // //   Icons.add,
-                                        // //   color: DesignCourseAppTheme.nearlyBlue,
-                                        // //   size: 28,
-                                        // // ),
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
-                                  Expanded(
-                                    child: GestureDetector(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  EditText(steps: '2')),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        decoration: BoxDecoration(
-                                          color:
-                                              DesignCourseAppTheme.nearlyBlue,
-                                          borderRadius: const BorderRadius.all(
-                                            Radius.circular(16.0),
-                                          ),
-                                          boxShadow: <BoxShadow>[
-                                            BoxShadow(
-                                                color: DesignCourseAppTheme
-                                                    .nearlyBlue
-                                                    .withOpacity(0.5),
-                                                offset: const Offset(1.1, 1.1),
-                                                blurRadius: 10.0),
-                                          ],
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            'Type here',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18,
-                                              letterSpacing: 0.0,
-                                              color: DesignCourseAppTheme
-                                                  .nearlyWhite,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
+                          // AnimatedOpacity(
+                          //   duration: const Duration(milliseconds: 500),
+                          //   opacity: opacity3,
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.only(
+                          //         left: 16, bottom: 16, right: 16),
+                          //     child: Row(
+                          //       mainAxisAlignment: MainAxisAlignment.center,
+                          //       crossAxisAlignment: CrossAxisAlignment.center,
+                          //       children: <Widget>[
+                          //         // Container(
+                          //         //   width: 48,
+                          //         //   height: 48,
+                          //         //   child: Container(
+                          //         // decoration: BoxDecoration(
+                          //         //   color: DesignCourseAppTheme.nearlyWhite,
+                          //         //   borderRadius: const BorderRadius.all(
+                          //         //     Radius.circular(16.0),
+                          //         //   ),
+                          //         //   border: Border.all(
+                          //         //       color: DesignCourseAppTheme.grey
+                          //         //           .withOpacity(0.2)),
+                          //         // ),
+                          //         // child: Icon(
+                          //         //   Icons.add,
+                          //         //   color: DesignCourseAppTheme.nearlyBlue,
+                          //         //   size: 28,
+                          //         // ),
+                          //         //       ),
+                          //         // ),
+                          //         // const SizedBox(
+                          //         //   width: 16,
+                          //         // ),
+                          //         Expanded(
+                          //           child: Container(
+                          //             height: 48,
+                          //             decoration: BoxDecoration(
+                          //               color: DesignCourseAppTheme.nearlyBlue,
+                          //               borderRadius: const BorderRadius.all(
+                          //                 Radius.circular(16.0),
+                          //               ),
+                          //               boxShadow: <BoxShadow>[
+                          //                 BoxShadow(
+                          //                     color: DesignCourseAppTheme
+                          //                         .nearlyBlue
+                          //                         .withOpacity(0.5),
+                          //                     offset: const Offset(1.1, 1.1),
+                          //                     blurRadius: 10.0),
+                          //               ],
+                          //             ),
+                          //             child: Center(
+                          //               child: Text(
+                          //                 'Type here',
+                          //                 textAlign: TextAlign.left,
+                          //                 style: TextStyle(
+                          //                   fontWeight: FontWeight.w600,
+                          //                   fontSize: 18,
+                          //                   letterSpacing: 0.0,
+                          //                   color: DesignCourseAppTheme
+                          //                       .nearlyWhite,
+                          //                 ),
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         )
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
                           SizedBox(
                             height: MediaQuery.of(context).padding.bottom,
                           )
@@ -248,25 +231,19 @@ class _Step2SessionState extends State<Step2Session>
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: InkWell(
-                  onTap: () async {
-                    await Share.share(
-                        'The thought \nYou identify your thoughts about the situation that are underlying your upsetting feelings. If you are unsure what those thoughts are, ask yourself the following questions, depending on what your upsetting feelings were:\n• For fear or anxiety, ask yourself, “What bad thing do I expect to happen?” “What kind of danger am I in?”\n• For sadness or depression, ask yourself, “What have I lost hope in?” “What is missing in my life or in me?”\n• For guilt or shame, ask yourself, “What bad thing have I done?” “What is wrong with me?”\n• For anger, ask yourself, “What is unfair about this situation?” “Who has wronged me?”');
-                  },
-                  child: Card(
-                    color: DesignCourseAppTheme.nearlyBlue,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    elevation: 10.0,
-                    child: Container(
-                      width: 60,
-                      height: 60,
-                      child: Center(
-                        child: Icon(
-                          Icons.share,
-                          color: DesignCourseAppTheme.nearlyWhite,
-                          size: 30,
-                        ),
+                child: Card(
+                  color: DesignCourseAppTheme.nearlyBlue,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0)),
+                  elevation: 10.0,
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    child: Center(
+                      child: Icon(
+                        Icons.favorite,
+                        color: DesignCourseAppTheme.nearlyWhite,
+                        size: 30,
                       ),
                     ),
                   ),

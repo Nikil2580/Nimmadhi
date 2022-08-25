@@ -6,8 +6,7 @@ class Eulogy extends StatefulWidget {
   _EulogyState createState() => _EulogyState();
 }
 
-class _EulogyState extends State<Eulogy>
-    with TickerProviderStateMixin {
+class _EulogyState extends State<Eulogy> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -156,29 +155,29 @@ class _EulogyState extends State<Eulogy>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                        // decoration: BoxDecoration(
-                                        //   color: DesignCourseAppTheme.nearlyWhite,
-                                        //   borderRadius: const BorderRadius.all(
-                                        //     Radius.circular(16.0),
-                                        //   ),
-                                        //   border: Border.all(
-                                        //       color: DesignCourseAppTheme.grey
-                                        //           .withOpacity(0.2)),
-                                        // ),
-                                        // child: Icon(
-                                        //   Icons.add,
-                                        //   color: DesignCourseAppTheme.nearlyBlue,
-                                        //   size: 28,
-                                        // ),
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
+                                  // Container(
+                                  //   width: 48,
+                                  //   height: 48,
+                                  //   child: Container(
+                                  // decoration: BoxDecoration(
+                                  //   color: DesignCourseAppTheme.nearlyWhite,
+                                  //   borderRadius: const BorderRadius.all(
+                                  //     Radius.circular(16.0),
+                                  //   ),
+                                  //   border: Border.all(
+                                  //       color: DesignCourseAppTheme.grey
+                                  //           .withOpacity(0.2)),
+                                  // ),
+                                  // child: Icon(
+                                  //   Icons.add,
+                                  //   color: DesignCourseAppTheme.nearlyBlue,
+                                  //   size: 28,
+                                  // ),
+                                  //       ),
+                                  // ),
+                                  // const SizedBox(
+                                  //   width: 16,
+                                  // ),
                                   Expanded(
                                     child: Container(
                                       height: 48,
@@ -198,7 +197,7 @@ class _EulogyState extends State<Eulogy>
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'Take Session',
+                                          'Type Here',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,

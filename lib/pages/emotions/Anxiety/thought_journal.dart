@@ -146,75 +146,75 @@ class _ThoughtJournalState extends State<ThoughtJournal>
                               ),
                             ),
                           ),
-                          // AnimatedOpacity(
-                          //   duration: const Duration(milliseconds: 500),
-                          //   opacity: opacity3,
-                          //   child: Padding(
-                          //     padding: const EdgeInsets.only(
-                          //         left: 16, bottom: 16, right: 16),
-                          //     child: Row(
-                          //       mainAxisAlignment: MainAxisAlignment.center,
-                          //       crossAxisAlignment: CrossAxisAlignment.center,
-                          //       children: <Widget>[
-                          //         Container(
-                          //           width: 48,
-                          //           height: 48,
-                          //           child: Container(
-                          //             decoration: BoxDecoration(
-                          //               color: DesignCourseAppTheme.nearlyWhite,
-                          //               borderRadius: const BorderRadius.all(
-                          //                 Radius.circular(16.0),
-                          //               ),
-                          //               border: Border.all(
-                          //                   color: DesignCourseAppTheme.grey
-                          //                       .withOpacity(0.2)),
-                          //             ),
-                          //             // child: Icon(
-                          //             //   Icons.add,
-                          //             //   color: DesignCourseAppTheme.nearlyBlue,
-                          //             //   size: 28,
-                          //             // ),
-                          //           ),
-                          //         ),
-                          //         const SizedBox(
-                          //           width: 16,
-                          //         ),
-                          //         Expanded(
-                          //           child: Container(
-                          //             height: 48,
-                          //             decoration: BoxDecoration(
-                          //               color: DesignCourseAppTheme.nearlyBlue,
-                          //               borderRadius: const BorderRadius.all(
-                          //                 Radius.circular(16.0),
-                          //               ),
-                          //               boxShadow: <BoxShadow>[
-                          //                 BoxShadow(
-                          //                     color: DesignCourseAppTheme
-                          //                         .nearlyBlue
-                          //                         .withOpacity(0.5),
-                          //                     offset: const Offset(1.1, 1.1),
-                          //                     blurRadius: 10.0),
-                          //               ],
-                          //             ),
-                          //             child: Center(
-                          //               child: Text(
-                          //                 'Take Session',
-                          //                 textAlign: TextAlign.left,
-                          //                 style: TextStyle(
-                          //                   fontWeight: FontWeight.w600,
-                          //                   fontSize: 18,
-                          //                   letterSpacing: 0.0,
-                          //                   color: DesignCourseAppTheme
-                          //                       .nearlyWhite,
-                          //                 ),
-                          //               ),
-                          //             ),
-                          //           ),
-                          //         )
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
+                          AnimatedOpacity(
+                            duration: const Duration(milliseconds: 500),
+                            opacity: opacity3,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 16, bottom: 16, right: 16),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  // Container(
+                                  //   width: 48,
+                                  //   height: 48,
+                                  //   child: Container(
+                                  //     decoration: BoxDecoration(
+                                  //       color: DesignCourseAppTheme.nearlyWhite,
+                                  //       borderRadius: const BorderRadius.all(
+                                  //         Radius.circular(16.0),
+                                  //       ),
+                                  //       border: Border.all(
+                                  //           color: DesignCourseAppTheme.grey
+                                  //               .withOpacity(0.2)),
+                                  //     ),
+                                  //     // child: Icon(
+                                  //     //   Icons.add,
+                                  //     //   color: DesignCourseAppTheme.nearlyBlue,
+                                  //     //   size: 28,
+                                  //     // ),
+                                  //   ),
+                                  // ),
+                                  // const SizedBox(
+                                  //   width: 16,
+                                  // ),
+                                  Expanded(
+                                    child: Container(
+                                      height: 48,
+                                      decoration: BoxDecoration(
+                                        color: DesignCourseAppTheme.nearlyBlue,
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                        boxShadow: <BoxShadow>[
+                                          BoxShadow(
+                                              color: DesignCourseAppTheme
+                                                  .nearlyBlue
+                                                  .withOpacity(0.5),
+                                              offset: const Offset(1.1, 1.1),
+                                              blurRadius: 10.0),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Type Here',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            letterSpacing: 0.0,
+                                            color: DesignCourseAppTheme
+                                                .nearlyWhite,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
                           SizedBox(
                             height: MediaQuery.of(context).padding.bottom,
                           )

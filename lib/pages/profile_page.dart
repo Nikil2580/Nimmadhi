@@ -103,24 +103,24 @@ class _ProfilePageState extends State<ProfilePage> {
                           style: TextStyle(fontSize: 24),
                         ),
                         SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Followers',
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(width: 5),
-                            Text('66'),
-                            SizedBox(width: 15),
-                            Text(
-                              'Following',
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(width: 5),
-                            Text('42'),
-                          ],
-                        ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [
+                        //     Text(
+                        //       'Followers',
+                        //       style: TextStyle(fontWeight: FontWeight.w600),
+                        //     ),
+                        //     SizedBox(width: 5),
+                        //     Text('66'),
+                        //     SizedBox(width: 15),
+                        //     Text(
+                        //       'Following',
+                        //       style: TextStyle(fontWeight: FontWeight.w600),
+                        //     ),
+                        //     SizedBox(width: 5),
+                        //     Text('42'),
+                        //   ],
+                        // ),
                       ],
                     ),
                     SizedBox(height: 20),

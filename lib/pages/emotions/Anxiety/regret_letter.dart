@@ -156,29 +156,29 @@ class _RegretLetterState extends State<RegretLetter>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                        // decoration: BoxDecoration(
-                                        //   color: DesignCourseAppTheme.nearlyWhite,
-                                        //   borderRadius: const BorderRadius.all(
-                                        //     Radius.circular(16.0),
-                                        //   ),
-                                        //   border: Border.all(
-                                        //       color: DesignCourseAppTheme.grey
-                                        //           .withOpacity(0.2)),
-                                        // ),
-                                        // child: Icon(
-                                        //   Icons.add,
-                                        //   color: DesignCourseAppTheme.nearlyBlue,
-                                        //   size: 28,
-                                        // ),
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    width: 18,
-                                  ),
+                                  // Container(
+                                  //   width: 48,
+                                  //   height: 48,
+                                  //   child: Container(
+                                  // decoration: BoxDecoration(
+                                  //   color: DesignCourseAppTheme.nearlyWhite,
+                                  //   borderRadius: const BorderRadius.all(
+                                  //     Radius.circular(16.0),
+                                  //   ),
+                                  //   border: Border.all(
+                                  //       color: DesignCourseAppTheme.grey
+                                  //           .withOpacity(0.2)),
+                                  // ),
+                                  // child: Icon(
+                                  //   Icons.add,
+                                  //   color: DesignCourseAppTheme.nearlyBlue,
+                                  //   size: 28,
+                                  // ),
+                                  //       ),
+                                  // ),
+                                  // const SizedBox(
+                                  //   width: 18,
+                                  // ),
                                   Expanded(
                                     child: Container(
                                       height: 48,
@@ -198,7 +198,7 @@ class _RegretLetterState extends State<RegretLetter>
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'Take Session',
+                                          'Type here',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,

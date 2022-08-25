@@ -131,7 +131,7 @@ class _BetterCommunicationState extends State<BetterCommunication>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Anger is a difficult emotion to process, and many people deal with it in unhealthy ways that can end up being detrimental to themselves or others.\n\nTo express yourself clearly, we’ve suggested a few healthy ways to communicate and process anger\n\n1. Understand your core emotion\n\nA wonderful and healthy way to communicate anger is by thinking “p before s”—processing before speaking.\nOnce you’ve figured out the core emotion which can help you better communicate your feelings\n\n2. Take a break\n\nAnother important step is taking your "me-time" (about 20 minutes)  understanding your feelings and calming your mind.\n\n3. Write it out\n\nIf you find yourself consistently angry, it may be a good idea to journal every night before bed, to ensure better emotional health.\n\n4. Use “I feel” statements\n\nWhen you have processed your core emotions and other underlying feelings, it may be time to talk to the other person. Prioritize the "I feel" statement to let the other person know what you are going through\n\n5. Stick to the subject\n\nAmy Bellows, Ph.D., wrote in a PsychCentral piece about how important it is to stick to the subject when you’re talking to someone while you’re angry.\nRemember that it is not productive to bring everything that’s ever bothered you in a conversation; it can put both parties on edge and flare emotions.\n\n6. Prepare to listen\n\n There is a chance that both are emotional at this point. You need to start listening to stop creating a cyclical fight.\n Listen with the intention of being open to opinions. Hopefully, this will help from keeping a similar argument from happening again.',
+                                    'Anger is a difficult emotion to process, and many people deal with it in unhealthy ways that can end up being detrimental to themselves or others.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
@@ -139,82 +139,94 @@ class _BetterCommunicationState extends State<BetterCommunication>
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
-                                    maxLines: 50,
+                                    maxLines: 500,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                          // AnimatedOpacity(
-                          //   duration: const Duration(milliseconds: 500),
-                          //   opacity: opacity3,
-                          //   child: Padding(
-                          //     padding: const EdgeInsets.only(
-                          //         left: 16, bottom: 16, right: 16),
-                          //     child: Row(
-                          //       mainAxisAlignment: MainAxisAlignment.center,
-                          //       crossAxisAlignment: CrossAxisAlignment.center,
-                          //       children: <Widget>[
-                          //         Container(
-                          //           width: 48,
-                          //           height: 48,
-                          //           child: Container(
-                          //             decoration: BoxDecoration(
-                          //               color: DesignCourseAppTheme.nearlyWhite,
-                          //               borderRadius: const BorderRadius.all(
-                          //                 Radius.circular(16.0),
-                          //               ),
-                          //               border: Border.all(
-                          //                   color: DesignCourseAppTheme.grey
-                          //                       .withOpacity(0.2)),
-                          //             ),
-                          //             // child: Icon(
-                          //             //   Icons.add,
-                          //             //   color: DesignCourseAppTheme.nearlyBlue,
-                          //             //   size: 28,
-                          //             // ),
-                          //           ),
-                          //         ),
-                          //         const SizedBox(
-                          //           width: 16,
-                          //         ),
-                          //         Expanded(
-                          //           child: Container(
-                          //             height: 48,
-                          //             decoration: BoxDecoration(
-                          //               color: DesignCourseAppTheme.nearlyBlue,
-                          //               borderRadius: const BorderRadius.all(
-                          //                 Radius.circular(16.0),
-                          //               ),
-                          //               boxShadow: <BoxShadow>[
-                          //                 BoxShadow(
-                          //                     color: DesignCourseAppTheme
-                          //                         .nearlyBlue
-                          //                         .withOpacity(0.5),
-                          //                     offset: const Offset(1.1, 1.1),
-                          //                     blurRadius: 10.0),
-                          //               ],
-                          //             ),
-                          //             child: Center(
-                          //               child: Text(
-                          //                 'Take Session',
-                          //                 textAlign: TextAlign.left,
-                          //                 style: TextStyle(
-                          //                   fontWeight: FontWeight.w600,
-                          //                   fontSize: 18,
-                          //                   letterSpacing: 0.0,
-                          //                   color: DesignCourseAppTheme
-                          //                       .nearlyWhite,
-                          //                 ),
-                          //               ),
-                          //             ),
-                          //           ),
-                          //         )
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
+                          AnimatedOpacity(
+                            duration: const Duration(milliseconds: 500),
+                            opacity: opacity3,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 16, bottom: 16, right: 16),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  OutlinedButton(
+                                    onPressed: () => null,
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Icon(
+                                            Icons.arrow_back_ios_new,
+                                            color:
+                                                DesignCourseAppTheme.nearlyBlue,
+                                            size: 28,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 200,
+                                  ),
+                                  OutlinedButton(
+                                    onPressed: () => null,
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Align(
+                                          alignment: Alignment.centerRight,
+                                          child: Icon(
+                                            Icons.arrow_forward_ios,
+                                            color:
+                                                DesignCourseAppTheme.nearlyBlue,
+                                            size: 28,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  // Expanded(
+                                  //   child: Container(
+                                  //     height: 48,
+                                  //     decoration: BoxDecoration(
+                                  //       color: DesignCourseAppTheme.nearlyBlue,
+                                  //       borderRadius: const BorderRadius.all(
+                                  //         Radius.circular(16.0),
+                                  //       ),
+                                  //       boxShadow: <BoxShadow>[
+                                  //         BoxShadow(
+                                  //             color: DesignCourseAppTheme
+                                  //                 .nearlyBlue
+                                  //                 .withOpacity(0.5),
+                                  //             offset: const Offset(1.1, 1.1),
+                                  //             blurRadius: 10.0),
+                                  //       ],
+                                  //     ),
+                                  //     child: Center(
+                                  //       child: Text(
+                                  //         'Take Session',
+                                  //         textAlign: TextAlign.left,
+                                  //         style: TextStyle(
+                                  //           fontWeight: FontWeight.w600,
+                                  //           fontSize: 18,
+                                  //           letterSpacing: 0.0,
+                                  //           color: DesignCourseAppTheme
+                                  //               .nearlyWhite,
+                                  //         ),
+                                  //       ),
+                                  //     ),
+                                  //   ),
+                                  // )
+                                ],
+                              ),
+                            ),
+                          ),
                           SizedBox(
                             height: MediaQuery.of(context).padding.bottom,
                           )
