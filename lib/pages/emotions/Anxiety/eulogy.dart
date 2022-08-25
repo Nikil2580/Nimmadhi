@@ -133,8 +133,8 @@ class _EulogyState extends State<Eulogy> with TickerProviderStateMixin {
                                     'Write your imaginary novel(song of praise) to illuminate how you’d like to be remembered after you’re gone. This exercise allows you to know how you want to show up in the world and the necessary shifts that need to occur. This self-awareness exercise allows you to know the necessary set of actions to reach your goal.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

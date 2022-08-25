@@ -135,8 +135,8 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
                                     'Cognitive reappraisal is an ability to successfully reappraise enables us to reduce negative emotions and open us up to experiencing happiness, even during difficult times.\n\nReappraisal involves cognitively reframing an event to reduce the negative emotions you feel.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

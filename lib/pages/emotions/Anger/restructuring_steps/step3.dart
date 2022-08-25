@@ -136,8 +136,8 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                                     'You identify your thoughts about the situation that are underlying your upsetting feelings. If you are unsure what those thoughts are, ask yourself the following questions, depending on what your upsetting feelings were:\n\n• For fear or anxiety, ask yourself, “What bad thing do I expect to happen?” “What kind of danger am I in?”\n• For sadness or depression, ask yourself, “What have I lost hope in?” “What is missing in my life or in me?”\n• For guilt or shame, ask yourself, “What bad thing have I done?” “What is wrong with me?”\n• For anger, ask yourself, “What is unfair about this situation?” “Who has wronged me?”',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
@@ -183,32 +183,43 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                                   //   width: 16,
                                   // ),
                                   Expanded(
-                                    child: Container(
-                                      height: 48,
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  EditText(steps: '3')),
+                                        );
+                                      },
+                                      child: Container(
+                                        height: 48,
+                                        decoration: BoxDecoration(
+                                          color:
+                                              DesignCourseAppTheme.nearlyBlue,
+                                          borderRadius: const BorderRadius.all(
+                                            Radius.circular(16.0),
+                                          ),
+                                          boxShadow: <BoxShadow>[
+                                            BoxShadow(
+                                                color: DesignCourseAppTheme
+                                                    .nearlyBlue
+                                                    .withOpacity(0.5),
+                                                offset: const Offset(1.1, 1.1),
+                                                blurRadius: 10.0),
+                                          ],
                                         ),
-                                        boxShadow: <BoxShadow>[
-                                          BoxShadow(
+                                        child: Center(
+                                          child: Text(
+                                            'Type Here',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 18,
+                                              letterSpacing: 0.0,
                                               color: DesignCourseAppTheme
-                                                  .nearlyBlue
-                                                  .withOpacity(0.5),
-                                              offset: const Offset(1.1, 1.1),
-                                              blurRadius: 10.0),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Type Here',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
+                                                  .nearlyWhite,
+                                            ),
                                           ),
                                         ),
                                       ),

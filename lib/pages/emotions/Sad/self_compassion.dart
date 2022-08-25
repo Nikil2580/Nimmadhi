@@ -103,7 +103,7 @@ class _SelfCompassionState extends State<SelfCompassion>
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                fontSize: 30,
+                                fontSize: 32,
                                 letterSpacing: 0.27,
                                 color: DesignCourseAppTheme.darkerText,
                               ),
@@ -132,11 +132,11 @@ class _SelfCompassionState extends State<SelfCompassion>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Self-compassion entails being warm ,understanding and nurturing toward ourselves when we want to ignore our pain or bombard ourselves with self-criticism.\ni.Self Compassion journal:\nKeeping a daily journal in which you process the difficult events of your day through a lens of self-compassion can enhance both mental and physical well-being. This exercise will help make self-kindness, common humanity, and mindfulness part of your daily life.\nii.Self compassion break:\nThis session can be used any time of day or night and will help you remember to evoke the three aspects of self-compassion in the moment you need it most.',
+                                    'Self-compassion entails being warm, understanding and nurturing toward ourselves when we want to ignore our pain or bombard ourselves with self-criticism.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

@@ -1,3 +1,4 @@
+import 'package:agni/pages/emotions/Anger/pause_reflect.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../pages/emotions/Anger/better_communication.dart';
@@ -15,7 +16,8 @@ final List<String> entries1 = <String>[
   'restructuring.jpg',
   'think.jpg',
   'communication.jpg',
-  'reappraisal.jpg'
+  'reappraisal.jpg',
+  'pause.jpg'
 ];
 
 final List<String> entries2 = <String>[
@@ -34,6 +36,7 @@ final List<String> anger = <String>[
   'Think Before You Speak',
   'Better Communication',
   'Cognitive Reappraisal',
+  'Pause and Reflect'
 ];
 
 final List<String> anxiety = <String>[
@@ -57,7 +60,8 @@ final List<Widget> pages1 = [
   CognitiveRestructuring(),
   ThinkSpeak(),
   BetterCommunication(),
-  CognitiveReappraisal()
+  CognitiveReappraisal(),
+  PauseReflect()
 ];
 
 final List<Widget> pages2 = [

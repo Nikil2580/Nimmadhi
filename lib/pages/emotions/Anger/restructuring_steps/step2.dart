@@ -134,8 +134,8 @@ class _Step2State extends State<Step2> with TickerProviderStateMixin {
                                     'You want to identify the most upsetting feeling you had in the situation.Sometimes you may have had more than one feeling in the situation, but you should focus on identifying the strongest and most upsetting feeling.\n It is easiest to focus on four broad feelings, Try picking one of the following emotions:\n\n• fear and anxiety\n• sadness and depression\n• guilt and shame\n• anger\n\nIf you have more than one strong feeling about a given situation, complete a CR on the first feeling and then a second CR on the next feeling.\n\nCR-Cognitive Restructuring',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

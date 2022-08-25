@@ -135,8 +135,8 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                     'Cognitive restructuring is a technique that has been successfully used to help people change the way they think. It refers to therapeutic techniques that help people notice and change their negative thinking patterns',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

@@ -136,8 +136,8 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                                     'You want to evaluate the accuracy of your upsetting thought as carefully and objectively as possible. To do this, first think of all of the evidence you can that supports your thought or makes you think it is accurate. For example, for the thought You said “hello” to an old friend whom you met in  grocery store, and that friend ignored you". The person could ask "Why do I think there will be an old friend in the grocery store?" "If there was a friend there, why do I think I would be ignored by her?". Write all the evidence down on the worksheet.\nThen, think of all the evidence you can that does not support your thought, or suggests it may not be accurate. Consider as many reasons as you can for why your thought might not be correct. Then, write all the evidence against the thought down on the worksheet\n',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

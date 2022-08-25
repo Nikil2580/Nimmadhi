@@ -134,8 +134,8 @@ class _ThoughtJournalState extends State<ThoughtJournal>
                                     'A thought journal is a way to increase self-awareness.\nIt involves keeping track of thoughts that arises along with a non-judgemental approach. Trying to understand the emotional reason behind the thought is appreciated.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

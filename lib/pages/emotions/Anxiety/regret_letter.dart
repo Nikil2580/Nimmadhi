@@ -134,8 +134,8 @@ class _RegretLetterState extends State<RegretLetter>
                                     'Writing a regret letter is a way to build self-awareness and practice radical forgiveness at the same time. Write to your former self about regrets and forgive that self for mistakes that have been made. This activity permits you to be human.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

@@ -1,4 +1,6 @@
 import 'package:agni/pages/home_page.dart';
+import 'package:agni/quiz/screens/quiz/send_score.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:agni/quiz/themes.dart';
@@ -34,8 +36,41 @@ class ScoreScreen2 extends StatelessWidget {
               ),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context)
-                        .popUntil(ModalRoute.withName("/home"));
+                    try {
+                      SendScores(
+                              quizName: 'stress',
+                              quizScore:
+                                  "${_qnController.numOfCorrectAns}/${_qnController.questions.length * 3}")
+                          .updateNotes();
+                      var snackBar = SnackBar(
+                        elevation: 0,
+                        behavior: SnackBarBehavior.floating,
+                        backgroundColor: Colors.transparent,
+                        content: AwesomeSnackbarContent(
+                          title: 'Let\'s Go',
+                          message: 'Quiz Completed',
+                          contentType: ContentType.success,
+                        ),
+                      );
+
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    } catch (error) {
+                      var snackBar = SnackBar(
+                        elevation: 0,
+                        behavior: SnackBarBehavior.floating,
+                        backgroundColor: Colors.transparent,
+                        content: AwesomeSnackbarContent(
+                          title: 'Oops',
+                          message: 'An error Occurred',
+                          contentType: ContentType.failure,
+                        ),
+                      );
+
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    } finally {
+                      Navigator.of(context)
+                          .popUntil(ModalRoute.withName("/home"));
+                    }
                   },
                   child: Text('Back')),
               Spacer(flex: 3),

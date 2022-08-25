@@ -18,7 +18,6 @@ class _RegisterPageState extends State<RegisterPage> {
   final _confirmpwController = TextEditingController();
   final _firstNameController = TextEditingController();
   final _lastNameController = TextEditingController();
-  final _userNameController = TextEditingController();
 
   @override
   void dispose() {

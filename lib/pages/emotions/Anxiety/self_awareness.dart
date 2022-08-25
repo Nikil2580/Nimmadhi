@@ -129,11 +129,11 @@ class _SelfAwarenessState extends State<SelfAwareness>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Self-awareness is the ability to monitor our inner and external world. Our thoughts and feelings arise as signals.\nSelf-awareness brings about three features: \n• Thought Journal\n• Regret letter\n• Eulogy',
+                                    'Self-awareness is the ability to monitor our inner and external world. Our thoughts and feelings arise as signals.\n\nSelf-awareness brings about three features: \n• Thought Journal\n• Regret letter\n• Eulogy',
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

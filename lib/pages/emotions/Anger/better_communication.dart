@@ -134,8 +134,8 @@ class _BetterCommunicationState extends State<BetterCommunication>
                                     'Anger is a difficult emotion to process, and many people deal with it in unhealthy ways that can end up being detrimental to themselves or others.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

@@ -136,8 +136,8 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                                     'Write down the upsetting situation. The situation might be an actual event,like having an argument with someone, or a memory of an event such as thinking about the disaster.\n\nIn either case, just write one sentence describing the situation',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
@@ -159,29 +159,6 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyWhite,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
-                                        ),
-                                        border: Border.all(
-                                            color: DesignCourseAppTheme.grey
-                                                .withOpacity(0.2)),
-                                      ),
-                                      child: Icon(
-                                        Icons.arrow_back_ios_new,
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        size: 28,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
                                   Expanded(
                                     child: Container(
                                       height: 48,
