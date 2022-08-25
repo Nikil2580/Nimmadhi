@@ -74,11 +74,14 @@ class _DisplayTextState extends State<DisplayText> {
                               borderRadius: BorderRadius.circular(5)),
                           elevation: 10,
                           child: Expanded(
-                              child: Text(
-                            data[widget.steps][index],
-                            style: GoogleFonts.rubik(
-                                color: DesignCourseAppTheme.grey),
-                            overflow: TextOverflow.visible,
+                              child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              data[widget.steps][index],
+                              style: GoogleFonts.rubik(
+                                  color: DesignCourseAppTheme.grey),
+                              overflow: TextOverflow.visible,
+                            ),
                           ))),
                     );
                   },
