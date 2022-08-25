@@ -32,6 +32,7 @@ class ScoreScreen extends StatelessWidget {
                     .headline4
                     ?.copyWith(color: kSecondaryColor),
               ),
+              Spacer(),
               ElevatedButton(
                   onPressed: () {
                     Navigator.of(context)
@@ -45,4 +46,6 @@ class ScoreScreen extends StatelessWidget {
       ),
     );
   }
+
+  
 }
