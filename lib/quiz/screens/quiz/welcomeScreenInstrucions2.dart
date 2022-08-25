@@ -1,3 +1,4 @@
+import 'package:agni/quiz/screens/quiz/quiz_screen2.dart';
 import 'package:flutter/material.dart';
 import 'package:agni/quiz/screens/quiz/quiz_screen.dart';
 
@@ -5,7 +6,7 @@ import 'package:agni/quiz/themes.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-class WelcomeScreenIntructions extends StatelessWidget{
+class WelcomeScreenIntructions2 extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -31,7 +32,7 @@ class WelcomeScreenIntructions extends StatelessWidget{
                     ?.copyWith(color: kSecondaryColor),),
                   Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(QuizScreen2()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,

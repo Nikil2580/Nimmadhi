@@ -6,8 +6,8 @@ import 'components/body.dart';
 
 class QuizScreen extends StatelessWidget {
 
-  int? _count =0 ;
-  int? get count => this._count;
+  int _count =0 ;
+  
   @override
   Widget build(BuildContext context) {
     QuestionController _controller = Get.put(QuestionController());
@@ -19,8 +19,8 @@ class QuizScreen extends StatelessWidget {
         elevation: 0,
         actions: [
           TextButton(onPressed:(){
+             //_count=1,
              _controller.nextQuestion();
-             //_count++; 
              }    , child: Text("Skip")),
         ],
       ),

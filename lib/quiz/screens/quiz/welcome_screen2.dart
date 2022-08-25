@@ -1,4 +1,5 @@
 import 'package:agni/quiz/screens/quiz/quiz_screen2.dart';
+import 'package:agni/quiz/screens/quiz/welcomeScreenInstrucions2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -50,7 +51,7 @@ class WelcomeScreen2 extends StatelessWidget {
                   ),
                   Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen2()),
+                    onTap: () => Get.to(WelcomeScreenIntructions2()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
