@@ -25,7 +25,7 @@ class QuestionController2 extends GetxController
       .map(
         (question) => QuestionStress(
             id: question['id'],
-            questionStress: question['question'],
+            questionStress: question['questionStress'],
             options: question['options'],
             answer: question['answer_index']),
       )
