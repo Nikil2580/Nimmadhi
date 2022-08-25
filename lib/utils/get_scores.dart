@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import '../pages/design_course_app_theme.dart';
 
@@ -17,6 +18,11 @@ class GetScores extends StatefulWidget {
 }
 
 class _GetScoresState extends State<GetScores> {
+  double perValue(String arg) {
+    List<String> s = arg.split("/");
+    return (num.parse(s[0]) / num.parse(s[1]));
+  }
+
   final user = FirebaseAuth.instance.currentUser!;
   late final DocumentReference _scoreStream =
       FirebaseFirestore.instance.collection('quiz').doc(user.uid);
@@ -35,29 +41,38 @@ class _GetScoresState extends State<GetScores> {
           }
 
           if (snapshot.connectionState != ConnectionState.done) {
-            return SimpleCircularProgressBar(
-              progressColors: const [Colors.deepPurple],
-            );
+            return LoadingAnimationWidget.twoRotatingArc(
+                color: Colors.deepPurple, size: 100);
           }
           Map<String, dynamic> data =
               snapshot.data!.data() as Map<String, dynamic>;
           if (data[widget.quizName] == null) {
             return (Text("Take the quiz to view Scores"));
           } else {
-            return (Card(
-                clipBehavior: Clip.antiAlias,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)),
-                elevation: 10,
-                child: Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
+            return (Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CircularPercentIndicator(
+                  animation: true,
+                  animationDuration: 1000,
+                  radius: 60,
+                  lineWidth: 20,
+                  percent: perValue(
+                      data[widget.quizName][data[widget.quizName].length - 1]),
+                  progressColor: Colors.deepPurple,
+                  backgroundColor: Colors.deepPurple.shade100,
+                  circularStrokeCap: CircularStrokeCap.round,
+                  center: Text(
                     data[widget.quizName][data[widget.quizName].length - 1],
                     style: GoogleFonts.rubik(color: DesignCourseAppTheme.grey),
                     overflow: TextOverflow.visible,
                   ),
-                ))));
+                )
+                // child: Text(
+                //   data[widget.quizName][data[widget.quizName].length - 1],
+                //   style: GoogleFonts.rubik(color: DesignCourseAppTheme.grey),
+                //   overflow: TextOverflow.visible,
+                // ),
+                ));
           }
         });
   }

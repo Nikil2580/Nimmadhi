@@ -93,7 +93,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: Container(
-                height: 400,
+                height: 540,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
