@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BC1 extends StatefulWidget {
-  const BC1({super.key});
+class BCMAIN extends StatefulWidget {
+  const BCMAIN({super.key});
 
   @override
-  State<BC1> createState() => _BC1State();
+  State<BCMAIN> createState() => _BCMAINState();
 }
 
-class _BC1State extends State<BC1> {
+class _BCMAINState extends State<BCMAIN> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +19,7 @@ class _BC1State extends State<BC1> {
             body: Container(
               child: Center(
                   child: Text(
-                      'A wonderful and healthy way to communicate anger is by thinking “p before s”—processing before speaking.Once you’ve figured out that core emotion it can help you better communicate your feelings.')),
+                      'To express yourself clearly, we suggest  few healthy ways to communicate and process anger.')),
             )));
   }
 }

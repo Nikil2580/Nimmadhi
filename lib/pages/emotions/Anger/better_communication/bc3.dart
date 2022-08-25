@@ -4,10 +4,10 @@ class BC3 extends StatefulWidget {
   const BC3({super.key});
 
   @override
-  State<BC3> createState() => _BC1State();
+  State<BC3> createState() => _BC3State();
 }
 
-class _BC1State extends State<BC3> {
+class _BC3State extends State<BC3> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

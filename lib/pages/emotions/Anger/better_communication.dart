@@ -131,7 +131,7 @@ class _BetterCommunicationState extends State<BetterCommunication>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Anger is a difficult emotion to process, and many people deal with it in unhealthy ways that can end up being detrimental to themselves or others.\n\nTo express yourself clearly, we’ve suggested a few healthy ways to communicate and process anger.',
+                                    'Anger is a difficult emotion to process, and many people deal with it in unhealthy ways that can end up being detrimental to themselves or others.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w200,

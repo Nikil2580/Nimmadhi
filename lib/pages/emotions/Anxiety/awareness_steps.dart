@@ -16,7 +16,11 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
+          appBar: AppBar(
+            title: Text("Self Awareness"),
+            backgroundColor: Colors.deepPurple,
+          ),
+          body: Column(
             children: [
               const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -138,15 +142,22 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
                 ),
               ),
             ],
-          )
-      ),
+          )),
     );
   }
 }
 
-final List<String> entries = <String>['thought_journal.png', 'regret_letter.png', 'eulogy.png'];
+final List<String> entries = <String>[
+  'thought_journal.png',
+  'regret_letter.png',
+  'eulogy.png'
+];
 
-final List<String> steps = <String>['Thought Journal', 'Regret Letter', 'Eulogy'];
+final List<String> steps = <String>[
+  'Thought Journal',
+  'Regret Letter',
+  'Eulogy'
+];
 
 final List<bool> _selections = List.generate(steps.length, (_) => true);
 
