@@ -1,12 +1,11 @@
-import 'package:agni/quiz/screens/quiz/quiz_screen2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:agni/quiz/themes.dart';
 import 'package:agni/quiz/screens/quiz/quiz_screen.dart';
 
-class WelcomeScreen2 extends StatelessWidget {
-  @override
+import 'package:agni/quiz/themes.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+class WelcomeScreenIntructions extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -18,39 +17,17 @@ class WelcomeScreen2 extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(flex: 2), //2/6
+                  Spacer(flex:1), //2/6
                   Text(
-                    "Let's Asses Emotions",
+                    "Instructions:-",
                     style: Theme.of(context).textTheme.headline4?.copyWith(
                         color: Color.fromARGB(255, 7, 6, 6),
                         fontWeight: FontWeight.bold),
                   ),
-                  Text("Enter your informations below"),
-                  Spacer(), // 1/6
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Color.fromARGB(255, 238, 238, 245),
-                      hintText: "Full Name",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12)),
-                      ),
-                    ),
-                  ),
-                  Spacer(),
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Color.fromARGB(255, 238, 238, 245),
-                      hintText: "Age",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12)),
-                      ),
-                    ),
-                  ),
+                  Text("The questions are set with a timer of 60 sec"),
                   Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen2()),
+                    onTap: () => Get.to(QuizScreen()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
@@ -60,15 +37,15 @@ class WelcomeScreen2 extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
-                        "Lets Start Quiz",
+                        "Done ! Got it",
                         style: Theme.of(context)
                             .textTheme
                             .button
-                            ?.copyWith(color: Color.fromARGB(255, 238, 233, 233)),
+                            ?.copyWith(color: Colors.black),
                       ),
                     ),
                   ),
-                  Spacer(flex: 2), // it will take 2/6 spaces
+                  
                 ],
               ),
             ),
