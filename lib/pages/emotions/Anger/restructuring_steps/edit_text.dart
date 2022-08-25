@@ -18,7 +18,7 @@ class _EditTextState extends State<EditText> {
     final _textController = TextEditingController();
     final user = FirebaseAuth.instance.currentUser!;
 
-    Future updateFirstName(String notes) async {
+    Future updateNotes(String notes) async {
       var docs = await FirebaseFirestore.instance
           .collection('notes')
           .doc(user.uid)
@@ -80,7 +80,7 @@ class _EditTextState extends State<EditText> {
             ),
             MaterialButton(
                 onPressed: () {
-                  updateFirstName(_textController.text.trim());
+                  updateNotes(_textController.text.trim());
                   var snackBar = SnackBar(
                     elevation: 0,
                     behavior: SnackBarBehavior.floating,
