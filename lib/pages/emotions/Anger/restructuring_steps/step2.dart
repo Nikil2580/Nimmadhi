@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../../design_course_app_theme.dart';
 
 class Step2 extends StatefulWidget {
@@ -231,19 +232,25 @@ class _Step2State extends State<Step2> with TickerProviderStateMixin {
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: Card(
-                  color: DesignCourseAppTheme.nearlyBlue,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite,
-                        color: DesignCourseAppTheme.nearlyWhite,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Share.share(
+                        'Cognitive reappraisal is an ability to successfully reappraise enables us to reduce negative emotions and open us up to experiencing happiness, even during difficult times.\nReappraisal involves cognitively reframing an event to reduce the negative emotions you feel.\nTo practice reappraisal, start by writing out a list of things you learned from a past failure.');
+                  },
+                  child: Card(
+                    color: DesignCourseAppTheme.nearlyBlue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    elevation: 10.0,
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      child: Center(
+                        child: Icon(
+                          Icons.share,
+                          color: DesignCourseAppTheme.nearlyWhite,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),
