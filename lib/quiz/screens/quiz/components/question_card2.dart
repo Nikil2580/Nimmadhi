@@ -7,7 +7,7 @@ import 'package:agni/quiz/controllers/question_controller2.dart';
 import 'package:agni/quiz/models/Question_stress.dart';
 
 import '../../../themes.dart';
-import 'option.dart';
+import 'option2.dart';
 
 class QuestionCard2 extends StatelessWidget {
   const QuestionCard2({

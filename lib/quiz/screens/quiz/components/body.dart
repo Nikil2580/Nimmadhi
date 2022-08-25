@@ -8,7 +8,7 @@ import 'package:agni/quiz/controllers/question_controller.dart';
 import 'package:agni/quiz/models/Question_anxiety.dart';
 import 'package:flutter_svg/svg.dart';
 
-//import 'progress_bar.dart';
+import 'progress_bar.dart';
 import 'question_card.dart';
 
 class Body extends StatelessWidget {
@@ -30,7 +30,7 @@ class Body extends StatelessWidget {
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                //child: ProgressBar(),
+                child: ProgressBar(),
               ),
               SizedBox(height: kDefaultPadding),
               Padding(
