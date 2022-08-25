@@ -47,6 +47,8 @@ dependencies:
   get: ^4.1.4
   awesome_snackbar_content:
   share_plus: ^4.0.10+1
+  loading_animation_widget:
+  percent_indicator: ^4.0.1
 
 dev_dependencies:
   flutter_test:

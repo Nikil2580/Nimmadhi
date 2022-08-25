@@ -5,6 +5,9 @@ import 'package:agni/quiz/controllers/question_controller.dart';
 import 'components/body.dart';
 
 class QuizScreen extends StatelessWidget {
+
+  int _count =0 ;
+  
   @override
   Widget build(BuildContext context) {
     QuestionController _controller = Get.put(QuestionController());
@@ -15,7 +18,10 @@ class QuizScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          TextButton(onPressed: _controller.nextQuestion, child: Text("Skip")),
+          TextButton(onPressed:(){
+             //_count=1,
+             _controller.nextQuestion();
+             }    , child: Text("Skip")),
         ],
       ),
       body: Body(),

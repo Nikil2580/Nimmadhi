@@ -1,3 +1,4 @@
+import 'package:agni/quiz/screens/quiz/welcomeScreenInstrucions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -49,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(WelcomeScreenIntructions()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
@@ -63,11 +64,11 @@ class WelcomeScreen extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .button
-                            ?.copyWith(color: Colors.black),
+                            ?.copyWith(color: Color.fromARGB(255, 241, 238, 238)),
                       ),
                     ),
                   ),
-                  Spacer(flex: 2), // it will take 2/6 spaces
+                  
                 ],
               ),
             ),
