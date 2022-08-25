@@ -37,6 +37,17 @@ class WelcomeScreen2 extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Spacer(),
+                  TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color.fromARGB(255, 238, 238, 245),
+                      hintText: "Age",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                      ),
+                    ),
+                  ),
                   Spacer(), // 1/6
                   InkWell(
                     onTap: () => Get.to(QuizScreen2()),
