@@ -47,6 +47,7 @@ dependencies:
   get: ^4.1.4
   awesome_snackbar_content:
   share_plus: ^4.0.10+1
+  simple_circular_progress_bar: ^1.0.2
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 import 'package:agni/pages/update_profile.dart';
+import 'package:agni/utils/get_scores.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -131,6 +132,34 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text('${user.email}')
                       ],
                     ),
+                    Expanded(
+                        child: Column(
+                      children: [
+                        Text(
+                          "Your last Anxiety quiz score",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w700),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        GetScores(quizName: 'anxiety'),
+                      ],
+                    )),
+                    Expanded(
+                        child: Column(
+                      children: [
+                        Text(
+                          "Your last Anxiety quiz score",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w700),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        GetScores(quizName: 'stress'),
+                      ],
+                    ))
                   ],
                 ),
               ),
