@@ -19,7 +19,10 @@ class _SelfCompassionStepsState extends State<SelfCompassionSteps> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Self Compassion"),
+            title: Text(
+              "Self Compassion",
+              style: TextStyle(fontSize: 26),
+            ),
             backgroundColor: Colors.deepPurple,
           ),
           body: Column(
@@ -132,7 +135,9 @@ class _SelfCompassionStepsState extends State<SelfCompassionSteps> {
                                             alignment: Alignment.center,
                                             child: Text(
                                               steps[index],
-                                              // style: titleStyle,
+                                              style: TextStyle(
+                                                fontSize: 22,
+                                              ),
                                             )),
                                       ),
                                     ),

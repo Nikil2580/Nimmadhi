@@ -133,8 +133,8 @@ class _BeingMindfulState extends State<BeingMindful>
                                     'Mindfulness meditation is the practice of actually being present in the moment, which in turn trains us to become more mindful throughout the day, particularly during difficult situations. As Ms. Brach puts it: “Mindfulness is your awareness of whats going on in the present moment without any judgment',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

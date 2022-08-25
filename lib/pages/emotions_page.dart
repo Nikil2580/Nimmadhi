@@ -38,7 +38,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
           automaticallyImplyLeading: false,
           centerTitle: true,
           // ignore: prefer_const_literals_to_create_immutables
-          bottom: TabBar(tabs: [
+          bottom: TabBar(labelStyle: TextStyle(fontSize: 22), tabs: [
             Tab(text: 'Anger'),
             Tab(text: 'Anxiety'),
             Tab(text: 'Sadness')
@@ -141,7 +141,9 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                             alignment: Alignment.center,
                                             child: Text(
                                               anger[index],
-                                              style: titleStyle,
+                                              style: TextStyle(
+                                                fontSize: 22,
+                                              ),
                                             )),
                                       ),
                                     ),
@@ -249,7 +251,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                             alignment: Alignment.center,
                                             child: Text(
                                               anxiety[index],
-                                              style: titleStyle,
+                                              style: TextStyle(fontSize: 22),
                                             )),
                                       ),
                                     ),
@@ -355,7 +357,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                             alignment: Alignment.center,
                                             child: Text(
                                               sad[index],
-                                              style: titleStyle,
+                                              style: TextStyle(fontSize: 22),
                                             )),
                                       ),
                                     ),

@@ -136,8 +136,8 @@ class _Step1State extends State<Step1> with TickerProviderStateMixin {
                                     'Write down the upsetting situation. The situation might be an actual event,like having an argument with someone, or a memory of an event such as thinking about the disaster.\n\nIn either case, just write one sentence describing the situation',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

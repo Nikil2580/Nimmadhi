@@ -135,8 +135,8 @@ class _SelfCompassionBreakState extends State<SelfCompassionBreak>
                                     'This session can be used any time of day or night and will help you remember to evoke the three aspects of self-compassion in the moment you need it most.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

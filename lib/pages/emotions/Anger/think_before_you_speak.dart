@@ -133,8 +133,8 @@ class _ThinkSpeakState extends State<ThinkSpeak> with TickerProviderStateMixin {
                                     'Speaking may seem to happen without a lot of thought because it occurs so quickly, psycholinguistics research has shown that we do plan our speech in different ways and we do think in advance to various degrees\n\n1. Mentally take a pause\n2. Take a few deep breaths(fresh air, feel relaxed, Better processing)\n3. Observe/Listen- You may feel the urge to respond to everything but not everything requires your response. \n4. Mentally, Now its time to play the speak button',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

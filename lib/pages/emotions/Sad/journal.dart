@@ -135,8 +135,8 @@ class _SelfCompassionJournalState extends State<SelfCompassionJournal>
                                     'Keeping a daily journal in which you process the difficult events of your day through a lens of self-compassion can enhance both mental and physical well-being. This exercise will help make self-kindness, common humanity, and mindfulness part of your daily life',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

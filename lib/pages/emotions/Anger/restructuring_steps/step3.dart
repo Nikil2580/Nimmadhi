@@ -136,8 +136,8 @@ class _Step3State extends State<Step3> with TickerProviderStateMixin {
                                     'You identify your thoughts about the situation that are underlying your upsetting feelings. If you are unsure what those thoughts are, ask yourself the following questions, depending on what your upsetting feelings were:\n\n• For fear or anxiety, ask yourself, “What bad thing do I expect to happen?” “What kind of danger am I in?”\n• For sadness or depression, ask yourself, “What have I lost hope in?” “What is missing in my life or in me?”\n• For guilt or shame, ask yourself, “What bad thing have I done?” “What is wrong with me?”\n• For anger, ask yourself, “What is unfair about this situation?” “Who has wronged me?”',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

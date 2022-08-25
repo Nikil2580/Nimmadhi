@@ -134,8 +134,8 @@ class _ReappraisalSessionState extends State<ReappraisalSession>
                                     'Lets start an effecient reappraisal, start by writing out a list of things you learned from a past failure. For example, if you missed an important deadline, maybe you learned that you need to prioritize better, delegate more, or tone down your perfectionism.\n\nAsk yourself these questions to help you reappraise:\n• Were there, or will there be, any positive outcomes that result from this situation?\n• Are you grateful for any part of this situation?\n• In what ways are you better off than when you started?\n• What did you learn?\n• How did you grow and develop as a result of this situation?\n\nThe more you invest the situation this Perspective,the better Reappraised your perspective will be.',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),

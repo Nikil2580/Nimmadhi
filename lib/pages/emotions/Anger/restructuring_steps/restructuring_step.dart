@@ -20,7 +20,10 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Cognitive Restructuring"),
+            title: Text(
+              "Cognitive Restructuring",
+              style: TextStyle(fontSize: 26),
+            ),
             backgroundColor: Colors.deepPurple,
           ),
           body: Column(
@@ -133,7 +136,7 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
                                             alignment: Alignment.center,
                                             child: Text(
                                               steps[index],
-                                              // style: ,
+                                              style: TextStyle(fontSize: 22),
                                             )),
                                       ),
                                     ),
@@ -161,8 +164,8 @@ final List<String> entries = <String>[
 final List<String> steps = <String>[
   'Step 1: The Situation',
   'Step 2: Feeling',
-  'Step 3: The thought',
-  'Step 4: Evaluate the thought',
+  'Step 3: The Thought',
+  'Step 4: Evaluate The Thought',
   'Step 5: Make A Desicion'
 ];
 
