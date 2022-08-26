@@ -181,7 +181,6 @@ class _CreateProfileState extends State<CreateProfile> {
 
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     Navigator.pop(context);
-                    Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
