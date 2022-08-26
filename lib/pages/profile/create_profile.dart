@@ -122,8 +122,8 @@ class _CreateProfileState extends State<CreateProfile> {
                 width: 300,
                 child: IntegerNumberPicker(
                   axis: Axis.horizontal,
-                  initialValue:
-                      _userDetails?['age'] == null ? 20 : _userDetails?['age'],
+                  initialValue: 20,
+                  //_userDetails?['age'] == null ? 20 : _userDetails?['age'],
                   minValue: 1,
                   maxValue: 100,
                   onChanged: (val) => {
