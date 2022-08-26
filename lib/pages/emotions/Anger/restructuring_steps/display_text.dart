@@ -35,7 +35,15 @@ class _DisplayTextState extends State<DisplayText> {
         }
 
         if (snapshot.connectionState != ConnectionState.done) {
-          return Text("loading");
+          return Center(
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: CircularProgressIndicator(
+                color: Colors.deepPurple,
+              ),
+            ),
+          );
         }
         Map<String, dynamic> data =
             snapshot.data!.data() as Map<String, dynamic>;
