@@ -103,7 +103,7 @@ class _CreateProfileState extends State<CreateProfile> {
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.indigo),
                           borderRadius: BorderRadius.circular(12)),
-                      hintText: _userDetails!['last_name'] == null
+                      hintText: _userDetails?['last_name'] == null
                           ? 'Enter Last Name'
                           : _userDetails!['last_name'],
                       fillColor: Colors.white,
@@ -122,7 +122,8 @@ class _CreateProfileState extends State<CreateProfile> {
                 width: 300,
                 child: IntegerNumberPicker(
                   axis: Axis.horizontal,
-                  initialValue: 20,
+                  initialValue:
+                      _userDetails?['age'] == null ? 20 : _userDetails!['age'],
                   //_userDetails?['age'] == null ? 20 : _userDetails?['age'],
                   minValue: 1,
                   maxValue: 100,
