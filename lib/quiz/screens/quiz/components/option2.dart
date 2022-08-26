@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:agni/quiz/controllers/question_controller2.dart';
 
@@ -17,17 +18,19 @@ class Option extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    QuestionController2 _questionController2 = Get.put(QuestionController2());
     return GetBuilder<QuestionController2>(
         init: QuestionController2(),
         builder: (qnController) {
           Color getTheRightColor() {
-            if (qnController.isAnswered) {
-              if (index == qnController.correctAns) {
-                return kGreenColor;
-              } else if (index == qnController.selectedAns &&
-                  qnController.selectedAns != qnController.correctAns) {
-                return kGreenColor;
-              }
+            if (_questionController2.index == 0) {
+              return KLightGreenColor;
+            } else if (_questionController2.index == 1) {
+              return KYellowColor;
+            } else if (_questionController2.index == 2) {
+              return KOrangeColor;
+            } else if (_questionController2.index == 3) {
+              return kRedColor;
             }
             return kGrayColor;
           }

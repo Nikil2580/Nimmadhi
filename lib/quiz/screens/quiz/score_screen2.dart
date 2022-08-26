@@ -6,10 +6,12 @@ import 'package:get/get.dart';
 import 'package:agni/quiz/themes.dart';
 import 'package:agni/quiz/controllers/question_controller2.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:agni/quiz/screens/quiz/welcome_screen2.dart';
 
 class ScoreScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    WelcomeScreen2 _quizScreen = Get.put(WelcomeScreen2());
     QuestionController2 _qnController = Get.put(QuestionController2());
     return Scaffold(
       body: Stack(
@@ -29,6 +31,22 @@ class ScoreScreen2 extends StatelessWidget {
               Spacer(),
               Text(
                 "${_qnController.numOfCorrectAns}/${_qnController.questions.length * 3}",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    ?.copyWith(color: kSecondaryColor),
+              ),
+              Spacer(),
+              Text(
+                "Skip Count",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    ?.copyWith(color: kSecondaryColor),
+              ),
+              Spacer(),
+              Text(
+                "${_quizScreen.count}/${_qnController.questions.length}",
                 style: Theme.of(context)
                     .textTheme
                     .headline4
