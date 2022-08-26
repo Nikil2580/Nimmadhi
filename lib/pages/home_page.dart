@@ -157,15 +157,12 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-
-<<<<<<< HEAD
             /*SizedBox(height: 20),
             Text('Favorites ⭐',
                 style: TextStyle(
                   fontSize: 28,
                 )),
             SizedBox(height: 20),*/
-=======
             SizedBox(height: 20),
             Text('Videos 🎭',
                 style: TextStyle(
@@ -206,7 +203,6 @@ class _HomePageState extends State<HomePage> {
                     );
                   },
                 ))
->>>>>>> 7484e4a5eee2eeb29ad8fd8f8fe2f573f07cf102
           ],
         ),
       ),

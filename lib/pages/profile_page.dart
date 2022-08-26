@@ -71,13 +71,9 @@ class _ProfilePageState extends State<ProfilePage> {
         title: Padding(
           padding: const EdgeInsets.all(7.0),
           child: Text(
-<<<<<<< HEAD
-            "Hi there!",
-=======
             _userDetails == null
                 ? "Hi There"
                 : "Hi ${_userDetails?['first_name']}",
->>>>>>> 7484e4a5eee2eeb29ad8fd8f8fe2f573f07cf102
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
