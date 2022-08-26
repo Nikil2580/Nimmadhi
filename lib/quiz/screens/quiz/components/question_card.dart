@@ -17,7 +17,6 @@ class QuestionCard extends StatelessWidget {
   }) : super(key: key);
 
   final Question question;
-
   @override
   Widget build(BuildContext context) {
     QuestionController _controller = Get.put(QuestionController());
@@ -42,10 +41,9 @@ class QuestionCard extends StatelessWidget {
             ...List.generate(
               question.options.length,
               (index) => Option(
-                index: index,
-                text: question.options[index],
-                press: () => _controller.checkAns(question, index),
-              ),
+                  index: index,
+                  text: question.options[index],
+                  press: () => _controller.checkAns(question, index)),
             ),
           ],
         ),
