@@ -153,9 +153,9 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
 }
 
 final List<String> entries = <String>[
-  'thought_journal.png',
-  'regret_letter.png',
-  'eulogy.png'
+  'thought_journal.gif',
+  'regret_letter.gif',
+  'eulogy.gif'
 ];
 
 final List<String> steps = <String>[

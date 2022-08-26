@@ -86,7 +86,7 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
                                           foregroundDecoration: BoxDecoration(
                                               image: DecorationImage(
                                             image: AssetImage(
-                                                'assets/images/restructuring/${entries[index]}'),
+                                                'assets/images/${entries[index]}'),
                                             fit: BoxFit.fitWidth,
                                           )),
                                         ),
@@ -154,11 +154,11 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
 }
 
 final List<String> entries = <String>[
-  'step1.png',
-  'step2.png',
-  'step3.png',
-  'step4.png',
-  'step5.png'
+  'situation.gif',
+  'feeling.gif',
+  'the_thought.gif',
+  'evaluate_thought.gif',
+  'making_decision.gif'
 ];
 
 final List<String> steps = <String>[

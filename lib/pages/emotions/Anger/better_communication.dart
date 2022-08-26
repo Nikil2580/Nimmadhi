@@ -57,7 +57,8 @@ class _BetterCommunicationState extends State<BetterCommunication>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/communication.jpg'),
+                    child:
+                        Image.asset('assets/images/better_communication.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -98,7 +99,7 @@ class _BetterCommunicationState extends State<BetterCommunication>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Better communication',
+                              'Communication Techniques',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -156,73 +157,73 @@ class _BetterCommunicationState extends State<BetterCommunication>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  OutlinedButton(
-                                    onPressed: () => null,
-                                    child: Stack(
-                                      children: <Widget>[
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Icon(
-                                            Icons.arrow_back_ios_new,
-                                            color:
-                                                DesignCourseAppTheme.nearlyBlue,
-                                            size: 28,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 200,
-                                  ),
-                                  OutlinedButton(
-                                    onPressed: () => null,
-                                    child: Stack(
-                                      children: <Widget>[
-                                        Align(
-                                          alignment: Alignment.centerRight,
-                                          child: Icon(
-                                            Icons.arrow_forward_ios,
-                                            color:
-                                                DesignCourseAppTheme.nearlyBlue,
-                                            size: 28,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  // Expanded(
-                                  //   child: Container(
-                                  //     height: 48,
-                                  //     decoration: BoxDecoration(
-                                  //       color: DesignCourseAppTheme.nearlyBlue,
-                                  //       borderRadius: const BorderRadius.all(
-                                  //         Radius.circular(16.0),
-                                  //       ),
-                                  //       boxShadow: <BoxShadow>[
-                                  //         BoxShadow(
-                                  //             color: DesignCourseAppTheme
-                                  //                 .nearlyBlue
-                                  //                 .withOpacity(0.5),
-                                  //             offset: const Offset(1.1, 1.1),
-                                  //             blurRadius: 10.0),
-                                  //       ],
-                                  //     ),
-                                  //     child: Center(
-                                  //       child: Text(
-                                  //         'Take Session',
-                                  //         textAlign: TextAlign.left,
-                                  //         style: TextStyle(
-                                  //           fontWeight: FontWeight.w600,
-                                  //           fontSize: 18,
-                                  //           letterSpacing: 0.0,
-                                  //           color: DesignCourseAppTheme
-                                  //               .nearlyWhite,
+                                  // OutlinedButton(
+                                  //   onPressed: () => null,
+                                  //   child: Stack(
+                                  //     children: <Widget>[
+                                  //       Align(
+                                  //         alignment: Alignment.centerLeft,
+                                  //         child: Icon(
+                                  //           Icons.arrow_back_ios_new,
+                                  //           color:
+                                  //               DesignCourseAppTheme.nearlyBlue,
+                                  //           size: 28,
                                   //         ),
                                   //       ),
-                                  //     ),
+                                  //     ],
                                   //   ),
-                                  // )
+                                  // ),
+                                  // const SizedBox(
+                                  //   width: 200,
+                                  // ),
+                                  // OutlinedButton(
+                                  //   onPressed: () => null,
+                                  //   child: Stack(
+                                  //     children: <Widget>[
+                                  //       Align(
+                                  //         alignment: Alignment.centerRight,
+                                  //         child: Icon(
+                                  //           Icons.arrow_forward_ios,
+                                  //           color:
+                                  //               DesignCourseAppTheme.nearlyBlue,
+                                  //           size: 28,
+                                  //         ),
+                                  //       ),
+                                  //     ],
+                                  //   ),
+                                  // ),
+                                  Expanded(
+                                    child: Container(
+                                      height: 48,
+                                      decoration: BoxDecoration(
+                                        color: DesignCourseAppTheme.nearlyBlue,
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                        boxShadow: <BoxShadow>[
+                                          BoxShadow(
+                                              color: DesignCourseAppTheme
+                                                  .nearlyBlue
+                                                  .withOpacity(0.5),
+                                              offset: const Offset(1.1, 1.1),
+                                              blurRadius: 10.0),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Take Session',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            letterSpacing: 0.0,
+                                            color: DesignCourseAppTheme
+                                                .nearlyWhite,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
                                 ],
                               ),
                             ),

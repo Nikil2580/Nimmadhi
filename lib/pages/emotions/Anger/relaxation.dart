@@ -58,7 +58,7 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                      child: Image.asset('assets/images/relaxation.jpg'),
+                      child: Image.asset('assets/images/relaxation.gif'),
                       fit: BoxFit.fill),
                 ),
               ],

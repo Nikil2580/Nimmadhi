@@ -59,7 +59,7 @@ class _Step4State extends State<Step4> with TickerProviderStateMixin {
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/restructuring/step4.png'),
+                    child: Image.asset('assets/images/evaluate_thought.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),
