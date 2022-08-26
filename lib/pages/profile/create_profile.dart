@@ -118,7 +118,7 @@ class _CreateProfileState extends State<CreateProfile> {
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
             )),
             SizedBox(
-                height: 150,
+                height: 100,
                 width: 300,
                 child: IntegerNumberPicker(
                   axis: Axis.horizontal,

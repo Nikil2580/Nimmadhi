@@ -203,7 +203,9 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                                         Navigator.push(context,
                                             MaterialPageRoute(
                                           builder: (context) {
-                                            return Player();
+                                            return Player(
+                                              video: 'relaxation',
+                                            );
                                           },
                                         ));
                                       },
