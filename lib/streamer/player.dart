@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 class Player extends StatefulWidget {
-  Player({Key? key}) : super(key: key);
+  final String video;
+  Player({Key? key, required this.video}) : super(key: key);
 
   @override
   State<Player> createState() => _PlayerState();
@@ -19,7 +20,8 @@ class _PlayerState extends State<Player> {
     // Create and store the VideoPlayerController. The VideoPlayerController
     // offers several different constructors to play videos from assets, files,
     // or the internet.
-    _controller = VideoPlayerController.asset('assets/media/relaxation.mp4');
+    _controller =
+        VideoPlayerController.asset('assets/media/${widget.video}.mp4');
     // _controller = VideoPlayerController.network(
     //     'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4');
 

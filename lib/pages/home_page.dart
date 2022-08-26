@@ -1,3 +1,4 @@
+import 'package:agni/streamer/player.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -171,18 +172,29 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8),
-                      child: Container(
-                          height: 200,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.indigo[200],
-                          ),
-                          child: Center(
-                              child: Text(
-                            "🤡",
-                            style: TextStyle(fontSize: 50),
-                          ))),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return Player(
+                                video: 'relaxation',
+                              );
+                            },
+                          ));
+                        },
+                        child: Container(
+                            height: 200,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.indigo[200],
+                            ),
+                            child: Center(
+                                child: Text(
+                              "Video${index}",
+                              style: TextStyle(fontSize: 50),
+                            ))),
+                      ),
                     );
                   },
                 ))
