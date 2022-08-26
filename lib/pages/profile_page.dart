@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:cool_alert/cool_alert.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -61,6 +62,10 @@ class _ProfilePageState extends State<ProfilePage> {
                       type: CoolAlertType.confirm,
                       onConfirmBtnTap: () {
                         FirebaseAuth.instance.signOut();
+                        final GoogleSignIn googleSignIn = new GoogleSignIn();
+                        googleSignIn.isSignedIn().then((s) {
+                          googleSignIn.signOut();
+                        });
                         Navigator.pop(context);
                       },
                       text: "Are you sure you want to log out");
