@@ -168,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                 height: 200,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 4,
+                  itemCount: videos.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8),
@@ -177,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(context, MaterialPageRoute(
                             builder: (context) {
                               return Player(
-                                video: 'relaxation',
+                                video: videos[index],
                               );
                             },
                           ));
@@ -191,8 +191,8 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Center(
                                 child: Text(
-                              "Video${index}",
-                              style: TextStyle(fontSize: 50),
+                              "${videos[index]}",
+                              style: TextStyle(fontSize: 25),
                             ))),
                       ),
                     );
@@ -203,4 +203,6 @@ class _HomePageState extends State<HomePage> {
       ),
     ));
   }
+
+  final List<String> videos = ["relaxation", "mindfulness"];
 }
