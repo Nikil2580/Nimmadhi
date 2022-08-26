@@ -142,9 +142,10 @@ class _ProfilePageState extends State<ProfilePage> {
                         children: [
                           Icon(FlutterRemix.mail_line, size: 20),
                           SizedBox(width: 5),
-                          Text('${user.email}')
+                          Text('${user.email}', style: TextStyle(fontSize: 16))
                         ],
                       ),
+                      SizedBox(height: 30),
                       Expanded(
                           child: Column(
                         children: [
@@ -163,9 +164,9 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Column(
                         children: [
                           Text(
-                            "\nYour last Anxiety quiz score",
+                            "\nYour last Stress quiz score",
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.w700),
+                                fontSize: 18, fontWeight: FontWeight.w700),
                           ),
                           SizedBox(
                             height: 20,
