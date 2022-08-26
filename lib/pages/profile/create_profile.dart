@@ -1,4 +1,5 @@
 import 'package:awesome_number_picker/awesome_number_picker.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -15,21 +16,39 @@ class CreateProfile extends StatefulWidget {
 class _CreateProfileState extends State<CreateProfile> {
   final _firstNameController = TextEditingController();
   final _lastNameController = TextEditingController();
-  int _ageController = 1;
   final user = FirebaseAuth.instance.currentUser!;
   @override
+  void initState() {
+    super.initState();
+    _getUserDetails();
+  }
+
   void dispose() {
     _firstNameController.dispose();
     _lastNameController.dispose();
     super.dispose();
   }
 
-  void newProfile() {
-    FirebaseFirestore.instance.collection('users').doc(user.uid).set({
-      'first_name': _firstNameController.text.trim(),
-      'last_name': _lastNameController.text.trim(),
-      'age': _ageController
+  late int _ageController = 20;
+
+  Map<String, dynamic>? _userDetails;
+  Future<void> _getUserDetails() async {
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .get()
+        .then((value) {
+      setState(() {
+        _userDetails = value.data();
+      });
     });
+  }
+
+  void newProfile({String fName = "", String lName = "", int age = 0}) {
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .set({'first_name': fName, 'last_name': lName, 'age': age});
   }
 
   Widget build(BuildContext context) {
@@ -62,7 +81,9 @@ class _CreateProfileState extends State<CreateProfile> {
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.indigo),
                           borderRadius: BorderRadius.circular(12)),
-                      hintText: 'First Name',
+                      hintText: _userDetails?['first_name'] == null
+                          ? 'Enter First Name'
+                          : _userDetails!['first_name'],
                       fillColor: Colors.white,
                       filled: true),
                 ),
@@ -82,7 +103,9 @@ class _CreateProfileState extends State<CreateProfile> {
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.indigo),
                           borderRadius: BorderRadius.circular(12)),
-                      hintText: 'Last Name',
+                      hintText: _userDetails?['last_name'] == null
+                          ? 'Enter Last Name'
+                          : _userDetails!['last_name'],
                       fillColor: Colors.white,
                       filled: true),
                 ),
@@ -92,14 +115,16 @@ class _CreateProfileState extends State<CreateProfile> {
             SizedBox(
                 child: Text(
               "Age",
-              style: TextStyle(fontWeight: FontWeight.w600),
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
             )),
             SizedBox(
-                height: 150,
+                height: 100,
                 width: 300,
                 child: IntegerNumberPicker(
                   axis: Axis.horizontal,
-                  initialValue: 15,
+                  initialValue:
+                      _userDetails?['age'] == null ? 20 : _userDetails!['age'],
+                  //_userDetails?['age'] == null ? 20 : _userDetails?['age'],
                   minValue: 1,
                   maxValue: 100,
                   onChanged: (val) => {
@@ -136,7 +161,26 @@ class _CreateProfileState extends State<CreateProfile> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    newProfile();
+                    newProfile(
+                        fName: _firstNameController.text.trim() == ''
+                            ? _userDetails!['first_name']
+                            : _firstNameController.text.trim(),
+                        lName: _lastNameController.text.trim() == ''
+                            ? _userDetails!['last_name']
+                            : _lastNameController.text.trim(),
+                        age: _ageController);
+                    var snackBar = SnackBar(
+                      elevation: 0,
+                      behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.transparent,
+                      content: AwesomeSnackbarContent(
+                        title: 'Let\'s Go',
+                        message: 'Profile successfully added',
+                        contentType: ContentType.success,
+                      ),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(

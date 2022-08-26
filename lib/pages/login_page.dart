@@ -22,10 +22,27 @@ class _LoginState extends State<Login> {
   GoogleSignInAccount get user => _user!;
 
   Future signIn() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: _emailController.text.trim(),
-      password: _passwordController.text.trim(),
-    );
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passwordController.text.trim(),
+      );
+    } catch (error) {
+      print(error);
+      var snackBar = SnackBar(
+        elevation: 0,
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Colors.transparent,
+        content: AwesomeSnackbarContent(
+          title: 'An Error Occurred',
+          message:
+              'Credential Mismatch.\nPlease try Again with the correct credentials',
+          contentType: ContentType.failure,
+        ),
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
   }
 
   Future signInWithGoogle() async {

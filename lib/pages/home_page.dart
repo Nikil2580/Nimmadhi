@@ -1,3 +1,6 @@
+import 'package:agni/streamer/player.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:agni/quiz/screens/quiz/welcome_screen.dart';
@@ -12,6 +15,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void initState() {
+    super.initState;
+    _getUserDetails();
+  }
+
+  final user = FirebaseAuth.instance.currentUser!;
+  Map<String, dynamic>? _userDetails;
+  Future<void> _getUserDetails() async {
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .get()
+        .then((value) {
+      setState(() {
+        _userDetails = value.data();
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +65,9 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             Text(
-              'User 👋',
+              _userDetails?['first_name'] == null
+                  ? "User 👋"
+                  : "${_userDetails?['first_name']} 👋",
               style: TextStyle(fontSize: 36),
             ),
             SizedBox(
@@ -134,12 +158,55 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
+<<<<<<< HEAD
             /*SizedBox(height: 20),
             Text('Favorites ⭐',
                 style: TextStyle(
                   fontSize: 28,
                 )),
             SizedBox(height: 20),*/
+=======
+            SizedBox(height: 20),
+            Text('Videos 🎭',
+                style: TextStyle(
+                  fontSize: 28,
+                )),
+            SizedBox(height: 20),
+            SizedBox(
+                height: 200,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return Player(
+                                video: 'relaxation',
+                              );
+                            },
+                          ));
+                        },
+                        child: Container(
+                            height: 200,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.indigo[200],
+                            ),
+                            child: Center(
+                                child: Text(
+                              "Video${index}",
+                              style: TextStyle(fontSize: 50),
+                            ))),
+                      ),
+                    );
+                  },
+                ))
+>>>>>>> 7484e4a5eee2eeb29ad8fd8f8fe2f573f07cf102
           ],
         ),
       ),

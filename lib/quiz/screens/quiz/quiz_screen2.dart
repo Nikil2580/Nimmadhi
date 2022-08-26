@@ -20,12 +20,19 @@ class QuizScreen2 extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          ElevatedButton(
-              onPressed: () {
-                _welcomScreen.count++;
-                _controller.nextQuestion();
-              },
-              child: Text("Skip")),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.deepPurple,
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                ),
+                onPressed: () {
+                  _welcomScreen.count++;
+                  _controller.nextQuestion();
+                },
+                child: Text("Skip")),
+          ),
         ],
       ),
       body: Body2(),
