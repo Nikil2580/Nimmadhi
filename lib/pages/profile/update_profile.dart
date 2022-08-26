@@ -1,6 +1,6 @@
-import 'package:agni/pages/update_firstname.dart';
-import 'package:agni/pages/update_lastname.dart';
-import 'package:agni/pages/update_username.dart';
+import 'package:agni/pages/profile/update_firstname.dart';
+import 'package:agni/pages/profile/update_lastname.dart';
+import 'package:agni/pages/profile/update_username.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +57,8 @@ class _UpdateProfileState extends State<UpdateProfile> {
       ),
       body: SafeArea(
           child: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(

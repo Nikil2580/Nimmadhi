@@ -87,8 +87,7 @@ class ScoreScreen extends StatelessWidget {
 
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     } finally {
-                      Navigator.of(context)
-                          .popUntil(ModalRoute.withName("/home"));
+                      Navigator.of(context).popUntil((route) => route.isFirst);
                     }
                   },
                   child: Text('Back')),
