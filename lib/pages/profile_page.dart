@@ -1,5 +1,4 @@
 import 'package:agni/pages/profile/create_profile.dart';
-import 'package:agni/pages/profile/update_profile.dart';
 import 'package:agni/utils/get_scores.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -64,7 +63,7 @@ class _ProfilePageState extends State<ProfilePage> {
         title: Padding(
           padding: const EdgeInsets.all(7.0),
           child: Text(
-            "Hi ${_userDetails?['user_name']}",
+            "Hi ${_userDetails?['first_name']}",
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
