@@ -1,48 +1,37 @@
-// ignore_for_file: prefer_const_constructors
-
+import 'package:awesome_number_picker/awesome_number_picker.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
-class RegisterPage extends StatefulWidget {
-  final VoidCallback showLoginPage;
-  const RegisterPage({Key? key, required this.showLoginPage}) : super(key: key);
+class CreateProfile extends StatefulWidget {
+  const CreateProfile({super.key});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<CreateProfile> createState() => _CreateProfileState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
-  final _confirmpwController = TextEditingController();
-
+class _CreateProfileState extends State<CreateProfile> {
+  final _firstNameController = TextEditingController();
+  final _lastNameController = TextEditingController();
+  int _ageController = 1;
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
-    _confirmpwController.dispose();
+    _firstNameController.dispose();
+    _lastNameController.dispose();
     super.dispose();
   }
 
-  bool isPassword() {
-    if (_passwordController.text.trim() == _confirmpwController.text.trim()) {
-      return true;
-    } else {
-      return false;
-    }
+  void newProfile() {
+    FirebaseFirestore.instance.collection('users').doc(user.uid).set({
+      'first_name': _firstNameController.text.trim(),
+      'last_name': _lastNameController.text.trim(),
+      'age': _ageController
+    });
   }
 
-  Future signUp() async {
-    if (isPassword()) {
-      //create user
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-          email: _emailController.text.trim(),
-          password: _passwordController.text.trim());
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
@@ -53,7 +42,7 @@ class _RegisterPageState extends State<RegisterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Register",
+            Text("Hello, There",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
@@ -65,7 +54,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 child: TextField(
-                  controller: _emailController,
+                  controller: _firstNameController,
                   decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -73,7 +62,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.indigo),
                           borderRadius: BorderRadius.circular(12)),
-                      hintText: 'E-mail',
+                      hintText: 'First Name',
                       fillColor: Colors.white,
                       filled: true),
                 ),
@@ -85,8 +74,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 child: TextField(
-                  obscureText: true,
-                  controller: _passwordController,
+                  controller: _lastNameController,
                   decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -94,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.indigo),
                           borderRadius: BorderRadius.circular(12)),
-                      hintText: 'Password',
+                      hintText: 'Last Name',
                       fillColor: Colors.white,
                       filled: true),
                 ),
@@ -102,25 +90,44 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
             //confirm-password
             SizedBox(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                child: TextField(
-                  obscureText: true,
-                  controller: _confirmpwController,
-                  decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(12)),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.indigo),
-                          borderRadius: BorderRadius.circular(12)),
-                      hintText: 'Confirm Password',
-                      fillColor: Colors.white,
-                      filled: true),
-                ),
-              ),
-            ),
+                child: Text(
+              "Age",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            )),
+            SizedBox(
+                height: 150,
+                width: 300,
+                child: IntegerNumberPicker(
+                  axis: Axis.horizontal,
+                  initialValue: 15,
+                  minValue: 1,
+                  maxValue: 100,
+                  onChanged: (val) => {
+                    setState(() {
+                      _ageController = val;
+                    })
+                  },
+                  pickedItemTextStyle: TextStyle(color: Colors.deepPurple),
+                  otherItemsDecoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(.1),
+                        blurRadius: 20.0, // soften the shadow
+                        spreadRadius: 0.0, //extend the shadow
+                      )
+                    ],
+                  ),
+                  pickedItemDecoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.deepPurple.withOpacity(.5),
+                        blurRadius: 20.0, // soften the shadow
+                        spreadRadius: 0.0, //extend the shadow
+                      )
+                    ],
+                  ),
+                )),
+
             SizedBox(height: 10),
             //sign-in
             Padding(
@@ -128,7 +135,10 @@ class _RegisterPageState extends State<RegisterPage> {
               child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: signUp,
+                  onPressed: () {
+                    newProfile();
+                    Navigator.pop(context);
+                  },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -137,28 +147,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     elevation: 0,
                     primary: Colors.indigo,
                   ),
-                  child: Text('Sign Up'),
+                  child: Text('Proceed'),
                 ),
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Already a member?",
-                  style: TextStyle(fontSize: 14),
-                ),
-                TextButton(
-                    onPressed: widget.showLoginPage,
-                    child: Text(
-                      'Login',
-                      style: TextStyle(color: Colors.indigo, fontSize: 14),
-                    ))
-              ],
-            )
           ],
         ),
       ))),

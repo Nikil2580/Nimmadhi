@@ -49,6 +49,7 @@ dependencies:
   share_plus: ^4.0.10+1
   loading_animation_widget:
   percent_indicator: ^4.0.1
+  awesome_number_picker : 0.0.4 
 
 dev_dependencies:
   flutter_test:
