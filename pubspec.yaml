@@ -48,6 +48,7 @@ dependencies:
   awesome_snackbar_content:
   share_plus: ^4.0.10+1
   video_player: ^2.4.7
+  animated_splash_screen: ^1.3.0
   loading_animation_widget:
   percent_indicator: ^4.0.1
   awesome_number_picker : 0.0.4 
@@ -80,6 +81,7 @@ flutter:
    - assets/images/
    - assets/images/restructuring/
    - assets/media/
+   - assets/lottie/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
