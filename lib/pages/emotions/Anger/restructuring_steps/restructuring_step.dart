@@ -166,7 +166,7 @@ final List<String> steps = <String>[
   'Step 2: Feeling',
   'Step 3: The Thought',
   'Step 4: Evaluate The Thought',
-  'Step 5: Make A Desicion'
+  'Step 5: Make A Decision'
 ];
 
 final List<bool> _selections = List.generate(steps.length, (_) => true);

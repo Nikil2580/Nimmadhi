@@ -64,7 +64,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 3),
                       child: Card(
-                        elevation: 5,
+                        elevation: 10,
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(14)),
@@ -175,7 +175,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 3),
                       child: Card(
-                        elevation: 5,
+                        elevation: 10,
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(14)),
@@ -283,7 +283,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 3),
                       child: Card(
-                        elevation: 5,
+                        elevation: 10,
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(14)),
