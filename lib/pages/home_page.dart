@@ -16,11 +16,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage("images/bg.png"),
-        fit: BoxFit.cover,
-      )),
+      // decoration: BoxDecoration(
+      //     image: DecorationImage(
+      //   image: AssetImage("images/bg.png"),
+      //   fit: BoxFit.cover,
+      // )),
       child: Padding(
         padding: const EdgeInsets.all(24.0),
         child: ListView(

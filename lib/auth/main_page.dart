@@ -10,12 +10,19 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder<User?>(
-          stream: FirebaseAuth.instance.authStateChanges(),
+          stream: FirebaseAuth.instance.idTokenChanges(),
           builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return AppRoute();
+            //print(snapshot.hasData);
+            if (snapshot.connectionState != ConnectionState.waiting) {
+              if (snapshot.hasData) {
+                return AppRoute();
+              } else {
+                return AuthPage();
+              }
             } else {
-              return AuthPage();
+              return CircularProgressIndicator(
+                color: Colors.deepPurple,
+              );
             }
           }),
     );
