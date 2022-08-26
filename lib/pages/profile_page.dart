@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
+import 'package:cool_alert/cool_alert.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -55,7 +56,14 @@ class _ProfilePageState extends State<ProfilePage> {
             child: IconButton(
                 icon: Icon(FlutterRemix.logout_box_r_line),
                 onPressed: () {
-                  FirebaseAuth.instance.signOut();
+                  CoolAlert.show(
+                      context: context,
+                      type: CoolAlertType.confirm,
+                      onConfirmBtnTap: () {
+                        FirebaseAuth.instance.signOut();
+                        Navigator.pop(context);
+                      },
+                      text: "Are you sure you want to log out");
                 },
                 color: Colors.black),
           ),
