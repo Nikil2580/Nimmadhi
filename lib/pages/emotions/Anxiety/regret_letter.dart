@@ -57,7 +57,7 @@ class _RegretLetterState extends State<RegretLetter>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/regret_letter.png'),
+                    child: Image.asset('assets/images/regret_letter.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

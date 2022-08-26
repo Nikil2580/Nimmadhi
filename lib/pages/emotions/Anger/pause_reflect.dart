@@ -57,7 +57,7 @@ class _PauseReflectState extends State<PauseReflect>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                      child: Image.asset('assets/images/pause.jpg'),
+                      child: Image.asset('assets/images/breathe.gif'),
                       fit: BoxFit.fill),
                 ),
               ],

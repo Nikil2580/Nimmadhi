@@ -57,7 +57,7 @@ class _SelfAwarenessState extends State<SelfAwareness>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/self_awareness.jpg'),
+                  child: Image.asset('assets/images/self_awareness.gif'),
                 ),
               ],
             ),

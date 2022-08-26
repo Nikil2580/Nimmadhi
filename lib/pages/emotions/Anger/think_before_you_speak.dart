@@ -56,7 +56,8 @@ class _ThinkSpeakState extends State<ThinkSpeak> with TickerProviderStateMixin {
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/think.jpg'),
+                    child:
+                        Image.asset('assets/images/think_before_you_speak.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

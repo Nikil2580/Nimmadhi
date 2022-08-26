@@ -57,7 +57,8 @@ class _ReappraisalSessionState extends State<ReappraisalSession>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/reappraisal_session.png'),
+                    child: Image.asset(
+                        'assets/images/cognitive_reappraisal_session.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

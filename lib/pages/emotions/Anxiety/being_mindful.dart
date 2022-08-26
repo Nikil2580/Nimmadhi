@@ -58,7 +58,7 @@ class _BeingMindfulState extends State<BeingMindful>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/mindful.png'),
+                  child: Image.asset('assets/images/mindfulness.gif'),
                 ),
               ],
             ),

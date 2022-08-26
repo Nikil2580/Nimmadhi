@@ -58,7 +58,7 @@ class _SelfCompassionBreakState extends State<SelfCompassionBreak>
                   aspectRatio: 1.2,
                   child: FittedBox(
                     child:
-                        Image.asset('assets/images/self_compassion_break.jpg'),
+                        Image.asset('assets/images/self_compassion_break.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

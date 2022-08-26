@@ -56,7 +56,7 @@ class _EulogyState extends State<Eulogy> with TickerProviderStateMixin {
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/eulogy.png'),
+                    child: Image.asset('assets/images/eulogy.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

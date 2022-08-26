@@ -155,8 +155,8 @@ class _SelfCompassionStepsState extends State<SelfCompassionSteps> {
 }
 
 final List<String> entries = <String>[
-  'self_compassion_break.jpg',
-  'self_compassion_journal.jpg',
+  'self_compassion_break.gif',
+  'self_compassion_journal.gif',
 ];
 
 final List<String> steps = <String>[

@@ -57,7 +57,7 @@ class _ThoughtJournalState extends State<ThoughtJournal>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/thought_journal.png'),
+                    child: Image.asset('assets/images/thought_journal.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

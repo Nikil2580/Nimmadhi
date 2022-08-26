@@ -58,7 +58,7 @@ class _SelfCompassionJournalState extends State<SelfCompassionJournal>
                   aspectRatio: 1.2,
                   child: FittedBox(
                     child: Image.asset(
-                        'assets/images/self_compassion_journal.jpg'),
+                        'assets/images/self_compassion_journal.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

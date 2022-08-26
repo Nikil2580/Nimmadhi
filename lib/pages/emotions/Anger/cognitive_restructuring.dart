@@ -58,7 +58,8 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                 AspectRatio(
                   aspectRatio: 1.2,
                   child: FittedBox(
-                    child: Image.asset('assets/images/restructuring.jpg'),
+                    child: Image.asset(
+                        'assets/images/cognitive_restructuring.gif'),
                     fit: BoxFit.fill,
                   ),
                 ),

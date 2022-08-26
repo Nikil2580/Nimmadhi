@@ -12,29 +12,29 @@ import '../pages/emotions/Sad/emotional_support.dart';
 import '../pages/emotions/Sad/self_compassion.dart';
 
 final List<String> entries1 = <String>[
-  'relaxation.jpg',
-  'restructuring.jpg',
-  'think.jpg',
-  'communication.jpg',
-  'reappraisal.jpg',
+  'relaxation.gif',
+  'cognitive_restructuring.gif',
+  'think_before_you_speak.gif',
+  'better_communication.gif',
+  'inner_peace.gif',
   // 'pause.jpg'
 ];
 
 final List<String> entries2 = <String>[
-  'mindful.png',
-  'self_awareness.jpg',
+  'mindfulness.gif',
+  'self_awareness.gif',
 ];
 
 final List<String> entries3 = <String>[
-  'self_compassion.jpg',
-  'emotional_support.jpg'
+  'inner_peace.gif',
+  'emotional_support.gif'
 ];
 
 final List<String> anger = <String>[
   'Relaxation Techniques',
   'Cognitive Restructuring',
   'Think Before You Speak',
-  'Better Communication',
+  'Communication Techniques',
   'Cognitive Reappraisal',
   // 'Pause and Reflect'
 ];
