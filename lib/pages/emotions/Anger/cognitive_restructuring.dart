@@ -1,6 +1,7 @@
 import 'package:agni/pages/emotions/Anger/restructuring_steps/restructuring_step.dart';
 import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
+import 'package:share_plus/share_plus.dart';
 
 class CognitiveRestructuring extends StatefulWidget {
   @override
@@ -245,19 +246,31 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: Card(
-                  color: DesignCourseAppTheme.nearlyBlue,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
+                child: InkWell(
+                  onTap: () async {
+                    await Share.share(
+                      'Cognitive restructuring is a technique that has been successfully used to help people change the way they think. It refers to therapeutic techniques that help people notice and change their negative thinking patterns',
+                    );
+                  },
+                  child: Card(
+                    color: DesignCourseAppTheme.nearlyBlue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    elevation: 10.0,
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      child: Center(
+                        /*child: Icon(
                         Icons.favorite,
                         color: DesignCourseAppTheme.nearlyWhite,
                         size: 30,
+                      ),*/
+                        child: Icon(
+                          Icons.share,
+                          color: DesignCourseAppTheme.nearlyWhite,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),

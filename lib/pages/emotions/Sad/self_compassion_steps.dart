@@ -91,7 +91,7 @@ class _SelfCompassionStepsState extends State<SelfCompassionSteps> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Align(
+                                          /*child: Align(
                                             alignment: Alignment.topRight,
                                             child: Container(
                                               height: 35,
@@ -123,7 +123,7 @@ class _SelfCompassionStepsState extends State<SelfCompassionSteps> {
                                                 ),
                                               ),
                                             ),
-                                          ),
+                                          ),*/
                                         ),
                                       ]),
                                     ),

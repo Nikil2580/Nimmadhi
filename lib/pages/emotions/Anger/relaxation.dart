@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../design_course_app_theme.dart';
 import 'package:agni/utils/constants.dart';
 
+import 'package:share_plus/share_plus.dart';
+
 class Relaxation extends StatefulWidget {
   @override
   _RelaxationState createState() => _RelaxationState();
@@ -267,20 +269,25 @@ class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
                       borderRadius: BorderRadius.circular(50.0)),
                   elevation: 10.0,
                   child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        angerselections[0] = !angerselections[0];
-                      });
+                    onTap: () async {
+                      await Share.share(
+                        'This method encourages you comfort and relaxation. It activates the sympathetic nervous system region, which is in charge of rest and healing.',
+                      );
                     },
                     child: Container(
                       width: 60,
                       height: 60,
                       child: Center(
-                        child: Icon(
+                        /*child: Icon(
                           angerselections[0]
                               ? Icons.favorite_border_sharp
                               : Icons.favorite_sharp,
                           color: angerselections[0] ? Colors.white : Colors.red,
+                          size: 30,
+                        ),*/
+                        child: Icon(
+                          Icons.share,
+                          color: DesignCourseAppTheme.nearlyWhite,
                           size: 30,
                         ),
                       ),

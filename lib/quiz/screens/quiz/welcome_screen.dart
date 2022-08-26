@@ -1,3 +1,4 @@
+import 'package:agni/quiz/screens/quiz/quiz_screen.dart';
 import 'package:agni/quiz/screens/quiz/welcomeScreenInstrucions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -27,7 +28,7 @@ class WelcomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   Text("Enter your informations below"),
-                  Spacer(), // 1/6
+                  //Spacer(), // 1/6
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -63,10 +64,11 @@ class WelcomeScreen extends StatelessWidget {
                       child: Text(
                         "Lets Start Quiz",
                         style: Theme.of(context).textTheme.button?.copyWith(
-                            color: Color.fromARGB(255, 241, 238, 238)),
+                            color: Color.fromARGB(255, 238, 233, 233)),
                       ),
                     ),
                   ),
+                  Spacer(flex: 2), // it will take 2/6 spaces
                 ],
               ),
             ),

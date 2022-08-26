@@ -5,7 +5,7 @@ import 'package:agni/quiz/themes.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-class WelcomeScreenIntructions extends StatelessWidget{
+class WelcomeScreenIntructions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -17,18 +17,20 @@ class WelcomeScreenIntructions extends StatelessWidget{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(flex:1), //2/6
+                  Spacer(flex: 1), //2/6
                   Text(
                     "Instructions:-",
                     style: Theme.of(context).textTheme.headline3?.copyWith(
                         color: Color.fromARGB(255, 7, 6, 6),
                         fontWeight: FontWeight.bold),
                   ),
-                  Text("The questions are set with a timer of 60 sec",
-                  style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    ?.copyWith(color: kSecondaryColor),),
+                  Text(
+                    "The questions are set with a timer of 60 sec",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline5
+                        ?.copyWith(color: kSecondaryColor),
+                  ),
                   Spacer(), // 1/6
                   InkWell(
                     onTap: () => Get.to(QuizScreen()),
@@ -42,14 +44,11 @@ class WelcomeScreenIntructions extends StatelessWidget{
                       ),
                       child: Text(
                         "Done ! Got it",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button
-                            ?.copyWith(color: Color.fromARGB(255, 248, 245, 245)),
+                        style: Theme.of(context).textTheme.button?.copyWith(
+                            color: Color.fromARGB(255, 248, 245, 245)),
                       ),
                     ),
                   ),
-                  
                 ],
               ),
             ),

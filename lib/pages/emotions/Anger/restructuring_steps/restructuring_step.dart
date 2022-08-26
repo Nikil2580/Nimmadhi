@@ -92,7 +92,7 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Align(
+                                          /*child: Align(
                                             alignment: Alignment.topRight,
                                             child: Container(
                                               height: 35,
@@ -124,7 +124,7 @@ class _RestructuringStepsState extends State<RestructuringSteps> {
                                                 ),
                                               ),
                                             ),
-                                          ),
+                                          ),*/
                                         ),
                                       ]),
                                     ),

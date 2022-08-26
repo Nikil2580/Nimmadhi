@@ -241,8 +241,13 @@ class _ThinkSpeakState extends State<ThinkSpeak> with TickerProviderStateMixin {
                     width: 60,
                     height: 60,
                     child: Center(
-                      child: Icon(
+                      /*child: Icon(
                         Icons.favorite,
+                        color: DesignCourseAppTheme.nearlyWhite,
+                        size: 30,
+                      ),*/
+                      child: Icon(
+                        Icons.share,
                         color: DesignCourseAppTheme.nearlyWhite,
                         size: 30,
                       ),

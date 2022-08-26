@@ -2,6 +2,7 @@ import 'package:agni/pages/emotions/Anxiety/eulogy.dart';
 import 'package:agni/pages/emotions/Anxiety/regret_letter.dart';
 import 'package:agni/pages/emotions/Anxiety/thought_journal.dart';
 import 'package:flutter/material.dart';
+import '../../design_course_app_theme.dart';
 
 class AwarenessSteps extends StatefulWidget {
   AwarenessSteps({Key? key}) : super(key: key);
@@ -89,7 +90,7 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Align(
+                                          /*child: Align(
                                             alignment: Alignment.topRight,
                                             child: Container(
                                               height: 35,
@@ -98,10 +99,10 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
                                                   color: Color.fromARGB(
                                                       95, 0, 0, 0),
                                                   shape: BoxShape.circle),
-                                              child: Padding(
+                                              /*child: Padding(
                                                 padding: const EdgeInsets.only(
                                                     right: 10.0),
-                                                child: IconButton(
+                                                /*child: IconButton(
                                                   icon: Icon(
                                                     _selections[index]
                                                         ? Icons
@@ -118,10 +119,10 @@ class _AwarenessStepsState extends State<AwarenessSteps> {
                                                           !_selections[index];
                                                     });
                                                   },
-                                                ),
-                                              ),
+                                                ),*/
+                                              ),*/
                                             ),
-                                          ),
+                                          ),*/
                                         ),
                                       ]),
                                     ),

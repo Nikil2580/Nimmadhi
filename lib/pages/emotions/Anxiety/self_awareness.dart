@@ -249,12 +249,17 @@ class _SelfAwarenessState extends State<SelfAwareness>
                   child: Container(
                     width: 60,
                     height: 60,
-                    child: Center(
+                    /*child: Center(
                       child: Icon(
-                        Icons.favorite,
+                        Icons.share,
                         color: DesignCourseAppTheme.nearlyWhite,
                         size: 30,
                       ),
+                    ),*/
+                    child: Icon(
+                      Icons.share,
+                      color: DesignCourseAppTheme.nearlyWhite,
+                      size: 30,
                     ),
                   ),
                 ),

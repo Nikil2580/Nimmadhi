@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../design_course_app_theme.dart';
+import 'package:share_plus/share_plus.dart';
 
 class Step5 extends StatefulWidget {
   @override
@@ -240,7 +241,7 @@ class _Step5State extends State<Step5> with TickerProviderStateMixin {
                     height: 60,
                     child: Center(
                       child: Icon(
-                        Icons.favorite,
+                        Icons.share,
                         color: DesignCourseAppTheme.nearlyWhite,
                         size: 30,
                       ),

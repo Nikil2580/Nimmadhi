@@ -243,7 +243,7 @@ class _SelfCompassionJournalState extends State<SelfCompassionJournal>
                     height: 60,
                     child: Center(
                       child: Icon(
-                        Icons.favorite,
+                        Icons.share,
                         color: DesignCourseAppTheme.nearlyWhite,
                         size: 30,
                       ),

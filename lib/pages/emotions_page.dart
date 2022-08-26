@@ -95,7 +95,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Align(
+                                          /*child: Align(
                                             alignment: Alignment.topRight,
                                             child: Container(
                                               height: 35,
@@ -129,7 +129,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                                 ),
                                               ),
                                             ),
-                                          ),
+                                          ),*/
                                         ),
                                       ]),
                                     ),
@@ -205,7 +205,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Align(
+                                          /*child: Align(
                                             alignment: Alignment.topRight,
                                             child: Container(
                                               height: 35,
@@ -239,7 +239,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                                 ),
                                               ),
                                             ),
-                                          ),
+                                          ),*/
                                         ),
                                       ]),
                                     ),
@@ -313,7 +313,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Align(
+                                          /*child: Align(
                                             alignment: Alignment.topRight,
                                             child: Container(
                                               height: 35,
@@ -345,7 +345,7 @@ class _EmotionsPageState extends State<EmotionsPage> {
                                                 ),
                                               ),
                                             ),
-                                          ),
+                                          ),*/
                                         ),
                                       ]),
                                     ),
