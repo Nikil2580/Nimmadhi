@@ -87,31 +87,49 @@ class _HomePageState extends State<HomePage> {
                   fontSize: 28,
                 )),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                      style:
-                          ElevatedButton.styleFrom(primary: Colors.deepPurple),
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          settings: RouteSettings(name: "/WelcomeScreen"),
-                          builder: (context) => WelcomeScreen(),
-                        ));
-                      },
-                      child: Text('Anxiety Test')),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      height: 50,
+                      width: 125,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.deepPurple,
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              settings: RouteSettings(name: "/WelcomeScreen"),
+                              builder: (context) => WelcomeScreen(),
+                            ));
+                          },
+                          child: Text(
+                            'Anxiety Test',
+                            style: TextStyle(fontSize: 15),
+                          )),
+                    ),
+                  ),
                   SizedBox(width: 20),
-                  ElevatedButton(
-                      style:
-                          ElevatedButton.styleFrom(primary: Colors.deepPurple),
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          settings: RouteSettings(name: "/WelcomeScreen2"),
-                          builder: (context) => WelcomeScreen2(),
-                        ));
-                      },
-                      child: Text('Stress Test')),
+                  SizedBox(
+                    height: 50,
+                    width: 125,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.deepPurple),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            settings: RouteSettings(name: "/WelcomeScreen2"),
+                            builder: (context) => WelcomeScreen2(),
+                          ));
+                        },
+                        child: Text(
+                          'Stress Test',
+                          style: TextStyle(fontSize: 15),
+                        )),
+                  ),
                 ],
               ),
             ),

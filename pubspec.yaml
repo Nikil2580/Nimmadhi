@@ -49,6 +49,7 @@ dependencies:
   share_plus: ^4.0.10+1
   loading_animation_widget:
   percent_indicator: ^4.0.1
+  lottie: ^1.4.2
 
 dev_dependencies:
   flutter_test:

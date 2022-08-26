@@ -17,7 +17,7 @@ final List<String> entries1 = <String>[
   'think.jpg',
   'communication.jpg',
   'reappraisal.jpg',
-  'pause.jpg'
+  // 'pause.jpg'
 ];
 
 final List<String> entries2 = <String>[
@@ -36,7 +36,7 @@ final List<String> anger = <String>[
   'Think Before You Speak',
   'Better Communication',
   'Cognitive Reappraisal',
-  'Pause and Reflect'
+  // 'Pause and Reflect'
 ];
 
 final List<String> anxiety = <String>[
@@ -61,7 +61,7 @@ final List<Widget> pages1 = [
   ThinkSpeak(),
   BetterCommunication(),
   CognitiveReappraisal(),
-  PauseReflect()
+  // PauseReflect()
 ];
 
 final List<Widget> pages2 = [

@@ -32,11 +32,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
-    <service
-            android:name="com.example.mediaplayer.AudioService"
-            android:enabled="true"
-            android:exported="false">
-        </service>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 </manifest>
   
