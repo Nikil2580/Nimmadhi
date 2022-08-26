@@ -1,4 +1,5 @@
 import 'package:awesome_number_picker/awesome_number_picker.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -15,11 +16,9 @@ class CreateProfile extends StatefulWidget {
 class _CreateProfileState extends State<CreateProfile> {
   final _firstNameController = TextEditingController();
   final _lastNameController = TextEditingController();
-  int _ageController = 18;
   final user = FirebaseAuth.instance.currentUser!;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _getUserDetails();
   }
@@ -29,6 +28,8 @@ class _CreateProfileState extends State<CreateProfile> {
     _lastNameController.dispose();
     super.dispose();
   }
+
+  late int _ageController = 20;
 
   Map<String, dynamic>? _userDetails;
   Future<void> _getUserDetails() async {
@@ -102,7 +103,7 @@ class _CreateProfileState extends State<CreateProfile> {
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.indigo),
                           borderRadius: BorderRadius.circular(12)),
-                      hintText: _userDetails?['last_name'] == null
+                      hintText: _userDetails!['last_name'] == null
                           ? 'Enter Last Name'
                           : _userDetails!['last_name'],
                       fillColor: Colors.white,
@@ -122,7 +123,7 @@ class _CreateProfileState extends State<CreateProfile> {
                 child: IntegerNumberPicker(
                   axis: Axis.horizontal,
                   initialValue:
-                      _userDetails?['age'] == null ? 18 : _userDetails!['age'],
+                      _userDetails?['age'] == null ? 20 : _userDetails?['age'],
                   minValue: 1,
                   maxValue: 100,
                   onChanged: (val) => {
@@ -167,6 +168,19 @@ class _CreateProfileState extends State<CreateProfile> {
                             ? _userDetails!['last_name']
                             : _lastNameController.text.trim(),
                         age: _ageController);
+                    var snackBar = SnackBar(
+                      elevation: 0,
+                      behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.transparent,
+                      content: AwesomeSnackbarContent(
+                        title: 'Let\'s Go',
+                        message: 'Profile successfully added',
+                        contentType: ContentType.success,
+                      ),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    Navigator.pop(context);
                     Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
