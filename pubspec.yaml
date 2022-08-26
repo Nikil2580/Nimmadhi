@@ -47,14 +47,13 @@ dependencies:
   get: ^4.1.4
   awesome_snackbar_content:
   share_plus: ^4.0.10+1
-
   video_player: ^2.4.7
   animated_splash_screen: ^1.3.0
   loading_animation_widget:
   percent_indicator: ^4.0.1
+  awesome_number_picker : 0.0.4 
   lottie: ^1.4.2
-
-
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
