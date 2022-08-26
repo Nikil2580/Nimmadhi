@@ -12,6 +12,7 @@ import 'package:agni/quiz/screens/quiz/score_screen.dart';
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
+  int index = 0;
 
   AnimationController? _animationController;
   Animation? _animation;
@@ -78,6 +79,7 @@ class QuestionController extends GetxController
 
   void checkAns(Question question, int selectedIndex) {
     // because once user press any option then it will run
+    index = selectedIndex;
     _isAnswered = true;
     //_correctAns = question.answer;
     _selectedAns = selectedIndex;

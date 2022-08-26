@@ -6,6 +6,7 @@ import 'package:agni/quiz/themes.dart';
 import 'package:agni/quiz/screens/quiz/quiz_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,14 +62,11 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                       child: Text(
                         "Lets Start Quiz",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button
-                            ?.copyWith(color: Color.fromARGB(255, 241, 238, 238)),
+                        style: Theme.of(context).textTheme.button?.copyWith(
+                            color: Color.fromARGB(255, 241, 238, 238)),
                       ),
                     ),
                   ),
-                  
                 ],
               ),
             ),
