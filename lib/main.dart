@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       //darkTheme: ThemeData.dark(),
-      home: HomePage(),
+      home: MainPage(),
     );
   }
 }
