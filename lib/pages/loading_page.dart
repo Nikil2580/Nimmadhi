@@ -12,9 +12,24 @@ class _LoaderState extends State<Loader> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple[100],
       body: Center(
-        child: Lottie.network(
-            'https://assets5.lottiefiles.com/packages/lf20_Yiahbq.json'),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Lottie.asset('assets/lottie/meditation.zip'),
+            SizedBox(height: 20),
+            Text(
+              'Nimmadhi',
+              style: TextStyle(
+                fontSize: 32,
+                color: Colors.deepPurple,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
