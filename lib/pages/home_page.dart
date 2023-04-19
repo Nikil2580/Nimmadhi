@@ -37,125 +37,128 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      // decoration: BoxDecoration(
-      //     image: DecorationImage(
-      //   image: AssetImage("images/bg.png"),
-      //   fit: BoxFit.cover,
-      // )),
-      child: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: ListView(
-          children: [
-            SizedBox(height: 40),
-            // SizedBox(height: 10),
-            // Align(
-            //   alignment: Alignment.centerRight,
-            //   child: Container(
-            //     height: 40,
-            //     width: 110,
-            //     color: Colors.white,
-            //   ),
-            // ),
-            Text(
-              'Welcome!',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 48),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              _userDetails?['first_name'] == null
-                  ? "User 👋"
-                  : "${_userDetails?['first_name']} 👋",
-              style: TextStyle(fontSize: 36),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Card(
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14)),
-              elevation: 5,
-              child: Container(
-                color: Colors.deepPurple[100],
-                height: 200,
-                child: Padding(
-                  padding: const EdgeInsets.all(30.0),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '\"The way I see it, if you want the rainbow, you gotta put up with the rain.\"',
-                          style: TextStyle(
-                              fontStyle: FontStyle.italic,
-                              fontSize: 22,
-                              color: Colors.deepPurple[900]),
-                        ),
-                        Text(
-                          '\n-Dolly Parton',
-                          style: TextStyle(
-                              fontStyle: FontStyle.italic,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.deepPurple[900]),
-                        ),
-                      ]),
+        body: SafeArea(
+      child: Container(
+        // decoration: BoxDecoration(
+        //     image: DecorationImage(
+        //   image: AssetImage("images/bg.png"),
+        //   fit: BoxFit.cover,
+        // )),
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: ListView(
+            children: [
+              SizedBox(height: 40),
+              // SizedBox(height: 10),
+              // Align(
+              //   alignment: Alignment.centerRight,
+              //   child: Container(
+              //     height: 40,
+              //     width: 110,
+              //     color: Colors.white,
+              //   ),
+              // ),
+              Text(
+                'Welcome!',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 48),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                _userDetails?['first_name'] == null
+                    ? "User 👋"
+                    : "${_userDetails?['first_name']} 👋",
+                style: TextStyle(fontSize: 36),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Card(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14)),
+                elevation: 5,
+                child: Container(
+                  color: Colors.deepPurple[100],
+                  height: 200,
+                  child: Padding(
+                    padding: const EdgeInsets.all(30.0),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '\"The way I see it, if you want the rainbow, you gotta put up with the rain.\"',
+                            style: TextStyle(
+                                fontStyle: FontStyle.italic,
+                                fontSize: 22,
+                                color: Colors.deepPurple[900]),
+                          ),
+                          Text(
+                            '\n-Dolly Parton',
+                            style: TextStyle(
+                                fontStyle: FontStyle.italic,
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple[900]),
+                          ),
+                        ]),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            Text("Evaluate yourself ✅",
-                style: TextStyle(
-                  fontSize: 28,
-                )),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
+              SizedBox(height: 20),
+              Text("Evaluate yourself ✅",
+                  style: TextStyle(
+                    fontSize: 28,
+                  )),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 50,
+                        width: 125,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.deepPurple,
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                settings: RouteSettings(name: "/WelcomeScreen"),
+                                builder: (context) => WelcomeScreen(),
+                              ));
+                            },
+                            child: Text(
+                              'Anxiety Test',
+                              style: TextStyle(fontSize: 15),
+                            )),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    SizedBox(
                       height: 50,
                       width: 125,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.deepPurple,
-                          ),
+                              primary: Colors.deepPurple),
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                              settings: RouteSettings(name: "/WelcomeScreen"),
-                              builder: (context) => WelcomeScreen(),
+                              settings: RouteSettings(name: "/WelcomeScreen2"),
+                              builder: (context) => WelcomeScreen2(),
                             ));
                           },
                           child: Text(
-                            'Anxiety Test',
+                            'Stress Test',
                             style: TextStyle(fontSize: 15),
                           )),
                     ),
-                  ),
-                  SizedBox(width: 20),
-                  SizedBox(
-                    height: 50,
-                    width: 125,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.deepPurple),
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            settings: RouteSettings(name: "/WelcomeScreen2"),
-                            builder: (context) => WelcomeScreen2(),
-                          ));
-                        },
-                        child: Text(
-                          'Stress Test',
-                          style: TextStyle(fontSize: 15),
-                        )),
-                  ),
-                ],
+                  ],
+                ),
               ),
+<<<<<<< HEAD
             ),
             /*SizedBox(height: 20),
             Text('Favorites ⭐',
@@ -204,6 +207,51 @@ class _HomePageState extends State<HomePage> {
                   },
                 ))
           ],
+=======
+
+              SizedBox(height: 20),
+              Text('Videos 🎭',
+                  style: TextStyle(
+                    fontSize: 28,
+                  )),
+              SizedBox(height: 20),
+              SizedBox(
+                  height: 200,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: videos.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return Player(
+                                  video: videos[index],
+                                );
+                              },
+                            ));
+                          },
+                          child: Container(
+                              height: 200,
+                              width: 200,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Colors.indigo[200],
+                              ),
+                              child: Center(
+                                  child: Text(
+                                "${videos[index]}",
+                                style: TextStyle(fontSize: 25),
+                              ))),
+                        ),
+                      );
+                    },
+                  ))
+            ],
+          ),
+>>>>>>> 5ef34da1b3d07a9d2969ffaa94e1c591fe83f35c
         ),
       ),
     ));
