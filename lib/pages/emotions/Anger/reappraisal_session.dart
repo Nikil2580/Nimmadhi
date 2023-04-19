@@ -132,7 +132,7 @@ class _ReappraisalSessionState extends State<ReappraisalSession>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
                                   child: Text(
-                                    'Ask yourself these questions to help you reappraise:\n• Were there, or will there be, any positive outcomes that result from this situation?\n• Are you grateful for any part of this situation?\n• In what ways are you better off than when you started?\n• What did you learn?\n• How did you grow and develop as a result of this situation?',
+                                    'Ask yourself these questions to help you reappraise:\n\n• Were there, or will there be, any positive outcomes that result from this situation?\n• Are you grateful for any part of this situation?\n• In what ways are you better off than when you started?\n• What did you learn?\n• How did you grow and develop as a result of this situation?',
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w400,

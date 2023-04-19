@@ -44,39 +44,42 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAnwj4bObDX-7VGKPhm_TWVdbZ9jpljBJo',
-    appId: '1:1074990192023:web:2635decbed6c727484a0d2',
-    messagingSenderId: '1074990192023',
-    projectId: 'nimadhi-46e15',
-    authDomain: 'nimadhi-46e15.firebaseapp.com',
-    storageBucket: 'nimadhi-46e15.appspot.com',
+    apiKey: 'AIzaSyDZvQ7HGDGwZeEbzwuaqehT80UxLLkinsE',
+    appId: '1:946784222951:web:bf178830e38ddb94982c42',
+    messagingSenderId: '946784222951',
+    projectId: 'nimmadhi-4c375',
+    authDomain: 'nimmadhi-4c375.firebaseapp.com',
+    storageBucket: 'nimmadhi-4c375.appspot.com',
+    measurementId: 'G-9JH4F6EZK5',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCqBt_1bMTIokZcTqPAnXvlR-mSEpKz0Lg',
-    appId: '1:1074990192023:android:bbd02586197f33a284a0d2',
-    messagingSenderId: '1074990192023',
-    projectId: 'nimadhi-46e15',
-    storageBucket: 'nimadhi-46e15.appspot.com',
+    apiKey: 'AIzaSyBIe3Oqv93rYtsOtiuhUmuCpQKiCqXXGCo',
+    appId: '1:946784222951:android:5efc4e01320f0412982c42',
+    messagingSenderId: '946784222951',
+    projectId: 'nimmadhi-4c375',
+    storageBucket: 'nimmadhi-4c375.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCBSfqd5hKjAD4aC-6Fqmu1hkFuDbrNPd4',
-    appId: '1:1074990192023:ios:d82ace15ddfc29de84a0d2',
-    messagingSenderId: '1074990192023',
-    projectId: 'nimadhi-46e15',
-    storageBucket: 'nimadhi-46e15.appspot.com',
-    iosClientId: '1074990192023-pto0ig1d6udfmohru42v1fabt2joul4b.apps.googleusercontent.com',
+    apiKey: 'AIzaSyB_2uQ9_PthKLxJYuwIjPBQ9Z13TdT8Jhk',
+    appId: '1:946784222951:ios:a82a2d111e390e67982c42',
+    messagingSenderId: '946784222951',
+    projectId: 'nimmadhi-4c375',
+    storageBucket: 'nimmadhi-4c375.appspot.com',
+    androidClientId: '946784222951-kafv3h5k60r7pnaniv8rovucoeu9ausc.apps.googleusercontent.com',
+    iosClientId: '946784222951-njn9ktj7uh86hptg6fhmttrcm77p1vkp.apps.googleusercontent.com',
     iosBundleId: 'com.example.agni',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCBSfqd5hKjAD4aC-6Fqmu1hkFuDbrNPd4',
-    appId: '1:1074990192023:ios:d82ace15ddfc29de84a0d2',
-    messagingSenderId: '1074990192023',
-    projectId: 'nimadhi-46e15',
-    storageBucket: 'nimadhi-46e15.appspot.com',
-    iosClientId: '1074990192023-pto0ig1d6udfmohru42v1fabt2joul4b.apps.googleusercontent.com',
+    apiKey: 'AIzaSyB_2uQ9_PthKLxJYuwIjPBQ9Z13TdT8Jhk',
+    appId: '1:946784222951:ios:a82a2d111e390e67982c42',
+    messagingSenderId: '946784222951',
+    projectId: 'nimmadhi-4c375',
+    storageBucket: 'nimmadhi-4c375.appspot.com',
+    androidClientId: '946784222951-kafv3h5k60r7pnaniv8rovucoeu9ausc.apps.googleusercontent.com',
+    iosClientId: '946784222951-njn9ktj7uh86hptg6fhmttrcm77p1vkp.apps.googleusercontent.com',
     iosBundleId: 'com.example.agni',
   );
 }

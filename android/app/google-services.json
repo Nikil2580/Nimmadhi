@@ -1,76 +1,48 @@
 {
   "project_info": {
-    "project_number": "1074990192023",
-    "project_id": "nimadhi-46e15",
-    "storage_bucket": "nimadhi-46e15.appspot.com"
+    "project_number": "946784222951",
+    "project_id": "nimmadhi-4c375",
+    "storage_bucket": "nimmadhi-4c375.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1074990192023:android:bbd02586197f33a284a0d2",
+        "mobilesdk_app_id": "1:946784222951:android:5efc4e01320f0412982c42",
         "android_client_info": {
           "package_name": "com.example.agni"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1074990192023-tne841e1sofladulprq3hv758e6qn436.apps.googleusercontent.com",
+          "client_id": "946784222951-kafv3h5k60r7pnaniv8rovucoeu9ausc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agni",
+            "certificate_hash": "9907e22d85b0b91f1e4fea9eebb8402931953df1"
+          }
+        },
+        {
+          "client_id": "946784222951-ocu9p8h1tf8cuuheksmhgfldl1uncgtn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCqBt_1bMTIokZcTqPAnXvlR-mSEpKz0Lg"
+          "current_key": "AIzaSyBIe3Oqv93rYtsOtiuhUmuCpQKiCqXXGCo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1074990192023-tne841e1sofladulprq3hv758e6qn436.apps.googleusercontent.com",
+              "client_id": "946784222951-ocu9p8h1tf8cuuheksmhgfldl1uncgtn.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "1074990192023-mn5f39ql9dk446rkd037mcogc4rbqbn0.apps.googleusercontent.com",
+              "client_id": "946784222951-njn9ktj7uh86hptg6fhmttrcm77p1vkp.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.flutterApplicationMindfulness"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1074990192023:android:26246b75acf2204284a0d2",
-        "android_client_info": {
-          "package_name": "com.example.flutter_application_mindfulness"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1074990192023-tne841e1sofladulprq3hv758e6qn436.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCqBt_1bMTIokZcTqPAnXvlR-mSEpKz0Lg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1074990192023-tne841e1sofladulprq3hv758e6qn436.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "1074990192023-mn5f39ql9dk446rkd037mcogc4rbqbn0.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.flutterApplicationMindfulness"
+                "bundle_id": "com.example.agni"
               }
             }
           ]
