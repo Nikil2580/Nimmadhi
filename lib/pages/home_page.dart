@@ -158,56 +158,6 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-<<<<<<< HEAD
-            ),
-            /*SizedBox(height: 20),
-            Text('Favorites ⭐',
-                style: TextStyle(
-                  fontSize: 28,
-                )),
-            SizedBox(height: 20),*/
-            SizedBox(height: 20),
-            Text('Videos 🎭',
-                style: TextStyle(
-                  fontSize: 28,
-                )),
-            SizedBox(height: 20),
-            SizedBox(
-                height: 200,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: videos.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(
-                            builder: (context) {
-                              return Player(
-                                video: videos[index],
-                              );
-                            },
-                          ));
-                        },
-                        child: Container(
-                            height: 200,
-                            width: 200,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.indigo[200],
-                            ),
-                            child: Center(
-                                child: Text(
-                              "${videos[index]}",
-                              style: TextStyle(fontSize: 25),
-                            ))),
-                      ),
-                    );
-                  },
-                ))
-          ],
-=======
 
               SizedBox(height: 20),
               Text('Videos 🎭',
@@ -251,7 +201,6 @@ class _HomePageState extends State<HomePage> {
                   ))
             ],
           ),
->>>>>>> 5ef34da1b3d07a9d2969ffaa94e1c591fe83f35c
         ),
       ),
     ));
